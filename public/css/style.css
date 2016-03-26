@@ -60,9 +60,13 @@
 }
 
 /* Dashboard CSS */
+.custom-toolbar{
+    background: rgba(255,255,255,0.4)!important;
+    /*border-bottom: 0.1pt solid #fff;*/
+}
 
 .dashboard-main-div {
-    background: url("../img/login-bg.jpg");
+    background: url("../img/theme-01.jpg");
     background-size: 100% 100%;
 }
 
@@ -72,10 +76,15 @@
 }
 .menu-column p{
     color: #fff;
-    text-align: center;
+    padding-right: 20%;
+    text-align: right;
 }
-.main-content-dashboard{
-    background: transparent !important;
+.content-column{
+    height: calc(100vh - 100px);
+}
+.content-column :first-child{
+    height: 100%;
+    background: rgba(255,255,255,0.7)!important;
 }
 .bg-tsp{
     background: transparent !important;

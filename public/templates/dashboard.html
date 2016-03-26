@@ -1,27 +1,21 @@
-<div class="dashboard-main-div bg-tsp">
-    <md-toolbar>
+<div class="dashboard-main-div">
+    <md-toolbar class="custom-toolbar">
         <div class="md-toolbar-tools">
-            <md-button class="md-primary" ui-sref-active="md-raised" ui-sref="account.login" aria-label="Login">تسجيل
-                الدخول
-            </md-button>
-            <md-button class="md-primary" ui-sref-active="md-raised" ui-sref="account.register" aria-label="Register">
-                إصنع حساب
-            </md-button>
             <span flex></span>
             <h1>نظام إدارة التعلم</h1>
         </div>
     </md-toolbar>
-    <md-content class="main-md-content bg-tsp">
+    <md-content class="main-md-content">
         <div layout="row">
-            <section flex="80" class="content-column">
+            <section flex="85" class="content-column" layout-padding>
                 <div class="md-whiteframe-6dp" layout-margin>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi culpa fuga laborum soluta tempora.
                     Alias, molestiae quae! Cupiditate, delectus deleniti eligendi esse et harum nisi nostrum nulla
                     numquam quam ratione.
                 </div>
             </section>
-            <section flex="20" class="menu-column">
-                <md-list>
+            <section flex="15" class="menu-column">
+                <md-list layout-margin>
                     <md-divider></md-divider>
                     <md-list-item ng-click="a()"><p>معلمون</p></md-list-item>
                     <md-divider></md-divider>
