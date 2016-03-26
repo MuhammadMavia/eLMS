@@ -1,0 +1,59 @@
+<div layout-wrap layout-padding layout="row" layout-align="center center" class="register-main">
+    <md-content layout-padding flex-gt-lg="20" flex-gt-md="35" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50"
+                class="md-whiteframe-4dp register-form">
+        <form ng-submit="doRegister(user)">
+            <md-input-container class="md-block">
+                <label class="right-label">الاسم الاول</label>
+                <input type="text" required md-no-asterisk ng-model="user.firstName">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">اسم العائلة</label>
+                <input type="text" required md-no-asterisk ng-model="user.lastName">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">البريد الإلكتروني</label>
+                <input type="email" required md-no-asterisk ng-model="user.email">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <md-select placeholder="جنس" ng-model="user.sex">
+                    <md-option ng-value="1">ذكر</md-option>
+                    <md-option ng-value="2">أنثى</md-option>
+                    <md-option ng-value="0">آخر</md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label class="right-label">هاتف</label>
+                <input type="text" required md-no-asterisk ng-model="user.tel">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">كلمه المرور</label>
+                <input equal type="password" required md-no-asterisk ng-model="user.password">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">تأكيد كلمة المرور</label>
+                <input compare-to="user.password" type="password" required md-no-asterisk
+                       ng-model="user.confirmPassword" name="confirmPassword">
+                <div ng-messages="confirmPassword.$error"
+                     ng-messages="'Password does not match'"></div>
+            </md-input-container>
+
+
+            <div layout="row" layout-wrap layout-align="center center">
+                <md-button type="submit" class="md-button md-primary md-raised submit-btn">إصنع حساب</md-button>
+                <md-button ui-sref="account.login" class="md-primary submit-btn">تسجيل الدخول</md-button>
+            </div>
+            <h3>أو</h3>
+
+            <div layout="row" layout-wrap layout-align="center center">
+                <md-button class="social-login-btn">
+                    <img src="../img/fb_login.png" class="md-button social-login-png">
+                </md-button>
+                <md-button class="social-login-btn">
+                    <img src="../img/loginGoogle.png" class="md-button social-login-png">
+                </md-button>
+            </div>
+
+        </form>
+    </md-content>
+</div>
