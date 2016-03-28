@@ -1,0 +1,42 @@
+<div layout="row" layout-align="end end" layout-wrap>
+    <div class="md-whiteframe-6dp" flex="50" layout-padding>
+        <div class="teacher-add-form" layout="column" layout-align="center center" layout-wrap>
+            <md-input-container class="md-block">
+                <label class="right-label">الاسم الاول</label>
+                <input type="text" required md-no-asterisk ng-model="teacher.firstName">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">اسم العائلة</label>
+                <input type="text" required md-no-asterisk ng-model="teacher.lastName">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label class="right-label">البريد الإلكتروني</label>
+                <input type="email" required md-no-asterisk ng-model="teacher.email">
+            </md-input-container>
+
+            <md-radio-group ng-model="teacher.sex" layout="row">
+                <md-radio-button value="1" class="md-primary">ذكر</md-radio-button>
+                <md-radio-button value="2" class="md-primary"> أنثى</md-radio-button>
+                <md-radio-button value="3" class="md-primary">آخر</md-radio-button>
+            </md-radio-group>
+
+
+            <md-input-container class="md-block">
+                <label class="right-label">هاتف</label>
+                <input type="text" required md-no-asterisk ng-model="user.tel">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">كلمه المرور</label>
+                <input equal type="password" required md-no-asterisk ng-model="user.password">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">تأكيد كلمة المرور</label>
+                <input compare-to="user.password" type="password" required md-no-asterisk
+                       ng-model="user.confirmPassword" name="confirmPassword">
+                <div ng-messages="confirmPassword.$error"
+                     ng-messages="'Password does not match'"></div>
+            </md-input-container>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,7 @@ var user;
 var usersSchema = new mongoose.Schema({
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
+    profileImg: {type: String},
     email: {type: String, required: true},
     theme: {type: String},
     password: {type: String, required: true},
@@ -18,9 +19,42 @@ var usersSchema = new mongoose.Schema({
     courses: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses'}]},
     quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]}
 });
-
+var socialUsersSchema = new mongoose.Schema({
+    firstName: {type: String, required: true},
+    lastName: {type: String, required: true},
+    progress: {type: Array},
+    profileImg: {type: String, required: true},
+    email: {type: String},
+    link: {type: String, required: true},
+    userID: {type: String, required: true},
+    theme: {type: String},
+    sex: {type: Number, required: true},
+    tel: {type: Number},
+    role: {type: Number, default: 1},
+    createdOn: {type: Date, default: Date.now()},
+    courses: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses'}]},
+    quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]}
+});
 var usersModel = mongoose.model("Users", usersSchema);
+var socialUsersModel = mongoose.model("SocialUsers", socialUsersSchema);
 exports.usersModel = usersModel;
+exports.usersModel = socialUsersModel;
+
+
+/* Social User Auth*/
+
+account.use('/socialUserAuth', function (req, res, next) {
+    socialUsersModel.findOne({userID: req.body.userID}, function (err, success) {
+        success ? res.send({code: 1, user: success}) : next();
+    });
+});
+
+account.post('/socialUserAuth', function (req, res) {
+    var user = new socialUsersModel(req.body);
+    user.save(function (error, success) {
+        res.send(error || success);
+    })
+});
 
 /* Checking Email Middleware */
 account.use("/login", function (req, res, next) {

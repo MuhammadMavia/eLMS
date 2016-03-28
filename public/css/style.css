@@ -1,3 +1,43 @@
+/* FONTS */
+
+@font-face {
+    font-family: Al-Jazeera;
+    src: url(../fonts/font2/aljazeera.ttf);
+}
+
+@font-face {
+    font-family: Al-Jazeera-Arabic-Bold;
+    src: url(../fonts/font1/Al-Jazeera-Arabic-Bold.ttf);
+}
+
+@font-face {
+    font-family: Al-Jazeera-Arabic-Light;
+    src: url(../fonts/font1/Al-Jazeera-Arabic-Light.ttf);
+}
+
+@font-face {
+    font-family: Al-Jazeera-Arabic-Regular;
+    src: url(../fonts/font1/Al-Jazeera-Arabic-Regular.ttf);
+}
+
+.Al-Jazeera {
+    font-family: Al-Jazeera !important;
+}
+
+.Al-Jazeera-Bold {
+    font-family: Al-Jazeera-Arabic-Bold !important;
+}
+
+.Al-Jazeera-Light {
+    font-family: Al-Jazeera-Arabic-Light !important;
+}
+
+.Al-Jazeera-Regular {
+    font-family: Al-Jazeera-Arabic-Regular !important;
+}
+
+/* LOGIN CSS*/
+
 .login-main {
     background: url("../img/login-bg.jpg");
     background-size: 100% 100%;
@@ -55,18 +95,49 @@
 }
 
 .right-label {
+    font-family: Al-Jazeera !important;
+    color: #fff;
     left: auto !important;
     right: 0 !important;
 }
 
 /* Dashboard CSS */
-.custom-toolbar{
-    background: rgba(255,255,255,0.4)!important;
+.custom-toolbar {
+    background: rgba(255, 255, 255, 0.4) !important;
     /*border-bottom: 0.1pt solid #fff;*/
 }
 
+.bg-opacity {
+    background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.no-outline {
+    outline: none;
+}
+
+.no-margin {
+    margin: 0 0 0 0 !important;
+}
+
+.menu-column md-list {
+    margin: 8px 0 0 0 !important;
+    padding: 0 0 0 0 !important;
+}
+
+.menu-column md-list-item {
+    border-right: 5px solid transparent;
+    margin: 0 0 0 0 !important;
+}
+.menu-column md-divider{
+    margin: 0 0 0 0 !important;
+}
+.menu-active-item {
+    border-right: 5px solid #fff !important;
+    background: rgba(0,0,0,0.3)!important;
+    color: #fff;
+}
 .dashboard-main-div {
-    background: url("../img/theme-01.jpg");
+    /*background: url("../img/theme-01.jpg");*/
     background-size: 100% 100%;
 }
 
@@ -74,21 +145,49 @@
     height: calc(100vh - 64px);
     background: transparent !important;
 }
-.menu-column p{
-    color: #fff;
+
+.menu-column p {
+    /*color: #fff;*/
     padding-right: 20%;
     text-align: right;
+    font-family: Al-Jazeera-Arabic-Bold;
 }
-.content-column{
+
+.content-column {
     height: calc(100vh - 100px);
 }
-.content-column :first-child{
+
+.content-column .content-column-box {
     height: 100%;
-    background: rgba(255,255,255,0.7)!important;
+    background: rgba(255, 255, 255, 0.7) !important;
 }
-.bg-tsp{
+
+.dashboard-card span {
+    text-align: center;
+}
+
+md-card md-card-title {
+    text-align: center;
+    width: 220px;
+    /*padding: 24px 100px 16px !important;*/
+}
+
+.dashboard-chart {
+    width: 50%;
+    height: 50vh;
+    background: #fff;
+}
+
+.bg-tsp {
     background: transparent !important;
 }
+
+.teacher-add-form md-input-container{
+    width: 100%;
+}
+
+
+
 /* Scroll bar Css*/
 
 /* For the "inset" look only */
@@ -121,5 +220,7 @@ html {
 }
 
 md-toast.md-default-theme .md-toast-content, md-toast .md-toast-content {
+    text-align: right;
     margin-top: 70px !important;
+    font-family: Al-Jazeera-Arabic-Bold;
 }

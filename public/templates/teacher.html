@@ -1,0 +1,38 @@
+<div class="dashboard-main-div"
+     ng-style="{'background-image':'url('+themes[8]+')'}">
+    <md-toolbar class="custom-toolbar">
+        <div class="md-toolbar-tools">
+            <md-list-item>
+                <img ng-src="{{'https://scontent.xx.fbcdn.net/hprofile-xfa1/v/t1.0-1/s100x100/10354686_10150004552801856_220367501106153455_n.jpg?oh=550d02a498e7c7305e6b936be935404a&oe=578B3E73'}}"
+                     class="md-avatar no-outline"
+                     ng-click="$mdOpenMenu($event)">
+            </md-list-item>
+            <span flex></span>
+            <h1 class="Al-Jazeera-Bold">نظام إدارة التعلم</h1>
+        </div>
+    </md-toolbar>
+    <md-content class="main-md-content">
+        <div layout="row">
+            <section flex="85" class="content-column" layout-padding>
+                <div ui-view name="TeacherContent" class="md-whiteframe-6dp content-column-box" layout-margin></div>
+            </section>
+            <section flex="15" class="menu-column">
+                <div layout-padding>
+                    <md-list layout-margin class="bg-opacity">
+                        <md-divider></md-divider>
+                        <md-list-item ui-sref-active="menu-active-item" ui-sref="teacher.dashboard"><p>لوحة القيادة</p></md-list-item>
+                        <md-divider></md-divider>
+                        <md-list-item ng-click="a()"><p>طلابي</p></md-list-item>
+                        <md-divider></md-divider>
+                        <md-list-item ng-click="a()"><p>دوراتي</p></md-list-item>
+                        <md-divider></md-divider>
+                        <md-list-item ng-click="a()"><p>مسابقة</p></md-list-item>
+                        <md-divider></md-divider>
+                        <md-list-item ng-click="a()"><p>ضبط</p></md-list-item>
+                        <md-divider></md-divider>
+                    </md-list>
+                </div>
+            </section>
+        </div>
+    </md-content>
+</div>
