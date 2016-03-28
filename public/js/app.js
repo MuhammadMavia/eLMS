@@ -1,5 +1,5 @@
 angular.module("Lms", ['ui.router', 'ngMaterial'])
-    .constant('serverRef', '')
+    .constant('serverRef', 'https://elms-serv.herokuapp.com')
     .run(function ($rootScope, $state) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             var loginData = localStorage.getItem("loginData");

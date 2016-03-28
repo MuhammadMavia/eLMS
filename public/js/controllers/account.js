@@ -1,11 +1,11 @@
 angular.module("Lms")
 
-    .controller('AccountCtrl', ['$http', '$scope', 'serverRef', 'Tools', '$mdDialog','$state', account]);
+    .controller('AccountCtrl', ['$http', '$scope', 'serverRef', 'Tools', '$mdDialog', '$state', account]);
 
-function account($http, $scope, serverRef, Tools, $mdDialog,$state) {
+function account($http, $scope, serverRef, Tools, $mdDialog, $state) {
     $scope.doLogin = function (user) {
         Tools.loader();
-        $http.post('/account/login', user).then(
+        $http.post(serverRef + '/account/login', user).then(
             function (success) {
                 $mdDialog.hide();
                 console.log(success);
@@ -25,7 +25,8 @@ function account($http, $scope, serverRef, Tools, $mdDialog,$state) {
         );
     };
     $scope.doRegister = function (user) {
-        $http.post('/account/signup', user).then(
+        Tools.loader();
+        $http.post(serverRef + '/account/signup', user).then(
             function (success) {
                 $mdDialog.hide();
                 console.log(success);
