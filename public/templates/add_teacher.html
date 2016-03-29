@@ -1,6 +1,6 @@
 <div layout="row" layout-align="end end" layout-wrap>
     <div class="md-whiteframe-6dp" flex="50" layout-padding>
-        <div class="teacher-add-form" layout="column" layout-align="center center" layout-wrap>
+        <form ng-submit="addTeacher(teacher)" class="teacher-add-form" layout="column" layout-align="center center" layout-wrap>
             <md-input-container class="md-block">
                 <label class="right-label">الاسم الاول</label>
                 <input type="text" required md-no-asterisk ng-model="teacher.firstName">
@@ -28,7 +28,7 @@
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">كلمه المرور</label>
-                <input equal type="password" required md-no-asterisk ng-model="user.password">
+                <input equal type="password" required md-no-asterisk ng-model="teacher.password">
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">تأكيد كلمة المرور</label>
@@ -37,6 +37,7 @@
                 <div ng-messages="confirmPassword.$error"
                      ng-messages="'Password does not match'"></div>
             </md-input-container>
-        </div>
+            <button class="md-button" value="submit">Submit</button>
+        </form>
     </div>
 </div>

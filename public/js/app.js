@@ -3,7 +3,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
     .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state) {
-        $rootScope.themes = [
+        var themes = [
             'http://www.computer-wallpaper-backgrounds.com/wallpaper/1024x768/backgrounds/fibre-lights-orange.jpg',
             'https://lh3.googleusercontent.com/-fc8aYvCPIS8/Trv3ered17I/AAAAAAAAGtg/dLUU15mB3Qc/bg_afternoon_1920x1200.resized.jpg',
             'https://lh5.ggpht.com/XTAJ29_VKGeTqmUnNA22Zu4_1PichxrGZPGiMXh-6YGmocEZ9GiMz0vhLgthkrED2A=h900',
@@ -16,28 +16,28 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
             'https://lh3.googleusercontent.com/-D-7x8XAVWwE/UO5ThB_KgvI/AAAAAAAALsI/HGqvgoPGvRk/w2048-h1364/Lake%2BTahoe%2BColors.jpg'
         ];
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-            var loginData = localStorage.getItem("loginData");
+            var loginData = JSON.parse(localStorage.getItem("loginData"));
             if (toState.loginCompulsory && !loginData) {
                 event.preventDefault();
                 $state.go("account.login")
             }
-            /*else if (!toState.loginCompulsory && loginData) {
-                event.preventDefault();
-                $state.go('admin.dashboard');
-            }*/
+            else {
+                $rootScope.myTheme = themes[loginData.theme];
+                if (toState.isAdmin && loginData.role !== 3) {
+                    event.preventDefault();
+                    $state.go("account.login")
+                }
+                else if (toState.isTeacher && loginData.role !== 2) {
+                    event.preventDefault();
+                    $state.go("account.login")
+                }
+                else if (toState.isStudent && loginData.role !== 1) {
+                    event.preventDefault();
+                    $state.go("account.login")
+                }
+            }
         })
     })
-    /* .factory("httpInterceptor", function () {
-     return {
-     request: function (config) {
-     var firebaseToken = localStorage.getItem("firebaseToken");
-     if (firebaseToken) {
-     config.url = config.url + "?firebaseToken=" + firebaseToken;
-     }
-     return config;
-     }
-     }
-     })*/
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('lms', {
@@ -69,53 +69,63 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
             /* Admin Routes */
 
             .state('admin', {
-                loginCompulsory: true,
                 url: '/admin',
                 abstract: true,
-                templateUrl: 'templates/admin.html'
+                templateUrl: 'templates/admin.html',
+                controller: 'AdminCtrl'
             })
             .state('admin.dashboard', {
                 url: '/dashboard',
+                isAdmin: true,
+                loginCompulsory: true,
                 views: {
                     AdminContent: {
-                        templateUrl: 'templates/dashboard.html'
+                        templateUrl: 'templates/dashboard.html',
+                        controller: 'AdminCtrl'
                     }
                 }
             })
             .state('admin.add_teacher', {
                 url: '/add_teacher',
+                isAdmin: true,
+                loginCompulsory: true,
                 views: {
                     AdminContent: {
-                        templateUrl: 'templates/add_teacher.html'
+                        templateUrl: 'templates/add_teacher.html',
+                        controller: 'AddTeacherCtrl'
                     }
                 }
             })
             /* Teacher Routes */
 
             .state('teacher', {
-                loginCompulsory: true,
                 url: '/teacher',
                 // abstract: true,
-                templateUrl: 'templates/teacher.html'
+                templateUrl: 'templates/teacher.html',
+                controller: 'TeacherCtrl'
             })
             .state('teacher.dashboard', {
                 url: '/teacher_dashboard',
+                loginCompulsory: true,
+                isTeacher: true,
                 views: {
                     TeacherContent: {
                         templateUrl: 'templates/teacher_dashboard.html'
                     }
                 }
             })
-            /* Teacher Routes */
+            /* Student Routes */
 
             .state('student', {
-                loginCompulsory: true,
                 url: '/student',
                 // abstract: true,
-                templateUrl: 'templates/student.html'
+                templateUrl: 'templates/student.html',
+                controller: 'TeacherCtrl'
             })
             .state('student.dashboard', {
                 url: '/student_dashboard',
+                loginCompulsory: true,
+                isStudent: true,
                 views: {
                     StudentContent: {
                         templateUrl: 'templates/student_dashboard.html'

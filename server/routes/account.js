@@ -5,54 +5,40 @@ var account = express.Router();
 var user;
 
 var usersSchema = new mongoose.Schema({
-    firstName: {type: String, required: true},
-    lastName: {type: String, required: true},
     profileImg: {type: String},
-    email: {type: String, required: true},
-    theme: {type: String},
-    password: {type: String, required: true},
-    progress: {type: Array},
-    sex: {type: Number, required: true},
-    tel: {type: Number, required: true},
-    role: {type: Number, default: 1},
-    createdOn: {type: Date, default: Date.now()},
-    courses: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses'}]},
-    quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]}
-});
-var socialUsersSchema = new mongoose.Schema({
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
+    email: {type: String, index: {unique: true}},
+    password: {type: String},
     progress: {type: Array},
-    profileImg: {type: String, required: true},
-    email: {type: String},
-    link: {type: String, required: true},
-    userID: {type: String, required: true},
-    theme: {type: String},
-    sex: {type: Number, required: true},
+    sex: {type: Number},
     tel: {type: Number},
     role: {type: Number, default: 1},
+    theme: {type: String, default: 1},
     createdOn: {type: Date, default: Date.now()},
     courses: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses'}]},
-    quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]}
+    quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]},
+    userID: {type: String},
+    link: {type: String}
+
 });
+
 var usersModel = mongoose.model("Users", usersSchema);
-var socialUsersModel = mongoose.model("SocialUsers", socialUsersSchema);
 exports.usersModel = usersModel;
-exports.usersModel = socialUsersModel;
 
 
 /* Social User Auth*/
-
 account.use('/socialUserAuth', function (req, res, next) {
-    socialUsersModel.findOne({userID: req.body.userID}, function (err, success) {
+    usersModel.findOne({userID: req.body.userID}, function (error, success) {
         success ? res.send({code: 1, user: success}) : next();
     });
 });
 
 account.post('/socialUserAuth', function (req, res) {
-    var user = new socialUsersModel(req.body);
+    var user = new usersModel(req.body);
     user.save(function (error, success) {
-        res.send(error || success);
+        console.log(error, success);
+        error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
     })
 });
 
