@@ -1,12 +1,59 @@
-<div class="dashboard-main-div"
-     ng-style="{'background-image':'url('+themes[8]+')'}">
+<div class="dashboard-main-div" ng-style="{'background-image':'url({{myTheme}})'}">
     <md-toolbar class="custom-toolbar">
         <div class="md-toolbar-tools">
-            <md-list-item>
-                <img ng-src="{{'https://scontent.xx.fbcdn.net/hprofile-xfa1/v/t1.0-1/s100x100/10354686_10150004552801856_220367501106153455_n.jpg?oh=550d02a498e7c7305e6b936be935404a&oe=578B3E73'}}"
-                     class="md-avatar no-outline"
-                     ng-click="$mdOpenMenu($event)">
-            </md-list-item>
+            <md-menu flex>
+                <md-list-item>
+                    <img ng-src="{{'https://scontent.xx.fbcdn.net/hprofile-xfa1/v/t1.0-1/s100x100/10354686_10150004552801856_220367501106153455_n.jpg?oh=550d02a498e7c7305e6b936be935404a&oe=578B3E73'}}"
+                         class="md-avatar no-outline"
+                         ng-click="$mdOpenMenu($event)">
+                </md-list-item>
+                <md-menu-content width="4">
+                    <md-list>
+
+                        <md-list-item ng-click="viewAdminDetails(admin)" class="md-2-line">
+                            <md-divider></md-divider>
+                            <ng-md-icon icon="face" class="fill-white md-avatar-icon"></ng-md-icon>
+                            <div class="md-list-item-text" layout="column">
+                                <h3>Your Profile</h3>
+                            </div>
+                        </md-list-item>
+
+                        <md-list-item ng-click="updateAdminProfile(admin)" class="md-2-line">
+                            <md-divider></md-divider>
+                            <ng-md-icon icon="format_align_right" class=" md-avatar-icon fill-white"></ng-md-icon>
+                            <div class="md-list-item-text" layout="column">
+                                <h3>Update Profile</h3>
+                            </div>
+                        </md-list-item>
+
+
+                        <md-list-item ng-show="company" ng-click="viewCompanyDetails(admin)" class="md-2-line">
+                            <md-divider></md-divider>
+                            <ng-md-icon icon="account_balance" class=" md-avatar-icon fill-white"></ng-md-icon>
+                            <div class="md-list-item-text" layout="column">
+                                <h3>Company</h3>
+                            </div>
+                        </md-list-item>
+
+                        <md-list-item ng-click="createCompanyForm()" class="md-2-line" ng-hide="company">
+                            <md-divider></md-divider>
+                            <ng-md-icon icon="account_balance" class=" md-avatar-icon fill-white"></ng-md-icon>
+                            <div class="md-list-item-text" layout="column">
+                                <h3>Create Company</h3>
+                            </div>
+                        </md-list-item>
+
+                        <md-list-item ng-click="doLogOut()" class="md-2-line">
+                            <md-divider></md-divider>
+                            <ng-md-icon icon="logout" class=" md-avatar-icon fill-white"></ng-md-icon>
+                            <div class="md-list-item-text" layout="column">
+                                <h3>Logout</h3>
+                            </div>
+                        </md-list-item>
+
+                    </md-list>
+                </md-menu-content>
+            </md-menu>
             <span flex></span>
             <h1 class="Al-Jazeera-Bold">نظام إدارة التعلم</h1>
         </div>

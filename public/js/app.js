@@ -1,20 +1,8 @@
 angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
-    // .constant('serverRef', 'https://elms-serv.herokuapp.com')
-    .constant('serverRef', '')
+    .constant('serverRef', 'https://elms-serv.herokuapp.com')
+    // .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
-    .run(function ($rootScope, $state) {
-        var themes = [
-            'http://www.computer-wallpaper-backgrounds.com/wallpaper/1024x768/backgrounds/fibre-lights-orange.jpg',
-            'https://lh3.googleusercontent.com/-fc8aYvCPIS8/Trv3ered17I/AAAAAAAAGtg/dLUU15mB3Qc/bg_afternoon_1920x1200.resized.jpg',
-            'https://lh5.ggpht.com/XTAJ29_VKGeTqmUnNA22Zu4_1PichxrGZPGiMXh-6YGmocEZ9GiMz0vhLgthkrED2A=h900',
-            'http://interfacelift.com/wallpaper/previews/01407_harboursunset_672x420.jpg',
-            'https://jamaluddinpak.files.wordpress.com/2015/04/bg_mon_1920x1200-resized.jpg',
-            'https://lh3.googleusercontent.com/-od86tFafGHc/Trv3fhC1G1I/AAAAAAAAGuM/Wn3V9Up77FE/bg_thu_1920x1200.resized.jpg',
-            'https://s-media-cache-ak0.pinimg.com/736x/bc/ed/d0/bcedd0355b09b5ddfab48249cd8718a3.jpg',
-            'https://lh4.googleusercontent.com/-yHeZ_0mg8cM/Trv3fogmWuI/AAAAAAAAGt4/jZM1653ELxY/bg_sun_1920x1200.resized.jpg',
-            'https://evetravel.files.wordpress.com/2012/02/vapor-sea-3.jpg',
-            'https://lh3.googleusercontent.com/-D-7x8XAVWwE/UO5ThB_KgvI/AAAAAAAALsI/HGqvgoPGvRk/w2048-h1364/Lake%2BTahoe%2BColors.jpg'
-        ];
+    .run(function ($rootScope, $state, Tools) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             var loginData = JSON.parse(localStorage.getItem("loginData"));
             if (toState.loginCompulsory && !loginData) {
@@ -22,7 +10,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                 $state.go("account.login")
             }
             else {
-                $rootScope.myTheme = themes[loginData.theme];
+                $rootScope.myTheme = Tools.themes[loginData.theme || 0];
                 if (toState.isAdmin && loginData.role !== 3) {
                     event.preventDefault();
                     $state.go("account.login")
@@ -66,6 +54,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                     }
                 }
             })
+
             /* Admin Routes */
 
             .state('admin', {
@@ -81,7 +70,18 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                 views: {
                     AdminContent: {
                         templateUrl: 'templates/dashboard.html',
-                        controller: 'AdminCtrl'
+                        // controller: 'AdminCtrl'
+                    }
+                }
+            })
+            .state('admin.update_info', {
+                url: '/admin_update_info',
+                isAdmin: true,
+                loginCompulsory: true,
+                views: {
+                    AdminContent: {
+                        templateUrl: 'templates/update_info.html',
+                        // controller: 'AdminCtrl'
                     }
                 }
             })
@@ -96,6 +96,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                     }
                 }
             })
+
             /* Teacher Routes */
 
             .state('teacher', {
@@ -114,6 +115,16 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                     }
                 }
             })
+            .state('teacher.update_info', {
+                url: '/teacher_update_info',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/update_info.html'
+                    }
+                }
+            })
             /* Student Routes */
 
             .state('student', {
@@ -129,6 +140,16 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                 views: {
                     StudentContent: {
                         templateUrl: 'templates/student_dashboard.html'
+                    }
+                }
+            })
+            .state('student.update_info', {
+                url: '/student_update_info',
+                loginCompulsory: true,
+                isStudent: true,
+                views: {
+                    StudentContent: {
+                        templateUrl: 'templates/update_info.html'
                     }
                 }
             });

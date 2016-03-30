@@ -27,6 +27,15 @@ var usersModel = mongoose.model("Users", usersSchema);
 exports.usersModel = usersModel;
 
 
+/* Get Current User Data*/
+account.get('/currentUserData', function (req, res) {
+    console.log(req.query.data);
+    usersModel.findOne({$or: [{email: req.query.data}, {userID: req.query.data}]}, function (error, success) {
+        error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
+        console.log(success)
+    })
+});
+
 /* Social User Auth*/
 account.use('/socialUserAuth', function (req, res, next) {
     usersModel.findOne({userID: req.body.userID}, function (error, success) {
@@ -81,5 +90,20 @@ account.post("/signup", function (req, res) {
         res.send(err || success)
     });
 });
+
+/* Update Info */
+
+account.post('/updateInfo', function (req, res) {
+    usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
+        res.send(err || success);
+    });
+});
+
+account.post('/changeTheme', function (req, res) {
+    usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
+        res.send(err || success);
+    });
+});
+
 
 module.exports = account;

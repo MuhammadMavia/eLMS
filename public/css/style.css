@@ -103,7 +103,7 @@
 
 /* Dashboard CSS */
 .custom-toolbar {
-    background: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.7) !important;
     /*border-bottom: 0.1pt solid #fff;*/
 }
 
@@ -128,14 +128,17 @@
     border-right: 5px solid transparent;
     margin: 0 0 0 0 !important;
 }
-.menu-column md-divider{
+
+.menu-column md-divider {
     margin: 0 0 0 0 !important;
 }
+
 .menu-active-item {
     border-right: 5px solid #fff !important;
-    background: rgba(0,0,0,0.3)!important;
+    background: rgba(0, 0, 0, 0.3) !important;
     color: #fff;
 }
+
 .dashboard-main-div {
     /*background: url("../img/theme-01.jpg");*/
     background-size: 100% 100%;
@@ -182,11 +185,32 @@ md-card md-card-title {
     background: transparent !important;
 }
 
-.teacher-add-form md-input-container{
+.teacher-add-form md-input-container {
     width: 100%;
 }
 
+.theme-thumbnail {
+    height: 140px;
+    width: 200px;
+    text-align: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.theme-thumbnail ng-md-icon{
+    display: none;
+}
+.thumbnail-box{
+    /*height: 500px;*/
+}
+.theme-thumbnail-select {
+    border: 5px solid #fff;
+}
 
+.theme-thumbnail-select ng-md-icon{
+    display: inline-block;
+    margin-top: 15px;
+    fill: #fff;
+}
 
 /* Scroll bar Css*/
 

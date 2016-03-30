@@ -1,0 +1,18 @@
+<md-dialog aria-label="Themes" layout-padding>
+    <md-dialog-content style="max-width:800px;max-height:810px;">
+        <div class="thumbnail-box" layout="row" layout-align="center center" layout-padding layout-margin
+             layout-wrap>
+            <md-button aria-label="theme" ng-class="{'theme-thumbnail-select':$index === themes.indexOf(myTheme)}"
+                       ng-repeat="theme in themes"
+                       ng-click="changeThemeClick($index)"
+                       class="theme-thumbnail no-outline" ng-style="{'background-image':'url({{theme}})'}">
+                <ng-md-icon icon="done" size="100"></ng-md-icon>
+            </md-button>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <md-button ng-click="changeThemeSubmit(themes.indexOf(myTheme),true)" class="md-raised bg-opacity">OK
+        </md-button>
+        <md-button ng-click="changeThemeSubmit()">Cancel</md-button>
+    </md-dialog-actions>
+</md-dialog>
