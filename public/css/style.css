@@ -36,13 +36,27 @@
     font-family: Al-Jazeera-Arabic-Regular !important;
 }
 
+.md-toolbar-tools h1{
+    color: #fff!important;
+}
+
 /* LOGIN CSS*/
 
-.login-main {
-    background: url("../img/login-bg.jpg");
+.account-bg {
+    background: url("https://wallpaperscraft.com/image/macbook_apple_laptop_louis_vuitton_99088_3840x2400.jpg");
+    /*background: #eceae3;*/
     background-size: 100% 100%;
-    height: calc(100vh - 64px);
+    height: calc(100vh);
     width: 100%;
+}
+
+.login-main {
+    margin-top: 10vh;
+    /*    !*background: url("../img/login-bg.jpg");*!
+        !*background: #eceae3;*!
+        background-size: 100% 100%;
+        height: calc(100vh - 64px);
+        width: 100%;*/
 }
 
 .login-form {
@@ -53,10 +67,11 @@
 }
 
 .register-main {
-    background: url("../img/login-bg.jpg");
+    /*!*background: url("../img/login-bg.jpg");*!
+    background: #eceae3;
     background-size: 100% 100%;
     height: calc(100vh - 64px);
-    width: 100%;
+    width: 100%;*/
 }
 
 .register-form {
@@ -68,6 +83,7 @@
 
 .submit-btn {
     width: 80%;
+    font-family: Al-Jazeera-Arabic-Bold;
 }
 
 .social-login-btn {
@@ -77,26 +93,26 @@
 }
 
 .social-login-png {
-    border-radius: 5px !important;
+    border-radius: 15px !important;
     /*width: 40%;*/
     height: 25px;
 }
 
 .login-main h3 {
-    color: #fff;
+    /*color: #000 ;*/
     text-align: center;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 
 .register-main h3 {
-    color: #fff;
+    /*color: #fff;*/
     text-align: center;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 
 .right-label {
     font-family: Al-Jazeera !important;
-    color: #fff;
+    color: #000;
     left: auto !important;
     right: 0 !important;
 }
@@ -109,6 +125,15 @@
 
 .bg-opacity {
     background: rgba(255, 255, 255, 0.7) !important;
+    color: #000 !important;
+}
+
+.profile-img {
+    border-radius: 10px;
+    height: 15vh;
+    width: 15vh;
+    outline: none;
+    cursor: pointer;
 }
 
 .no-outline {
@@ -196,17 +221,20 @@ md-card md-card-title {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-.theme-thumbnail ng-md-icon{
+
+.theme-thumbnail ng-md-icon {
     display: none;
 }
-.thumbnail-box{
+
+.thumbnail-box {
     /*height: 500px;*/
 }
+
 .theme-thumbnail-select {
     border: 5px solid #fff;
 }
 
-.theme-thumbnail-select ng-md-icon{
+.theme-thumbnail-select ng-md-icon {
     display: inline-block;
     margin-top: 15px;
     fill: #fff;

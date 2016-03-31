@@ -1,5 +1,5 @@
 <div layout-wrap layout-padding layout="row" layout-align="center center" class="login-main">
-    <md-content layout-padding flex-gt-lg="20" flex-gt-md="30" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50" class="md-whiteframe-4dp login-form">
+    <md-content layout-padding flex-gt-lg="20" flex-gt-md="30" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50" class="md-whiteframe-4dp bg-opacity login-form">
         <form ng-submit="doLogin(user)">
             <md-input-container class="md-block">
                 <label class="right-label">البريد الإلكتروني</label>
@@ -19,10 +19,10 @@
 
 
             <div layout="row" layout-wrap layout-align="center center">
-                <md-button class="social-login-btn" ng-click="socialLogin('facebook')">
+                <md-button aria-label="Facebook" class="social-login-btn" ng-click="socialLogin('facebook')">
                     <img src="../img/fb_login.png" class="md-button social-login-png">
                 </md-button>
-                <md-button class="social-login-btn" ng-click="socialLogin('google')">
+                <md-button aria-label="Google" class="social-login-btn" ng-click="socialLogin('google')">
                     <img src="../img/loginGoogle.png" class="md-button social-login-png">
                 </md-button>
             </div>

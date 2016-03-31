@@ -29,11 +29,33 @@ exports.usersModel = usersModel;
 
 /* Get Current User Data*/
 account.get('/currentUserData', function (req, res) {
-    console.log(req.query.data);
     usersModel.findOne({$or: [{email: req.query.data}, {userID: req.query.data}]}, function (error, success) {
         error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
-        console.log(success)
     })
+});
+
+
+/* Get All Users */
+account.get('/usersFind', function (req, res) {
+    usersModel.find({role: req.query.data}, function (err, success) {
+        res.send(err || success);
+    }).skip(0).limit(50);
+});
+
+/* Update Profile Image */
+account.post('/updateProfileImg', function (req, res) {
+    console.log(req.body._id);
+    usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
+        res.send(err || success);
+    });
+});
+
+/* Update Profile */
+account.post('/updateProfile', function (req, res) {
+    console.log(req.body._id);
+    usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
+        res.send(err || success);
+    });
 });
 
 /* Social User Auth*/
@@ -104,6 +126,5 @@ account.post('/changeTheme', function (req, res) {
         res.send(err || success);
     });
 });
-
 
 module.exports = account;

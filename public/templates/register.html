@@ -1,6 +1,6 @@
 <div layout-wrap layout-padding layout="row" layout-align="center center" class="register-main">
     <md-content layout-padding flex-gt-lg="20" flex-gt-md="35" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50"
-                class="md-whiteframe-4dp register-form">
+                class="md-whiteframe-4dp register-form bg-opacity">
         <form ng-submit="doRegister(user)">
             <md-input-container class="md-block">
                 <label class="right-label">الاسم الاول</label>
@@ -15,11 +15,12 @@
                 <input type="email" required md-no-asterisk ng-model="user.email">
             </md-input-container>
             <md-input-container class="md-block">
-                <md-select class="right-label" placeholder="جنس" ng-model="user.sex">
-                    <md-option ng-value="1">ذكر</md-option>
-                    <md-option ng-value="2">أنثى</md-option>
-                    <md-option ng-value="0">آخر</md-option>
-                </md-select>
+                <label class="right-label">جنس</label>
+                <md-radio-group class="Al-Jazeera-Bold" ng-model="user.sex" layout="row" layout-align="center center">
+                    <md-radio-button value="1" class="md-primary">ذكر</md-radio-button>
+                    <md-radio-button value="2" class="md-primary"> أنثى</md-radio-button>
+                    <md-radio-button value="3" class="md-primary">آخر</md-radio-button>
+                </md-radio-group>
             </md-input-container>
 
             <md-input-container class="md-block">
@@ -46,10 +47,10 @@
             <h3>أو</h3>
 
             <div layout="row" layout-wrap layout-align="center center">
-                <md-button class="social-login-btn" ng-click="socialLogin('facebook')">
+                <md-button aria-label="Facebook" class="social-login-btn" ng-click="socialLogin('facebook')">
                     <img src="../img/fb_login.png" class="md-button social-login-png">
                 </md-button>
-                <md-button class="social-login-btn" ng-click="socialLogin('google')">
+                <md-button aria-label="Google" class="social-login-btn" ng-click="socialLogin('google')">
                     <img src="../img/loginGoogle.png" class="md-button social-login-png">
                 </md-button>
             </div>

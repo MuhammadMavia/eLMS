@@ -3,7 +3,7 @@
         <div class="md-toolbar-tools">
             <md-menu flex>
                 <md-list-item>
-                    <img ng-src="{{'https://scontent.xx.fbcdn.net/hprofile-xfa1/v/t1.0-1/s100x100/10354686_10150004552801856_220367501106153455_n.jpg?oh=550d02a498e7c7305e6b936be935404a&oe=578B3E73'}}"
+                    <img ng-src="{{$root.profileImg || currentUser.profileImg || defaultProfileImg}}"
                          class="md-avatar no-outline"
                          ng-click="$mdOpenMenu($event)">
                 </md-list-item>
@@ -41,12 +41,12 @@
             </section>
             <section flex="15" class="menu-column">
                 <div layout-padding>
-                    <md-list layout-margin class="bg-opacity">
+                    <md-list layout-margin class="bg-opacity background">
                         <md-divider></md-divider>
                         <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.dashboard"><p>لوحة القيادة</p>
                         </md-list-item>
                         <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>معلمون</p></md-list-item>
+                        <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.teachers" class="background md-raised"><p>معلمون</p></md-list-item>
                         <md-divider></md-divider>
                         <md-list-item ng-click="a()"><p>الطلاب</p></md-list-item>
                         <md-divider></md-divider>
@@ -57,7 +57,7 @@
                         <md-divider></md-divider>
                         <md-list-item ng-click="changeTheme()"><p>موضوع</p></md-list-item>
                         <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>مستخدم</p></md-list-item>
+                        <md-list-item ng-click="newUser = currentUser;" ui-sref-active="menu-active-item" ui-sref="admin.update_info"><p>تحديث الملف</p></md-list-item>
                         <md-divider></md-divider>
                         <md-list-item ng-click="a()"><p>ضبط</p></md-list-item>
                         <md-divider></md-divider>

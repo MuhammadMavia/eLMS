@@ -1,5 +1,5 @@
 angular.module("Lms")
-    .controller('ThemeCtrl', function ($http, $scope, serverRef, Tools, $rootScope, $location, firebaseRef, CheckUserRole) {
+    .controller('ThemeCtrl', function (Cropper, $http, $scope, serverRef, Tools, $rootScope, $location, firebaseRef, CheckUserRole) {
         $scope.themes = Tools.themes;
         $scope.myTheme = $rootScope.myTheme;
         $scope.changeTheme = Tools.changeTheme;
@@ -8,4 +8,5 @@ angular.module("Lms")
             $scope.myTheme = $scope.themes[index];
         };
         $scope.changeThemeSubmit = Tools.changeThemeSubmit;
+        $scope.uploadProfileImg = Cropper.uploadProfileImg;
     });

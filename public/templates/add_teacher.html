@@ -1,5 +1,5 @@
 <div layout="row" layout-align="center center" layout-wrap>
-    <div class="md-whiteframe-6dp bg-opacity" flex="50" layout-padding>
+    <div class="" flex-gt-sm="100" flex-gt-md="50" flex-gt-sm-initial="100" flex-gt-xs="100" layout-padding>
         <form ng-submit="addTeacher(teacher)" class="teacher-add-form" layout="column" layout-align="center center" layout-wrap>
             <md-input-container class="md-block">
                 <label class="right-label">الاسم الاول</label>
@@ -15,16 +15,18 @@
                 <input type="email" required md-no-asterisk ng-model="teacher.email">
             </md-input-container>
 
-            <md-radio-group ng-model="teacher.sex" layout="row">
-                <md-radio-button value="1" class="md-primary">ذكر</md-radio-button>
-                <md-radio-button value="2" class="md-primary"> أنثى</md-radio-button>
-                <md-radio-button value="3" class="md-primary">آخر</md-radio-button>
-            </md-radio-group>
-
+            <md-input-container class="md-block">
+                <label class="right-label">جنس</label><br><br>
+                <md-radio-group class="Al-Jazeera-Bold" ng-model="teacher.sex" layout="row" layout-align="end end" layout-wrap="">
+                    <md-radio-button value="1" class="md-primary">ذكر</md-radio-button>
+                    <md-radio-button value="2" class="md-primary"> أنثى</md-radio-button>
+                    <md-radio-button value="3" class="md-primary">آخر</md-radio-button>
+                </md-radio-group>
+            </md-input-container>
 
             <md-input-container class="md-block">
                 <label class="right-label">هاتف</label>
-                <input type="text" required md-no-asterisk ng-model="user.tel">
+                <input type="text" required md-no-asterisk ng-model="teacher.tel">
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">كلمه المرور</label>
@@ -37,7 +39,7 @@
                 <div ng-messages="confirmPassword.$error"
                      ng-messages="'Password does not match'"></div>
             </md-input-container>
-            <button class="md-button" value="submit">Submit</button>
+            <button class="md-button md-raised submit-btn md-primary" value="submit">خلق</button>
         </form>
     </div>
 </div>

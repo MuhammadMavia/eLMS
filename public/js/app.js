@@ -1,15 +1,16 @@
-angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
+angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angular-img-cropper'])
     .constant('serverRef', 'https://elms-serv.herokuapp.com')
     // .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state, Tools) {
+        $rootScope.defaultProfileImg = 'https://cdnil1.fiverrcdn.com/photos/20653442/original/1449238862808_facebook20151204-17124-1d8o6tw.jpg?1449238862';
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             var loginData = JSON.parse(localStorage.getItem("loginData"));
             if (toState.loginCompulsory && !loginData) {
                 event.preventDefault();
                 $state.go("account.login")
             }
-            else {
+            else if(loginData){
                 $rootScope.myTheme = Tools.themes[loginData.theme || 0];
                 if (toState.isAdmin && loginData.role !== 3) {
                     event.preventDefault();
@@ -26,7 +27,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
             }
         })
     })
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
         $stateProvider
             .state('lms', {
                 url: '/',
@@ -96,6 +97,16 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                     }
                 }
             })
+            .state('admin.teachers', {
+                url: '/admin_teachers',
+                isAdmin: true,
+                loginCompulsory: true,
+                views: {
+                    AdminContent: {
+                        templateUrl: 'templates/teachers.html'
+                    }
+                }
+            })
 
             /* Teacher Routes */
 
@@ -131,7 +142,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                 url: '/student',
                 // abstract: true,
                 templateUrl: 'templates/student.html',
-                controller: 'TeacherCtrl'
+                controller: 'StudentCtrl'
             })
             .state('student.dashboard', {
                 url: '/student_dashboard',
@@ -154,6 +165,31 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons'])
                 }
             });
 
-        // $urlRouterProvider.otherwise('/account/register')
-        $urlRouterProvider.otherwise('/student/student_dashboard')
+        $urlRouterProvider.otherwise('/account/register');
+        /*$urlRouterProvider.otherwise('/student/student_dashboard');
+        $mdThemingProvider.definePalette('md-primary', {
+            '50': '000',
+            '100': '000',
+            '200': '000',
+            '300': '000',
+            '400': '000',
+            '500': '000',
+            '600': '000',
+            '700': '000',
+            '800': '000',
+            '900': '000',
+            'A100': '000',
+            'A200': '000',
+            'A400': '000',
+            'A700': '000',
+            'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                // on this palette should be dark or light
+            'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+                '200', '300', '400', 'A100'],
+            'contrastLightColors': undefined    // could also specify this if default was 'dark'
+        });
+        $mdThemingProvider.theme('default')
+            .primaryPalette('md-primary')
+            .backgroundPalette('md-primary')*/
+
     });
