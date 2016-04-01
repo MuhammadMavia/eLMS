@@ -1,42 +1,61 @@
 <div layout-wrap layout-padding layout="row" layout-align="center center" class="register-main">
     <md-content layout-padding flex-gt-lg="20" flex-gt-md="35" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50"
                 class="md-whiteframe-4dp register-form bg-opacity">
-        <form ng-submit="doRegister(user)">
+        <form name="registerForm" ng-submit="doRegister(user)">
             <md-input-container class="md-block">
                 <label class="right-label">الاسم الاول</label>
-                <input type="text" required md-no-asterisk ng-model="user.firstName">
+                <input name="firstName" type="text" required md-no-asterisk ng-model="user.firstName">
+                <div ng-messages="registerForm.firstName.$error">
+                    <div ng-message="required">مطلوب الاسم الأول</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">اسم العائلة</label>
-                <input type="text" required md-no-asterisk ng-model="user.lastName">
+                <input name="lastName" type="text" required md-no-asterisk ng-model="user.lastName">
+                <div ng-messages="registerForm.lastName.$error">
+                    <div ng-message="required">مطلوب اسم العائلة</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">البريد الإلكتروني</label>
-                <input type="email" required md-no-asterisk ng-model="user.email">
+                <input name="email" type="email" required md-no-asterisk ng-model="user.email">
+                <div ng-messages="registerForm.email.$error">
+                    <div ng-message="required">مطلوب البريد الإلكتروني</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">جنس</label>
-                <md-radio-group class="Al-Jazeera-Bold" ng-model="user.sex" layout="row" layout-align="center center">
+                <md-radio-group name="sex" required class="Al-Jazeera-Bold" ng-model="user.sex" layout="row" layout-align="center center">
                     <md-radio-button value="1" class="md-primary">ذكر</md-radio-button>
                     <md-radio-button value="2" class="md-primary"> أنثى</md-radio-button>
                     <md-radio-button value="3" class="md-primary">آخر</md-radio-button>
                 </md-radio-group>
+                <div ng-messages="registerForm.sex.$error">
+                    <div ng-message="required">جنس</div>
+                </div>
             </md-input-container>
 
             <md-input-container class="md-block">
                 <label class="right-label">هاتف</label>
-                <input type="text" required md-no-asterisk ng-model="user.tel">
+                <input name="tel" type="text" required md-no-asterisk ng-model="user.tel">
+                <div ng-messages="registerForm.tel.$error">
+                    <div ng-message="required">مطلوب الهاتف</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">كلمه المرور</label>
-                <input equal type="password" required md-no-asterisk ng-model="user.password">
+                <input name="password" type="password" required md-no-asterisk ng-model="user.password">
+                <div ng-messages="registerForm.password.$error">
+                    <div ng-message="required">كلمة المرور مطلوبة</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">تأكيد كلمة المرور</label>
-                <input compare-to="user.password" type="password" required md-no-asterisk
-                       ng-model="user.confirmPassword" name="confirmPassword">
-                <div ng-messages="confirmPassword.$error"
-                     ng-messages="'Password does not match'"></div>
+                <input compare-to="user.password" type="password" required md-no-asterisk ng-model="user.confirmPassword" name="confirmPassword">
+                <div ng-messages="registerForm.confirmPassword.$error">
+                    <!--<div ng-message="required">كلمة المرور غير مطابقين</div>-->
+                    <div ng-message="compareTo">كلمة المرور غير مطابقين</div>
+                </div>
             </md-input-container>
 
 

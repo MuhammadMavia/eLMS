@@ -1,12 +1,12 @@
-var compareTo = function() {
+function compareToo() {
     return {
         require: "ngModel",
         scope: {
-            otherModelValue: "=compareTo"
+            otherModelValue: "=compareToo"
         },
         link: function(scope, element, attributes, ngModel) {
 
-            ngModel.$validators.compareTo = function(modelValue) {
+            ngModel.$validators.compareToo = function(modelValue) {
                 return modelValue == scope.otherModelValue;
             };
 
@@ -15,6 +15,30 @@ var compareTo = function() {
             });
         }
     };
-};
+}
+function compareTo() {
+    return {
+        require: "ngModel",
+        scope: {
+            otherModelValue: "=compareTo"
+        },
+        link: function(scope, element, attributes, ngModel) {
 
-angular.module("Lms").directive("compareTo", compareTo);
+            ngModel.$validators.compareTo = function(modelValue) {
+                console.log(modelValue);
+                if(modelValue) {
+                    return modelValue !== scope.otherModelValue;
+                } else {
+                    return true
+                }
+            };
+
+            scope.$watch("otherModelValue", function() {
+                ngModel.$validate();
+            });
+        }
+    };
+}
+angular.module("Lms")
+    .directive("compareToo", compareToo)
+    .directive("compareTo", compareTo);

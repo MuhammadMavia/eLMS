@@ -1,13 +1,20 @@
 <div layout-wrap layout-padding layout="row" layout-align="center center" class="login-main">
-    <md-content layout-padding flex-gt-lg="20" flex-gt-md="30" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50" class="md-whiteframe-4dp bg-opacity login-form">
-        <form ng-submit="doLogin(user)">
+    <md-content layout-padding flex-gt-lg="20" flex-gt-md="30" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50"
+                class="md-whiteframe-4dp bg-opacity login-form">
+        <form name="loginForm" ng-submit="doLogin(user)">
             <md-input-container class="md-block">
                 <label class="right-label">البريد الإلكتروني</label>
-                <input type="text" required md-no-asterisk ng-model="user.email">
+                <input name="email" type="text" required md-no-asterisk ng-model="user.email">
+                <div ng-messages="loginForm.email.$error">
+                    <div ng-message="required">مطلوب البريد الإلكتروني</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block">
                 <label class="right-label">كلمه المرور</label>
-                <input type="password" required md-no-asterisk ng-model="user.password">
+                <input name="password" type="password" required md-no-asterisk ng-model="user.password">
+                <div ng-messages="loginForm.password.$error">
+                    <div ng-message="required">كلمة المرور مطلوبة</div>
+                </div>
             </md-input-container>
 
 

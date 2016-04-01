@@ -12,6 +12,10 @@ function admin($http, $scope, serverRef, Tools, $rootScope, $location, firebaseR
         $scope.teachers = data.data;
         console.log($scope.teachers)
     });
+    CheckUserRole.studentsFind().then(function (data) {
+        $scope.students = data.data;
+        console.log($scope.students);
+    });
     $scope.changeTheme = Tools.changeTheme;
     $scope.changeProfileImg = Cropper.changeProfileImg;
     $scope.updateInfo = CheckUserRole.updateInfo

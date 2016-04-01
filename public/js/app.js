@@ -1,4 +1,4 @@
-angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angular-img-cropper'])
+angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angular-img-cropper','ngMessages'])
     .constant('serverRef', 'https://elms-serv.herokuapp.com')
     // .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
@@ -104,6 +104,16 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angul
                 views: {
                     AdminContent: {
                         templateUrl: 'templates/teachers.html'
+                    }
+                }
+            })
+            .state('admin.students', {
+                url: '/admin_students',
+                isAdmin: true,
+                loginCompulsory: true,
+                views: {
+                    AdminContent: {
+                        templateUrl: 'templates/students.html'
                     }
                 }
             })

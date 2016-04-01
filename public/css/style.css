@@ -36,8 +36,18 @@
     font-family: Al-Jazeera-Arabic-Regular !important;
 }
 
-.md-toolbar-tools h1{
-    color: #fff!important;
+.md-toolbar-tools{
+    color: #000!important;
+}
+
+.md-toolbar-tools span{
+    color: #000!important;
+    font-family: Al-Jazeera-Arabic-Regular;
+}
+
+md-input-container .md-auto-hide .md-input-message-animation:not(.ng-animate){
+    text-align: right !important;
+    font-family: Al-Jazeera-Arabic-Bold;
 }
 
 /* LOGIN CSS*/

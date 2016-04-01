@@ -1,35 +1,11 @@
 <div class="dashboard-main-div" ng-style="{'background-image':'url('+$root.myTheme+')'}">
     <md-toolbar class="custom-toolbar">
         <div class="md-toolbar-tools">
-            <md-menu flex>
-                <md-list-item>
-                    <img ng-src="{{$root.profileImg || currentUser.profileImg || defaultProfileImg}}"
-                         class="md-avatar no-outline"
-                         ng-click="$mdOpenMenu($event)">
-                </md-list-item>
-                <md-menu-content class="" width="4">
-                    <md-list layout-margin class="bg-opacity">
-                        <md-divider></md-divider>
-                        <md-list-item ui-sref="admin.update_info"><p>تحديث المعلومات الشخصية</p></md-list-item>
-                        <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>خروج</p></md-list-item>
-                        <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>الدورات</p></md-list-item>
-                        <md-divider></md-divider>
-                        <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.add_teacher"><p>إضافة معلم</p>
-                        </md-list-item>
-                        <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>مستخدم</p></md-list-item>
-                        <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>مستخدم</p></md-list-item>
-                        <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>ضبط</p></md-list-item>
-                        <md-divider></md-divider>
-                    </md-list>
-
-
-                </md-menu-content>
-            </md-menu>
+            <span>{{currentUser.firstName}} {{currentUser.lastName}}</span>
+            <md-list-item>
+                <img ng-src="{{$root.profileImg || currentUser.profileImg || defaultProfileImg}}"
+                     class="md-avatar no-outline">
+            </md-list-item>
             <span flex></span>
             <h1 class="Al-Jazeera-Bold">نظام إدارة التعلم</h1>
         </div>
@@ -46,9 +22,10 @@
                         <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.dashboard"><p>لوحة القيادة</p>
                         </md-list-item>
                         <md-divider></md-divider>
-                        <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.teachers" class="background md-raised"><p>معلمون</p></md-list-item>
+                        <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.teachers"
+                                      class="background md-raised"><p>معلمون</p></md-list-item>
                         <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>الطلاب</p></md-list-item>
+                        <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.students"><p>الطلاب</p></md-list-item>
                         <md-divider></md-divider>
                         <md-list-item ng-click="a()"><p>الدورات</p></md-list-item>
                         <md-divider></md-divider>
@@ -57,7 +34,8 @@
                         <md-divider></md-divider>
                         <md-list-item ng-click="changeTheme()"><p>موضوع</p></md-list-item>
                         <md-divider></md-divider>
-                        <md-list-item ng-click="newUser = currentUser;" ui-sref-active="menu-active-item" ui-sref="admin.update_info"><p>تحديث الملف</p></md-list-item>
+                        <md-list-item ng-click="newUser = currentUser;" ui-sref-active="menu-active-item"
+                                      ui-sref="admin.update_info"><p>تحديث الملف</p></md-list-item>
                         <md-divider></md-divider>
                         <md-list-item ng-click="a()"><p>ضبط</p></md-list-item>
                         <md-divider></md-divider>
