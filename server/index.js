@@ -11,7 +11,9 @@ var app = express();
 app.use(cors());
 app.use(bodyParser.json({limit: '500kb'}));
 var account = require('./routes/account');
+var courses = require('./routes/courses');
 app.use("/account", account);
+app.use("/courses", courses);
 app.use(express.static(path.join(__dirname,'../public')));
 
 

@@ -9,6 +9,7 @@ angular.module("Lms")
             var loginData = JSON.parse(localStorage.getItem('loginData'));
             $http.get(serverRef + '/account/currentUserData?data=' + (loginData.userID || loginData.email)).then(
                 function (success) {
+                    console.log(success.data.user);
                     deferred.resolve(success);
                 }
             );

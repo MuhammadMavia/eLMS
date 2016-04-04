@@ -1,12 +1,15 @@
 angular.module("Lms")
 
-    .controller('AdminCtrl', ['$http', '$scope', 'serverRef', 'Tools', '$rootScope', '$location', 'firebaseRef', 'CheckUserRole', 'Cropper', admin]);
+    .controller('AdminCtrl', ['CourseService', '$scope', 'serverRef', 'Tools', '$rootScope', '$location', 'firebaseRef', 'CheckUserRole', 'Cropper', admin]);
 
-function admin($http, $scope, serverRef, Tools, $rootScope, $location, firebaseRef, CheckUserRole, Cropper) {
+function admin(CourseService, $scope, serverRef, Tools, $rootScope, $location, firebaseRef, CheckUserRole, Cropper) {
     CheckUserRole.currentUserData().then(function (data) {
         $scope.currentUser = data.data.user;
         localStorage.setItem('loginData', JSON.stringify(data.data.user));
         console.log($scope.currentUser)
+    });
+    CourseService.getAllCourses().then(function (data) {
+        $scope.allCourses = data;
     });
     CheckUserRole.teachersFind().then(function (data) {
         $scope.teachers = data.data;

@@ -3,6 +3,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angul
     // .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state, Tools) {
+        $rootScope.categroies = ['Match',"English","Physics","Chemistry","Urdu","Arabic"];
         $rootScope.defaultProfileImg = 'https://cdnil1.fiverrcdn.com/photos/20653442/original/1449238862808_facebook20151204-17124-1d8o6tw.jpg?1449238862';
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             var loginData = JSON.parse(localStorage.getItem("loginData"));
@@ -75,6 +76,17 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angul
                     }
                 }
             })
+            .state('admin.courses', {
+                url: '/admin_courses',
+                isAdmin: true,
+                loginCompulsory: true,
+                views: {
+                    AdminContent: {
+                        templateUrl: 'templates/courses.html',
+                        // controller: 'AdminCtrl'
+                    }
+                }
+            })
             .state('admin.update_info', {
                 url: '/admin_update_info',
                 isAdmin: true,
@@ -136,6 +148,26 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angul
                     }
                 }
             })
+            .state('teacher.courses', {
+                url: '/teacher_courses',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/courses.html'
+                    }
+                }
+            })
+            .state('teacher.create_course', {
+                url: '/create_course',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/create_course.html'
+                    }
+                }
+            })
             .state('teacher.update_info', {
                 url: '/teacher_update_info',
                 loginCompulsory: true,
@@ -164,6 +196,16 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angul
                     }
                 }
             })
+            .state('student.courses', {
+                url: '/student_courses',
+                loginCompulsory: true,
+                isStudent: true,
+                views: {
+                    StudentContent: {
+                        templateUrl: 'templates/courses.html'
+                    }
+                }
+            })
             .state('student.update_info', {
                 url: '/student_update_info',
                 loginCompulsory: true,
@@ -175,7 +217,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angul
                 }
             });
 
-        $urlRouterProvider.otherwise('/account/register');
+        $urlRouterProvider.otherwise('/account/login');
         /*$urlRouterProvider.otherwise('/student/student_dashboard');
         $mdThemingProvider.definePalette('md-primary', {
             '50': '000',

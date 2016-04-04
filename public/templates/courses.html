@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!--{{allCourses|json}}-->
 
-</body>
-</html>
+<div>
+    <div layout="row" layout-align="center center" layout-wrap layout-padding style="overflow: auto;">
+
+
+        <div class="md-whiteframe-1dp course-card" layout-align="center center" layout="column" layout-padding
+             layout-margin
+             ng-repeat="course in allCourses track by $index">
+            <div class="md-headline">{{course.title}}</div>
+            <!--<div class="text-nowrap" layout-wrap>{{course.description | truncate : 150}}</div>-->
+            <div>
+                <md-button ng-click="joinCourse(course._id,currentUser._id)" class="md-button md-raised md-warn">
+                    انضم
+                </md-button>
+            </div>
+            <div>
+                <a>{{course.createdOn| date : medium}}</a> <a>تم إنشاؤها على</a>
+            </div>
+        </div>
+    </div>
+</div>

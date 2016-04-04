@@ -13,7 +13,7 @@
     <md-content class="main-md-content">
         <div layout="row">
             <section flex="85" class="content-column" layout-padding>
-                <div ui-view name="AdminContent" class="md-whiteframe-6dp content-column-box" layout-margin></div>
+                <div ui-view name="AdminContent" class="md-whiteframe-6dp content-column-box ui-view-content" layout-margin></div>
             </section>
             <section flex="15" class="menu-column">
                 <div layout-padding>
@@ -27,7 +27,7 @@
                         <md-divider></md-divider>
                         <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.students"><p>الطلاب</p></md-list-item>
                         <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>الدورات</p></md-list-item>
+                        <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.courses"><p>الدورات</p></md-list-item>
                         <md-divider></md-divider>
                         <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.add_teacher"><p>إضافة معلم</p>
                         </md-list-item>

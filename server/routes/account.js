@@ -1,31 +1,14 @@
 var express = require("express");
 var mongoose = require("mongoose");
+var userSchema = require("./schema");
 var bcrypt = require("bcrypt-nodejs");
+var usersModel = userSchema.usersModel;
 var account = express.Router();
 var user;
 
-var usersSchema = new mongoose.Schema({
-    profileImg: {type: String},
-    firstName: {type: String, required: true},
-    lastName: {type: String, required: true},
-    email: {type: String, index: {unique: true}},
-    password: {type: String},
-    progress: {type: Array},
-    sex: {type: Number},
-    tel: {type: Number},
-    role: {type: Number, default: 1},
-    theme: {type: String, default: 1},
-    createdOn: {type: Date, default: Date.now()},
-    courses: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses'}]},
-    quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]},
-    userID: {type: String},
-    link: {type: String}
 
-});
 
-var usersModel = mongoose.model("Users", usersSchema);
-exports.usersModel = usersModel;
-
+// var usersModel = mongoose.model("Users", usersSchema);
 
 /* Get Current User Data*/
 account.get('/currentUserData', function (req, res) {

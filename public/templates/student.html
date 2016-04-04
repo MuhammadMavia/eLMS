@@ -13,7 +13,7 @@
     <md-content class="main-md-content">
         <div layout="row">
             <section flex="85" class="content-column" layout-padding>
-                <div ui-view name="StudentContent" class="md-whiteframe-6dp content-column-box" layout-margin></div>
+                <div ui-view name="StudentContent" class="md-whiteframe-6dp content-column-box ui-view-content" layout-margin></div>
             </section>
             <section flex="15" class="menu-column">
                 <div layout-padding>
@@ -26,7 +26,10 @@
                         <md-divider></md-divider>
                         <md-list-item ng-click="a()"><p>الطلاب</p></md-list-item>
                         <md-divider></md-divider>
-                        <md-list-item ng-click="a()"><p>الدورات</p></md-list-item>
+                        <md-divider></md-divider>
+                        <md-list-item ui-sref-active="menu-active-item" ui-sref="student.courses" ng-click="fetchMyCourses()"><p>دورات انضم</p></md-list-item>
+                        <md-divider></md-divider>
+                        <md-list-item ui-sref-active="menu-active-item" ui-sref="student.courses"><p>الدورات</p></md-list-item>
                         <md-divider></md-divider>
                         <md-list-item ng-click="changeTheme()"><p>موضوع</p></md-list-item>
                         <md-divider></md-divider>
