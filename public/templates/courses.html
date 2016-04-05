@@ -4,7 +4,8 @@
     <div layout="row" layout-align="center center" layout-wrap layout-padding style="overflow: auto;">
 
 
-        <div class="md-whiteframe-1dp course-card" layout-align="center center" layout="column" layout-padding
+        <div ng-click="goToCourseDetail($index)" class="md-button md-whiteframe-1dp course-card"
+             layout-align="center center" layout="column" layout-padding
              layout-margin
              ng-repeat="course in allCourses track by $index">
             <div class="md-headline">{{course.title}}</div>
@@ -15,7 +16,7 @@
                 </md-button>
             </div>
             <div>
-                <a>{{course.createdOn| date : medium}}</a> <a>تم إنشاؤها على</a>
+                <!--<a>{{course.createdOn| date : medium}}</a> <a>تم إنشاؤها على</a>-->
             </div>
         </div>
     </div>

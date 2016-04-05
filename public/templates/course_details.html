@@ -1,0 +1,38 @@
+{{selectedCourse | json}}
+
+
+
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="حول مسار">
+        <md-content class="md-padding">
+            <h1 class="md-display-2 text-right">Tab One</h1>
+            <p class="md-subhead text-right">Title {{ selectedCourse.title }} </p>
+            <p class="md-subhead text-right">Category {{ selectedCourse.category }} </p>
+            <p class="md-subhead text-right">Year Of Study {{ $root.yearOfStudy[selectedCourse.yearOfStudy]}} </p>
+            <p class="md-subhead text-right">Students {{ selectedCourse.students.length }} </p>
+            <p class="md-subhead text-right">Lessons {{ selectedCourse.lessons.length }} </p>
+            <p class="md-caption text-right">
+                <b class="md-subhead">Description</b>
+            <p>{{ selectedCourse.description }}</p> </p>
+        </md-content>
+    </md-tab>
+    <md-tab label="فيديوهات">
+        <md-content class="md-padding">
+            <h1 class="md-display-2">Tab Two</h1>
+
+        </md-content>
+    </md-tab>
+    <md-tab label="قوات الدفاع الشعبي">
+        <md-content class="md-padding">
+            <h1 class="md-display-2">Tab Three</h1>
+        </md-content>
+    </md-tab>
+    <md-tab label="وثائق">
+        <md-content class="md-padding">
+            <h1 class="md-display-2">Tab Three</h1>
+        </md-content>
+    </md-tab>
+</md-tabs>
+
+
+

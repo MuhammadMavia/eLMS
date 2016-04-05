@@ -1,8 +1,9 @@
 angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angular-img-cropper','ngMessages'])
-    .constant('serverRef', 'https://elms-serv.herokuapp.com')
-    // .constant('serverRef', '')
+    // .constant('serverRef', 'https://elms-serv.herokuapp.com')
+    .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state, Tools) {
+        $rootScope.yearOfStudy = ['1st Year','2nd Year','3rd Year','4th Year',];
         $rootScope.categroies = ['Match',"English","Physics","Chemistry","Urdu","Arabic"];
         $rootScope.defaultProfileImg = 'https://cdnil1.fiverrcdn.com/photos/20653442/original/1449238862808_facebook20151204-17124-1d8o6tw.jpg?1449238862';
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
@@ -145,6 +146,26 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons','angul
                 views: {
                     TeacherContent: {
                         templateUrl: 'templates/teacher_dashboard.html'
+                    }
+                }
+            })
+            .state('teacher.course_details', {
+                url: '/teacher_course_details',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/course_details.html'
+                    }
+                }
+            })
+            .state('teacher.create_lesson', {
+                url: '/create_lesson',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/create_lesson.html'
                     }
                 }
             })

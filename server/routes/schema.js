@@ -34,13 +34,6 @@
  };
  */
 
-var lessons = {
-    title: {type: String},
-    courseID: {type: String},
-    description: {type: String},
-    documents: {type: String},
-    videos: {type: Array},
-};
 
 var quizzes = {
     title: {type: String},
@@ -76,7 +69,7 @@ exports.usersModel = mongoose.model("Users", usersSchema);
 
 
 var coursesSchema = new mongoose.Schema({
-     _creator: {type: String, ref: "Users"},
+    // _creator: {type: String, ref: "Users"},
     title: {type: String, required: true},
     description: {type: String, required: true},
     creatorID: {type: String, required: true},
@@ -95,3 +88,14 @@ var coursesSchema = new mongoose.Schema({
 usersSchema.plugin(uniqueValidator);
 coursesSchema.plugin(uniqueValidator);
 exports.coursesModel = mongoose.model("Courses", coursesSchema);
+
+
+var lessonsSchema = new mongoose.Schema({
+    title: {type: String, required: true},
+    courseID: {type: String, required: true},
+    creatorID: {type: String, required: true},
+    description: {type: String, required: true},
+    documents: {type: String},
+    videos: {type: Array}
+});
+exports.lessonsModel = mongoose.model("Lessons", lessonsSchema);

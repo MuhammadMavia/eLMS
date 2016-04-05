@@ -5,27 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e951f39c-7c38-4509-ae21-4a5eaaff41b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/services/course_service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/create_course.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/routes/courses.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Pana.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Pana.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/services/lesson_service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/course_details.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/create_lesson.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/routes/lessons.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/admin.js" afterPath="$PROJECT_DIR$/public/js/controllers/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/student.js" afterPath="$PROJECT_DIR$/public/js/controllers/student.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/teacher.js" afterPath="$PROJECT_DIR$/public/js/controllers/teacher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directive.js" afterPath="$PROJECT_DIR$/public/js/directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/services/check_user_role.js" afterPath="$PROJECT_DIR$/public/js/services/check_user_role.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/admin.html" afterPath="$PROJECT_DIR$/public/templates/admin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/courses.html" afterPath="$PROJECT_DIR$/public/templates/courses.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/register.html" afterPath="$PROJECT_DIR$/public/templates/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/student.html" afterPath="$PROJECT_DIR$/public/templates/student.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/teacher.html" afterPath="$PROJECT_DIR$/public/templates/teacher.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/index.js" afterPath="$PROJECT_DIR$/server/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/account.js" afterPath="$PROJECT_DIR$/server/routes/account.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/schema.js" afterPath="$PROJECT_DIR$/server/routes/schema.js" />
     </list>
     <ignored path="eLMS.iws" />
@@ -47,23 +37,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/index.js">
+      <file leaf-file-name="courses.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/courses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="462">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courses.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/courses.html">
+      <file leaf-file-name="create_lesson.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/templates/create_lesson.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="123">
+              <caret line="75" column="97" selection-start-line="75" selection-start-column="97" selection-end-line="75" selection-end-column="97" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#4380#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,111 +65,106 @@
       <file leaf-file-name="courses.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/courses.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="786">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".bowerrc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <file leaf-file-name="course_details.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/course_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="140">
+              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state relative-caret-position="838">
+              <caret line="240" column="52" selection-start-line="240" selection-start-column="39" selection-end-line="240" selection-end-column="52" />
               <folding>
-                <element signature="e#665#1554#0" expanded="false" />
-                <element signature="e#1692#1783#0" expanded="false" />
-                <element signature="e#1815#1992#0" expanded="false" />
-                <element signature="e#2030#2239#0" expanded="false" />
-                <element signature="e#2280#2495#0" expanded="false" />
-                <element signature="e#2558#2729#0" expanded="false" />
-                <element signature="e#2769#3106#0" expanded="false" />
-                <element signature="e#3144#3483#0" expanded="false" />
-                <element signature="e#3525#3872#0" expanded="false" />
-                <element signature="e#3914#4257#0" expanded="false" />
-                <element signature="e#4296#4585#0" expanded="false" />
-                <element signature="e#4624#4913#0" expanded="false" />
-                <element signature="e#4980#5160#0" expanded="false" />
-                <element signature="e#5202#5507#0" expanded="false" />
-                <element signature="e#5547#5840#0" expanded="false" />
-                <element signature="e#5886#6183#0" expanded="false" />
-                <element signature="e#6227#6528#0" expanded="false" />
-                <element signature="e#6594#6774#0" expanded="false" />
-                <element signature="e#6816#7121#0" expanded="false" />
-                <element signature="e#7161#7454#0" expanded="false" />
-                <element signature="e#7498#7799#0" expanded="false" />
-                <marker date="1459783731628" expanded="false" signature="7984:8782" placeholder="{&quot;50&quot;: '000'...}" />
+                <element signature="e#746#1635#0" expanded="false" />
+                <element signature="e#1896#2073#0" expanded="false" />
+                <element signature="e#2111#2320#0" expanded="false" />
+                <element signature="e#2361#2576#0" expanded="false" />
+                <element signature="e#2639#2810#0" expanded="false" />
+                <element signature="e#2850#3187#0" expanded="false" />
+                <element signature="e#3225#3564#0" expanded="false" />
+                <element signature="e#3606#3953#0" expanded="false" />
+                <element signature="e#3995#4338#0" expanded="false" />
+                <element signature="e#4377#4666#0" expanded="false" />
+                <element signature="e#4705#4994#0" expanded="false" />
+                <element signature="e#5061#5241#0" expanded="false" />
+                <element signature="e#5283#5588#0" expanded="false" />
+                <element signature="e#5635#5942#0" expanded="false" />
+                <element signature="e#5988#6285#0" expanded="false" />
+                <element signature="e#6325#6618#0" expanded="false" />
+                <element signature="e#6664#6961#0" expanded="false" />
+                <element signature="e#7005#7306#0" expanded="false" />
+                <element signature="e#7372#7552#0" expanded="false" />
+                <element signature="e#7594#7899#0" expanded="false" />
+                <element signature="e#7939#8232#0" expanded="false" />
+                <element signature="e#8276#8577#0" expanded="false" />
+                <marker date="1459857992533" expanded="false" signature="8762:9560" placeholder="{&quot;50&quot;: '000'...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/schema.js">
+      <file leaf-file-name="lms.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
-              <folding>
-                <element signature="e#558#1113#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_course.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/create_course.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course_service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/services/course_service.js">
+      <file leaf-file-name="teacher.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/controllers/teacher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+            <state relative-caret-position="527">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="e#150#723#0" expanded="false" />
-                <element signature="e#766#1038#0" expanded="false" />
-                <element signature="e#1094#1670#0" expanded="false" />
+                <element signature="e#363#490#0" expanded="false" />
+                <element signature="e#548#589#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="student.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/student.html">
+      <file leaf-file-name="lesson_service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/services/lesson_service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            <state relative-caret-position="90">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="student.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/student.js">
+      <file leaf-file-name="lessons.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/lessons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-              <folding>
-                <element signature="e#355#482#0" expanded="false" />
-                <element signature="e#540#581#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="341">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,8 +175,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -198,10 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/schema.js" />
-        <option value="$PROJECT_DIR$/public/css/stylae.css" />
-        <option value="$PROJECT_DIR$/.bowerrc" />
-        <option value="$PROJECT_DIR$/public/templates/lms.html" />
         <option value="$PROJECT_DIR$/server/schema.js" />
         <option value="$PROJECT_DIR$/public/New folder/startbootstrap-simple-sidebar-1.0.5/index.html" />
         <option value="$PROJECT_DIR$/public/css/simple-sidebar.css" />
@@ -228,11 +212,8 @@
         <option value="$PROJECT_DIR$/public/templates/login.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/js/controllers/course_service.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/server/routes/account.js" />
         <option value="$PROJECT_DIR$/public/js/services/check_user_role.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers/teacher.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/js/directive.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/admin.js" />
         <option value="$PROJECT_DIR$/public/templates/teacher.html" />
@@ -240,13 +221,22 @@
         <option value="$PROJECT_DIR$/public/templates/register.html" />
         <option value="$PROJECT_DIR$/public/templates/create_course.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/student.js" />
-        <option value="$PROJECT_DIR$/public/templates/courses.html" />
         <option value="$PROJECT_DIR$/public/templates/student.html" />
         <option value="$PROJECT_DIR$/public/js/services/course_service.js" />
-        <option value="$PROJECT_DIR$/server/routes/schema.js" />
         <option value="$PROJECT_DIR$/server/routes/courses.js" />
         <option value="$PROJECT_DIR$/server/index.js" />
+        <option value="$PROJECT_DIR$/server/routes/schema.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/templates/courses.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers/teacher.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/templates/course_details.html" />
+        <option value="$PROJECT_DIR$/public/js/services/lesson_service.js" />
+        <option value="$PROJECT_DIR$/server/routes/lessons.js" />
+        <option value="$PROJECT_DIR$/public/templates/drive.html" />
+        <option value="$PROJECT_DIR$/public/templates/lms.html" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/public/templates/create_lesson.html" />
       </list>
     </option>
   </component>
@@ -286,8 +276,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -452,6 +440,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,12 +543,13 @@
       <workItem from="1459403662174" duration="29832000" />
       <workItem from="1459492033463" duration="14251000" />
       <workItem from="1459576351571" duration="11981000" />
-      <workItem from="1459745109026" duration="23499000" />
+      <workItem from="1459745109026" duration="24103000" />
+      <workItem from="1459832063705" duration="14300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189287000" />
+    <option name="totallyTimeSpent" value="204191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,90 +618,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding>
-            <element signature="e#665#1554#0" expanded="false" />
-            <element signature="e#1692#1783#0" expanded="false" />
-            <element signature="e#1815#1992#0" expanded="false" />
-            <element signature="e#2030#2239#0" expanded="false" />
-            <element signature="e#2280#2495#0" expanded="false" />
-            <element signature="e#2558#2729#0" expanded="false" />
-            <element signature="e#2769#3106#0" expanded="false" />
-            <element signature="e#3144#3483#0" expanded="false" />
-            <element signature="e#3525#3872#0" expanded="false" />
-            <element signature="e#3914#4257#0" expanded="false" />
-            <element signature="e#4296#4585#0" expanded="false" />
-            <element signature="e#4624#4913#0" expanded="false" />
-            <element signature="e#4980#5160#0" expanded="false" />
-            <element signature="e#5202#5507#0" expanded="false" />
-            <element signature="e#5547#5840#0" expanded="false" />
-            <element signature="e#5886#6183#0" expanded="false" />
-            <element signature="e#6227#6528#0" expanded="false" />
-            <element signature="e#6594#6774#0" expanded="false" />
-            <element signature="e#6816#7121#0" expanded="false" />
-            <element signature="e#7161#7454#0" expanded="false" />
-            <element signature="e#7498#7799#0" expanded="false" />
-            <marker date="1459783731628" expanded="false" signature="7984:8782" placeholder="{&quot;50&quot;: '000'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding>
-            <element signature="e#665#1554#0" expanded="false" />
-            <element signature="e#1692#1783#0" expanded="false" />
-            <element signature="e#1815#1992#0" expanded="false" />
-            <element signature="e#2030#2239#0" expanded="false" />
-            <element signature="e#2280#2495#0" expanded="false" />
-            <element signature="e#2558#2729#0" expanded="false" />
-            <element signature="e#2769#3106#0" expanded="false" />
-            <element signature="e#3144#3483#0" expanded="false" />
-            <element signature="e#3525#3872#0" expanded="false" />
-            <element signature="e#3914#4257#0" expanded="false" />
-            <element signature="e#4296#4585#0" expanded="false" />
-            <element signature="e#4624#4913#0" expanded="false" />
-            <element signature="e#4980#5160#0" expanded="false" />
-            <element signature="e#5202#5507#0" expanded="false" />
-            <element signature="e#5547#5840#0" expanded="false" />
-            <element signature="e#5886#6183#0" expanded="false" />
-            <element signature="e#6227#6528#0" expanded="false" />
-            <element signature="e#6594#6774#0" expanded="false" />
-            <element signature="e#6816#7121#0" expanded="false" />
-            <element signature="e#7161#7454#0" expanded="false" />
-            <element signature="e#7498#7799#0" expanded="false" />
-            <marker date="1459783731628" expanded="false" signature="7984:8782" placeholder="{&quot;50&quot;: '000'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -747,13 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -891,19 +791,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/account.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,19 +811,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/directive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="866">
           <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,18 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="108" selection-start-line="15" selection-start-column="108" selection-end-line="15" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/teacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#353#480#0" expanded="false" />
-            <element signature="e#538#579#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -982,27 +851,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/create_course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/courses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/student.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
+        <state relative-caret-position="204">
           <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
             <element signature="e#355#482#0" expanded="false" />
@@ -1019,6 +870,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/create_course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/services/course_service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -1031,67 +906,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/schema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="1500">
+          <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
           <folding>
             <element signature="e#558#1113#0" expanded="false" />
+            <element signature="e#1130#1313#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/courses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/course_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#363#490#0" expanded="false" />
+            <element signature="e#548#589#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/courses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="786">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.bowerrc">
+    <entry file="file://$PROJECT_DIR$/public/js/services/lesson_service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="90">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
+    <entry file="file://$PROJECT_DIR$/server/routes/lessons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="341">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/drive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="838">
+          <caret line="240" column="52" selection-start-line="240" selection-start-column="39" selection-end-line="240" selection-end-column="52" />
           <folding>
-            <element signature="e#665#1554#0" expanded="false" />
-            <element signature="e#1692#1783#0" expanded="false" />
-            <element signature="e#1815#1992#0" expanded="false" />
-            <element signature="e#2030#2239#0" expanded="false" />
-            <element signature="e#2280#2495#0" expanded="false" />
-            <element signature="e#2558#2729#0" expanded="false" />
-            <element signature="e#2769#3106#0" expanded="false" />
-            <element signature="e#3144#3483#0" expanded="false" />
-            <element signature="e#3525#3872#0" expanded="false" />
-            <element signature="e#3914#4257#0" expanded="false" />
-            <element signature="e#4296#4585#0" expanded="false" />
-            <element signature="e#4624#4913#0" expanded="false" />
-            <element signature="e#4980#5160#0" expanded="false" />
-            <element signature="e#5202#5507#0" expanded="false" />
-            <element signature="e#5547#5840#0" expanded="false" />
-            <element signature="e#5886#6183#0" expanded="false" />
-            <element signature="e#6227#6528#0" expanded="false" />
-            <element signature="e#6594#6774#0" expanded="false" />
-            <element signature="e#6816#7121#0" expanded="false" />
-            <element signature="e#7161#7454#0" expanded="false" />
-            <element signature="e#7498#7799#0" expanded="false" />
-            <marker date="1459783731628" expanded="false" signature="7984:8782" placeholder="{&quot;50&quot;: '000'...}" />
+            <element signature="e#746#1635#0" expanded="false" />
+            <element signature="e#1896#2073#0" expanded="false" />
+            <element signature="e#2111#2320#0" expanded="false" />
+            <element signature="e#2361#2576#0" expanded="false" />
+            <element signature="e#2639#2810#0" expanded="false" />
+            <element signature="e#2850#3187#0" expanded="false" />
+            <element signature="e#3225#3564#0" expanded="false" />
+            <element signature="e#3606#3953#0" expanded="false" />
+            <element signature="e#3995#4338#0" expanded="false" />
+            <element signature="e#4377#4666#0" expanded="false" />
+            <element signature="e#4705#4994#0" expanded="false" />
+            <element signature="e#5061#5241#0" expanded="false" />
+            <element signature="e#5283#5588#0" expanded="false" />
+            <element signature="e#5635#5942#0" expanded="false" />
+            <element signature="e#5988#6285#0" expanded="false" />
+            <element signature="e#6325#6618#0" expanded="false" />
+            <element signature="e#6664#6961#0" expanded="false" />
+            <element signature="e#7005#7306#0" expanded="false" />
+            <element signature="e#7372#7552#0" expanded="false" />
+            <element signature="e#7594#7899#0" expanded="false" />
+            <element signature="e#7939#8232#0" expanded="false" />
+            <element signature="e#8276#8577#0" expanded="false" />
+            <marker date="1459857992533" expanded="false" signature="8762:9560" placeholder="{&quot;50&quot;: '000'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/create_lesson.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="75" column="97" selection-start-line="75" selection-start-column="97" selection-end-line="75" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#4380#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
