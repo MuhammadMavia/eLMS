@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e951f39c-7c38-4509-ae21-4a5eaaff41b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/youtube/cors_upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/youtube/upload_video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/youtube/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/youtube/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/youtube/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/cors_upload.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Pana.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Pana.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/teacher.js" afterPath="$PROJECT_DIR$/public/js/controllers/teacher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/create_lesson.html" afterPath="$PROJECT_DIR$/public/templates/create_lesson.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/teacher.html" afterPath="$PROJECT_DIR$/public/templates/teacher.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/index.js" afterPath="$PROJECT_DIR$/server/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youtube/app.js" afterPath="$PROJECT_DIR$/youtube/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youtube/index.html" afterPath="$PROJECT_DIR$/youtube/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youtube/upload_video.css" afterPath="$PROJECT_DIR$/youtube/upload_video.css" />
     </list>
     <ignored path="eLMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,42 +38,180 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="upload_video.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/youtube/upload_video.js">
+      <file leaf-file-name="create_lesson.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/create_lesson.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="713">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_video.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/youtube/upload_video.css">
+      <file leaf-file-name="teacher.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/templates/teacher.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="588">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#0;n#!!top" expanded="false" />
+                <element signature="n#md-sidenav#0;n#!!top" expanded="false" />
+                <element signature="n#md-list-item#0;n#md-list#0;n#form#0;n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+                <element signature="n#md-list-item#1;n#md-list#0;n#form#0;n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+                <element signature="n#md-list-item#2;n#md-list#0;n#form#0;n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+                <marker date="1460036806961" expanded="false" signature="4484:5022" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="37" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cors_upload.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/cors_upload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3804">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="699">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+              <folding>
+                <element signature="n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#md-list-item#0;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#md-list-item#0;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#md-list-item#1;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#md-list-item#2;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-button#0;n#md-list-item#3;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#md-button#0;n#md-list-item#3;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_course.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/create_course.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="97" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1241">
+              <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/youtube/app.js">
+        <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="44">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <folding>
+                <element signature="e#760#1651#0" expanded="false" />
+                <element signature="e#1738#9618#0" expanded="false" />
+                <element signature="e#1912#2089#0" expanded="false" />
+                <element signature="e#2127#2336#0" expanded="false" />
+                <element signature="e#2377#2592#0" expanded="false" />
+                <element signature="e#2655#2826#0" expanded="false" />
+                <element signature="e#2866#3203#0" expanded="false" />
+                <element signature="e#3241#3580#0" expanded="false" />
+                <element signature="e#3622#3969#0" expanded="false" />
+                <element signature="e#4011#4354#0" expanded="false" />
+                <element signature="e#4393#4682#0" expanded="false" />
+                <element signature="e#4721#5010#0" expanded="false" />
+                <element signature="e#5077#5257#0" expanded="false" />
+                <element signature="e#5299#5604#0" expanded="false" />
+                <element signature="e#5651#5958#0" expanded="false" />
+                <element signature="e#6004#6301#0" expanded="false" />
+                <element signature="e#6341#6634#0" expanded="false" />
+                <element signature="e#6680#6977#0" expanded="false" />
+                <element signature="e#7021#7322#0" expanded="false" />
+                <element signature="e#7388#7568#0" expanded="false" />
+                <element signature="e#7610#7915#0" expanded="false" />
+                <element signature="e#7955#8248#0" expanded="false" />
+                <element signature="e#8292#8593#0" expanded="false" />
+                <element signature="e#9814#9987#0" expanded="false" />
+                <element signature="e#10027#10909#0" expanded="false" />
+                <element signature="e#10972#12223#0" expanded="false" />
+                <element signature="e#11124#12008#0" expanded="false" />
+                <element signature="e#11331#11983#0" expanded="false" />
+                <element signature="e#12412#12865#0" expanded="false" />
+                <element signature="e#12469#12681#0" expanded="false" />
+                <element signature="e#12706#12851#0" expanded="false" />
+                <element signature="e#13123#13200#0" expanded="false" />
+                <element signature="e#13244#13302#0" expanded="false" />
+                <element signature="e#13848#13983#0" expanded="false" />
+                <element signature="e#14058#14622#0" expanded="false" />
+                <element signature="e#14166#14465#0" expanded="false" />
+                <element signature="e#14803#14914#0" expanded="false" />
+                <element signature="e#14979#16167#0" expanded="false" />
+                <element signature="e#15684#16090#0" expanded="false" />
+                <marker date="1460028882380" expanded="false" signature="8779:9481" placeholder="{&quot;50&quot;: '000'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/youtube/index.html">
+      <file leaf-file-name="teacher.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/controllers/teacher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="459">
+              <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+              <folding>
+                <element signature="e#363#490#0" expanded="false" />
+                <element signature="e#548#589#0" expanded="false" />
+                <element signature="e#897#1006#0" expanded="false" />
+                <element signature="e#1135#1909#0" expanded="false" />
+                <element signature="e#1968#3115#0" expanded="false" />
+                <element signature="e#2104#2912#0" expanded="false" />
+                <element signature="e#2287#2891#0" expanded="false" />
+                <element signature="e#3172#5324#0" expanded="false" />
+                <element signature="e#3288#3693#0" expanded="false" />
+                <element signature="e#3337#3529#0" expanded="false" />
+                <element signature="e#3550#3683#0" expanded="false" />
+                <element signature="e#3736#5246#0" expanded="false" />
+                <element signature="e#3927#3996#0" expanded="false" />
+                <element signature="e#4036#4086#0" expanded="false" />
+                <element signature="e#4139#4652#0" expanded="false" />
+                <element signature="e#4515#4638#0" expanded="false" />
+                <element signature="e#4705#5225#0" expanded="false" />
+                <element signature="e#4805#5084#0" expanded="false" />
+                <element signature="e#5386#5485#0" expanded="false" />
+                <element signature="e#5546#6626#0" expanded="false" />
+                <element signature="e#6191#6565#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +222,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -93,9 +233,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/services/theme.js" />
-        <option value="$PROJECT_DIR$/public/js/services/cropper.js" />
-        <option value="$PROJECT_DIR$/public/js/services/tools.js" />
         <option value="$PROJECT_DIR$/public/templates/teachers.html" />
         <option value="$PROJECT_DIR$/public/templates/cropper.html" />
         <option value="$PROJECT_DIR$/public/templates/teacher_dashboard.html" />
@@ -104,14 +241,12 @@
         <option value="$PROJECT_DIR$/public/templates/students.html" />
         <option value="$PROJECT_DIR$/public/templates/add_teacher.html" />
         <option value="$PROJECT_DIR$/public/templates/update_info.html" />
-        <option value="$PROJECT_DIR$/public/templates/login.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/js/controllers/course_service.js" />
         <option value="$PROJECT_DIR$/server/routes/account.js" />
         <option value="$PROJECT_DIR$/public/js/services/check_user_role.js" />
         <option value="$PROJECT_DIR$/public/js/directive.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/admin.js" />
-        <option value="$PROJECT_DIR$/public/templates/teacher.html" />
         <option value="$PROJECT_DIR$/public/templates/admin.html" />
         <option value="$PROJECT_DIR$/public/templates/register.html" />
         <option value="$PROJECT_DIR$/public/templates/create_course.html" />
@@ -121,13 +256,11 @@
         <option value="$PROJECT_DIR$/server/routes/courses.js" />
         <option value="$PROJECT_DIR$/server/routes/schema.js" />
         <option value="$PROJECT_DIR$/public/templates/courses.html" />
-        <option value="$PROJECT_DIR$/public/js/controllers/teacher.js" />
         <option value="$PROJECT_DIR$/public/templates/course_details.html" />
         <option value="$PROJECT_DIR$/public/js/services/lesson_service.js" />
         <option value="$PROJECT_DIR$/server/routes/lessons.js" />
         <option value="$PROJECT_DIR$/public/templates/drive.html" />
         <option value="$PROJECT_DIR$/public/templates/lms.html" />
-        <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/youtube/youtube.html" />
         <option value="$PROJECT_DIR$/youtube/youtube.js" />
         <option value="$PROJECT_DIR$/youtube/oauth.js" />
@@ -137,13 +270,20 @@
         <option value="$PROJECT_DIR$/youtube/search.js" />
         <option value="$PROJECT_DIR$/youtube/upload.html" />
         <option value="$PROJECT_DIR$/youtube/upload_video.html" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/templates/create_lesson.html" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/server/index.js" />
         <option value="$PROJECT_DIR$/youtube/upload_video.js" />
+        <option value="$PROJECT_DIR$/youtube/upload_video.css" />
         <option value="$PROJECT_DIR$/youtube/app.js" />
         <option value="$PROJECT_DIR$/youtube/index.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers/teacher.js" />
+        <option value="$PROJECT_DIR$/server/index.js" />
+        <option value="$PROJECT_DIR$/public/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/public/templates/login.html" />
+        <option value="$PROJECT_DIR$/public/templates/google.html" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/templates/create_lesson.html" />
+        <option value="$PROJECT_DIR$/public/templates/teacher.html" />
       </list>
     </option>
   </component>
@@ -183,7 +323,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -227,12 +366,103 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eLMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,17 +476,18 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\eLMS\youtube" />
-      <recent name="D:\eLMS\public\js\youtube" />
-      <recent name="D:\eLMS\public" />
-      <recent name="D:\eLMS\public\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\eLMS\public\js\services" />
       <recent name="D:\eLMS\public\js\controllers" />
       <recent name="D:\eLMS\server\routes" />
       <recent name="D:\eLMS\server" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\eLMS\public\js" />
+      <recent name="D:\eLMS\youtube" />
+      <recent name="D:\eLMS\public\js\youtube" />
+      <recent name="D:\eLMS\public" />
+      <recent name="D:\eLMS\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -338,12 +569,13 @@
       <workItem from="1459576351571" duration="11981000" />
       <workItem from="1459745109026" duration="24103000" />
       <workItem from="1459832063705" duration="14899000" />
-      <workItem from="1459919507719" duration="23298000" />
+      <workItem from="1459919507719" duration="23384000" />
+      <workItem from="1460004771195" duration="24730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228088000" />
+    <option name="totallyTimeSpent" value="252904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -358,10 +590,9 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18630952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -373,6 +604,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -412,34 +644,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/templates/update_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/students.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/add_teacher.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/account.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -465,20 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/teacher.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="108" selection-start-line="15" selection-start-column="108" selection-end-line="15" selection-end-column="108" />
         </state>
       </provider>
     </entry>
@@ -511,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/create_course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/services/course_service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -536,9 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -546,18 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/teacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#363#490#0" expanded="false" />
-            <element signature="e#548#589#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,7 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -598,74 +764,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/youtube.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/oauth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/you.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/playlist_updates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/my_uploads.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/youtube.js" />
+    <entry file="file://$PROJECT_DIR$/youtube/oauth.js" />
+    <entry file="file://$PROJECT_DIR$/youtube/you.js" />
+    <entry file="file://$PROJECT_DIR$/youtube/playlist_updates.html" />
+    <entry file="file://$PROJECT_DIR$/youtube/search.html" />
+    <entry file="file://$PROJECT_DIR$/youtube/my_uploads.js" />
+    <entry file="file://$PROJECT_DIR$/youtube/auth.js" />
+    <entry file="file://$PROJECT_DIR$/youtube/upload.js" />
     <entry file="file://$PROJECT_DIR$/youtube/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
@@ -674,69 +783,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-          <folding>
-            <element signature="e#746#1635#0" expanded="false" />
-            <element signature="e#1896#2073#0" expanded="false" />
-            <element signature="e#2111#2320#0" expanded="false" />
-            <element signature="e#2361#2576#0" expanded="false" />
-            <element signature="e#2639#2810#0" expanded="false" />
-            <element signature="e#2850#3187#0" expanded="false" />
-            <element signature="e#3225#3564#0" expanded="false" />
-            <element signature="e#3606#3953#0" expanded="false" />
-            <element signature="e#3995#4338#0" expanded="false" />
-            <element signature="e#4377#4666#0" expanded="false" />
-            <element signature="e#4705#4994#0" expanded="false" />
-            <element signature="e#5061#5241#0" expanded="false" />
-            <element signature="e#5283#5588#0" expanded="false" />
-            <element signature="e#5635#5942#0" expanded="false" />
-            <element signature="e#5988#6285#0" expanded="false" />
-            <element signature="e#6325#6618#0" expanded="false" />
-            <element signature="e#6664#6961#0" expanded="false" />
-            <element signature="e#7005#7306#0" expanded="false" />
-            <element signature="e#7372#7552#0" expanded="false" />
-            <element signature="e#7594#7899#0" expanded="false" />
-            <element signature="e#7939#8232#0" expanded="false" />
-            <element signature="e#8276#8577#0" expanded="false" />
-            <marker date="1459857992533" expanded="false" signature="8762:9560" placeholder="{&quot;50&quot;: '000'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/search.js" />
+    <entry file="file://$PROJECT_DIR$/youtube/upload.html" />
     <entry file="file://$PROJECT_DIR$/public/js/youtube/upload_video.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,40 +803,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/my_uploads.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="280" column="1" selection-start-line="280" selection-start-column="1" selection-end-line="280" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/create_lesson.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#4380#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/my_uploads.html" />
     <entry file="file://$PROJECT_DIR$/youtube/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -795,40 +817,242 @@
         <state relative-caret-position="201">
           <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/youtube/upload_video.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="476">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/google.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding>
+            <element signature="e#363#490#0" expanded="false" />
+            <element signature="e#548#589#0" expanded="false" />
+            <element signature="e#897#1006#0" expanded="false" />
+            <element signature="e#1135#1909#0" expanded="false" />
+            <element signature="e#1968#3115#0" expanded="false" />
+            <element signature="e#2104#2912#0" expanded="false" />
+            <element signature="e#2287#2891#0" expanded="false" />
+            <element signature="e#3172#5324#0" expanded="false" />
+            <element signature="e#3288#3693#0" expanded="false" />
+            <element signature="e#3337#3529#0" expanded="false" />
+            <element signature="e#3550#3683#0" expanded="false" />
+            <element signature="e#3736#5246#0" expanded="false" />
+            <element signature="e#3927#3996#0" expanded="false" />
+            <element signature="e#4036#4086#0" expanded="false" />
+            <element signature="e#4139#4652#0" expanded="false" />
+            <element signature="e#4515#4638#0" expanded="false" />
+            <element signature="e#4705#5225#0" expanded="false" />
+            <element signature="e#4805#5084#0" expanded="false" />
+            <element signature="e#5386#5485#0" expanded="false" />
+            <element signature="e#5546#6626#0" expanded="false" />
+            <element signature="e#6191#6565#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/youtube/upload_video.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="204">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/youtube/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
+          <folding>
+            <element signature="e#156#329#0" expanded="false" />
+            <element signature="e#440#1322#0" expanded="false" />
+            <element signature="e#1385#2636#0" expanded="false" />
+            <element signature="e#1537#2421#0" expanded="false" />
+            <element signature="e#1744#2396#0" expanded="false" />
+            <element signature="e#2697#5061#0" expanded="false" />
+            <element signature="e#2825#3278#0" expanded="false" />
+            <element signature="e#2882#3094#0" expanded="false" />
+            <element signature="e#3325#4971#0" expanded="false" />
+            <element signature="e#3536#3613#0" expanded="false" />
+            <element signature="e#3657#3715#0" expanded="false" />
+            <element signature="e#3772#4325#0" expanded="false" />
+            <element signature="e#4172#4307#0" expanded="false" />
+            <element signature="e#4382#4946#0" expanded="false" />
+            <element signature="e#4490#4789#0" expanded="false" />
+            <element signature="e#5127#5238#0" expanded="false" />
+            <element signature="e#5303#6491#0" expanded="false" />
+            <element signature="e#6008#6414#0" expanded="false" />
+            <marker date="1460012841968" expanded="false" signature="3119:3264" placeholder="{&quot;privacyStatus&quot;: 'public'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/youtube/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/cors_upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3804">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding>
+            <element signature="e#760#1651#0" expanded="false" />
+            <element signature="e#1738#9618#0" expanded="false" />
+            <element signature="e#1912#2089#0" expanded="false" />
+            <element signature="e#2127#2336#0" expanded="false" />
+            <element signature="e#2377#2592#0" expanded="false" />
+            <element signature="e#2655#2826#0" expanded="false" />
+            <element signature="e#2866#3203#0" expanded="false" />
+            <element signature="e#3241#3580#0" expanded="false" />
+            <element signature="e#3622#3969#0" expanded="false" />
+            <element signature="e#4011#4354#0" expanded="false" />
+            <element signature="e#4393#4682#0" expanded="false" />
+            <element signature="e#4721#5010#0" expanded="false" />
+            <element signature="e#5077#5257#0" expanded="false" />
+            <element signature="e#5299#5604#0" expanded="false" />
+            <element signature="e#5651#5958#0" expanded="false" />
+            <element signature="e#6004#6301#0" expanded="false" />
+            <element signature="e#6341#6634#0" expanded="false" />
+            <element signature="e#6680#6977#0" expanded="false" />
+            <element signature="e#7021#7322#0" expanded="false" />
+            <element signature="e#7388#7568#0" expanded="false" />
+            <element signature="e#7610#7915#0" expanded="false" />
+            <element signature="e#7955#8248#0" expanded="false" />
+            <element signature="e#8292#8593#0" expanded="false" />
+            <element signature="e#9814#9987#0" expanded="false" />
+            <element signature="e#10027#10909#0" expanded="false" />
+            <element signature="e#10972#12223#0" expanded="false" />
+            <element signature="e#11124#12008#0" expanded="false" />
+            <element signature="e#11331#11983#0" expanded="false" />
+            <element signature="e#12412#12865#0" expanded="false" />
+            <element signature="e#12469#12681#0" expanded="false" />
+            <element signature="e#12706#12851#0" expanded="false" />
+            <element signature="e#13123#13200#0" expanded="false" />
+            <element signature="e#13244#13302#0" expanded="false" />
+            <element signature="e#13848#13983#0" expanded="false" />
+            <element signature="e#14058#14622#0" expanded="false" />
+            <element signature="e#14166#14465#0" expanded="false" />
+            <element signature="e#14803#14914#0" expanded="false" />
+            <element signature="e#14979#16167#0" expanded="false" />
+            <element signature="e#15684#16090#0" expanded="false" />
+            <marker date="1460028882380" expanded="false" signature="8779:9481" placeholder="{&quot;50&quot;: '000'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+          <folding>
+            <element signature="n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-list-item#0;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#md-list-item#0;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-list-item#1;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-list-item#2;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-button#0;n#md-list-item#3;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#md-button#0;n#md-list-item#3;n#md-list#0;n#md-content#0;n#md-sidenav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/create_course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="97" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/create_lesson.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/teacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#md-sidenav#0;n#!!top" expanded="false" />
+            <element signature="n#md-list-item#0;n#md-list#0;n#form#0;n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+            <element signature="n#md-list-item#1;n#md-list#0;n#form#0;n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+            <element signature="n#md-list-item#2;n#md-list#0;n#form#0;n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+            <marker date="1460036806961" expanded="false" signature="4484:5022" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

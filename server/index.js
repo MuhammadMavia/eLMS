@@ -16,8 +16,8 @@ var lessons = require('./routes/lessons');
 app.use("/account", account);
 app.use("/courses", courses);
 app.use("/lessons", lessons);
-app.use(express.static(path.join(__dirname,'../youtube')));
-// app.use(express.static(path.join(__dirname,'../public')));
+// app.use(express.static(path.join(__dirname,'../youtube')));
+app.use(express.static(path.join(__dirname,'../public')));
 
 
 app.set('port', process.env.PORT || 8000);
