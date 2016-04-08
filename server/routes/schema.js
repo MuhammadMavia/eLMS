@@ -95,7 +95,8 @@ var lessonsSchema = new mongoose.Schema({
     courseID: {type: String, required: true},
     creatorID: {type: String, required: true},
     description: {type: String, required: true},
-    documents: {type: String},
+    createdOn: {type: Date, default: Date.now()},
+    documents: {type: Array},
     videos: {type: Array}
 });
 exports.lessonsModel = mongoose.model("Lessons", lessonsSchema);

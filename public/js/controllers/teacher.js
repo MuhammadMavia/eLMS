@@ -1,8 +1,8 @@
 angular.module("Lms")
 
-    .controller('TeacherCtrl', ['CourseService', '$state', '$scope', 'serverRef', 'Tools', 'LessonService', 'Cropper', 'firebaseRef', 'CheckUserRole', teacher]);
+    .controller('TeacherCtrl', ['CourseService', '$state', '$scope', '$mdSidenav', 'Tools', 'LessonService', 'Cropper', 'firebaseRef', 'CheckUserRole', teacher]);
 
-function teacher(CourseService, $state, $scope, serverRef, Tools, LessonService, Cropper, firebaseRef, CheckUserRole) {
+function teacher(CourseService, $state, $scope, $mdSidenav, Tools, LessonService, Cropper, firebaseRef, CheckUserRole) {
     CheckUserRole.currentUserData().then(function (data) {
         $scope.currentUser = data.data.user;
         localStorage.setItem('loginData', JSON.stringify(data.data.user));
@@ -11,12 +11,25 @@ function teacher(CourseService, $state, $scope, serverRef, Tools, LessonService,
         $scope.allCourses = data;
     });
     $scope.changeTheme = Tools.changeTheme;
+    $scope.toggleSidenav = function (navId) {
+        $mdSidenav(navId).toggle();
+    };
+    $scope.changeState = function (state) {
+        $state.go(state);
+    };
     $scope.changeProfileImg = Cropper.changeProfileImg;
     $scope.createCourse = CourseService.createCourse;
     $scope.createLesson = LessonService.createLesson;
     $scope.updateInfo = CheckUserRole.updateInfo;
     $scope.goToCourseDetail = function (index) {
+        CourseService.selectedCourse = $scope.allCourses[index];
         $scope.selectedCourse = $scope.allCourses[index];
+        console.log($scope.selectedCourse);
+        $state.go('teacher.course_details')
+    };
+    $scope.goToLessonDetail = function (index) {
+        CourseService.selectedLesson = $scope.selectedCourse.lessons[index];
+        $scope.selectedLesson = $scope.selectedCourse.lessons[index];
         $state.go('teacher.course_details')
     };
 

@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-signin-client_id"
-          content="970630033444-a3n9pkmgmpj7g09no4ggkbvrk0npbapv.apps.googleusercontent.com">
     <title>نظام إدارة التعلم</title>
 
     <link rel="stylesheet" href="lib/angular-material/angular-material.css">
@@ -18,12 +16,10 @@
     <script type="text/javascript" src="lib/firebase/firebase.js"></script>
     <script type="text/javascript" src="lib/angularfire/dist/angularfire.min.js"></script>
     <script type="text/javascript" src="lib/angular-img-cropper/dist/angular-img-cropper.min.js"></script>
-    <script type="text/javascript"
-            src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
+    <script type="text/javascript" src="lib/angular-material-icons/angular-material-icons.min.js"></script>
     <!--<script type="text/javascript" src="lib/angular-facebook/lib/angular-facebook.js"></script>-->
 
-    <script src="//apis.google.com/js/client:plusone.js"></script>
-    <script src="js/cors_upload.js"></script>
+
     <!---->
     <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
 
@@ -34,6 +30,7 @@
     <script type="text/javascript" src="js/controllers/teacher.js"></script>
     <script type="text/javascript" src="js/controllers/student.js"></script>
     <script type="text/javascript" src="js/controllers/add_teacher.js"></script>
+    <script type="text/javascript" src="js/controllers/video_upload.js"></script>
     <script type="text/javascript" src="js/directive.js"></script>
     <script type="text/javascript" src="js/services/tools.js"></script>
     <script type="text/javascript" src="js/services/cropper.js"></script>
@@ -48,64 +45,84 @@
 </head>
 <body ng-app="Lms">
 <ui-view></ui-view>
-<md-sidenav md-is-open="!true" md-component-id="upload-video-sidenav">
+<md-sidenav md-component-id="upload-video-sidenav">
     <md-toolbar class=""></md-toolbar>
-    <md-content class="" ng-controller="AppCtrl">
-        <div ng-if="!channel">
+    <md-content class="" ng-controller="VideoUploadCtrl">
+        <div ng-hide="channel">
             <span class="g-signin"
-                    data-callback="signinCallback"
-                    data-clientid="970630033444-a3n9pkmgmpj7g09no4ggkbvrk0npbapv.apps.googleusercontent.com"
-                    data-cookiepolicy="single_host_origin"
-                    data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
+                  data-callback="signinCallback"
+                  data-clientid="970630033444-a3n9pkmgmpj7g09no4ggkbvrk0npbapv.apps.googleusercontent.com"
+                  data-cookiepolicy="single_host_origin"
+                  data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
             </span>
         </div>
-
-        <md-list ng-if="!channel">
-            <md-list-item class="md-3-line">
-                <div class="md-list-item-text" layout="column">
-                    <h3>{{channel.title}}</h3>
-                    <!--<h4>{{ channel|json}}</h4>-->
-                    <!--<p></p>-->
-                </div>
-                <img ng-src="{{channel.thumbnails.default.url}}" class="md-avatar"/>
-            </md-list-item>
-
-            <md-list-item>
-                <md-input-container class="md-block full-width-input">
-                    <label>Title</label>
-                    <input ng-model="video.title" type="text">
-                </md-input-container>
-            </md-list-item>
-
-            <md-list-item>
-                <md-input-container class="md-block full-width-input">
-                    <label>Description</label>
-                    <textarea ng-model="video.description">Default description</textarea>
-                </md-input-container>
-            </md-list-item>
-
-            <md-list-item>
-                <md-button class="md-raised" style="padding-top: 5%!important;">
-                    <label for="file">
-                        <ng-md-icon class="video-upload-icon" icon="video_library" size="50"></ng-md-icon>
-                    </label>
-                    <input input style="display:none;" type="file" id="file" class="button" accept="video/*">
-                </md-button>
-            </md-list-item>
-            <md-card class="md-whiteframe-6dp" ng-if="!onProgressData.percentage">
-                <div layout="column" layout-padding>
-                    <div layout="row" layout-align="center center">
-                        <!--<span flex="20" class="md-body-1">default</span>-->
-                        <md-slider ng-readonly class="md-primary" md-discrete flex ng-model="onProgressData.percentage" step="1" min="0"
-                                   max="100" aria-label="rating"></md-slider>
+        <form name="videoUploaderForm">
+            <md-list ng-show="channel">
+                <md-list-item class="md-3-line">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>{{channel.title}}</h3>
+                        <!--<h4>{{ channel|json}}</h4>-->
+                        <!--<p></p>-->
                     </div>
-                    <sup>{{Math.ceil(onProgressData.percentage)}}% done
-                        ({{onProgressData.loaded}}/{{onProgressData.total}})</sup>
-                </div>
-            </md-card>
-            <md-button ng-disabled="onProgressData.percentage" class="md-primary md-raised float-right" id="video-uploader-button">Upload Video</md-button>
-        </md-list>
+                    <img ng-src="{{channel.thumbnails.default.url}}" class="md-avatar"/>
+                </md-list-item>
+
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label>Title</label>
+                        <input md-maxlength="100" name="title" ng-model="video.title" type="text">
+                        <div ng-messages="videoUploaderForm.title.$error">
+                            <div ng-message="required">عنوان المطلوبة</div>
+                            <div ng-message="maxlength">عنوان maxlength</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label>Description</label>
+                        <textarea md-maxlength="1200" name="description" rows="5"
+                                  ng-model="video.description"></textarea>
+                        <div ng-messages="videoUploaderForm.description.$error">
+                            <div ng-message="required">عنوان المطلوبة</div>
+                            <div ng-message="maxlength">عنوان maxlength</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+
+                <md-list-item>
+                    <md-button class="md-raised" style="padding-top: 5%!important;">
+                        <label for="file">
+                            <ng-md-icon class="video-upload-icon" icon="video_library" size="50"></ng-md-icon>
+                        </label>
+                        <input input style="display:none;" type="file" id="file" class="button" accept="video/*">
+                    </md-button>
+                </md-list-item>
+                <md-card class="md-whiteframe-6dp"
+                         ng-if="onProgressData.percentage && onProgressData.percentage != 100">
+                    <div layout="column" layout-padding>
+                        <div layout="row" layout-align="center center">
+                            <!--<span flex="20" class="md-body-1">default</span>-->
+                            <md-slider ng-readonly class="md-primary" md-discrete flex
+                                       ng-model="onProgressData.percentage"
+                                       step="1" min="0"
+                                       max="100" aria-label="rating"></md-slider>
+                        </div>
+                        <sup>{{Math.ceil(onProgressData.percentage)}}% done
+                            ({{onProgressData.loaded}}/{{onProgressData.total}})</sup>
+                    </div>
+                </md-card>
+                <!--<md-button ng-disabled="onProgressData.percentage" class="md-primary md-raised float-right" id="video-uploader-button">Upload Video</md-button>-->
+                <md-button ng-disabled="onProgressData.percentage"
+                           class="md-primary md-raised float-right"
+                           id="video-uploader-button">Upload Video
+                </md-button>
+            </md-list>
+        </form>
     </md-content>
 </md-sidenav>
+
+<script src="//apis.google.com/js/client:plusone.js"></script>
+<script src="js/cors_upload.js"></script>
 </body>
 </html>

@@ -8,10 +8,10 @@
              layout-align="center center" layout="column" layout-padding
              layout-margin
              ng-repeat="course in allCourses track by $index">
-            <div class="md-headline">{{course.title}}</div>
+            <div class="md-title">{{course.title}}</div>
             <!--<div class="text-nowrap" layout-wrap>{{course.description | truncate : 150}}</div>-->
             <div>
-                <md-button ng-click="joinCourse(course._id,currentUser._id)" class="md-button md-raised md-warn">
+                <md-button ng-click="joinCourse(course._id,currentUser._id)" class="md-button md-raised md-warn Al-Jazeera-Bold">
                     انضم
                 </md-button>
             </div>
@@ -21,3 +21,14 @@
         </div>
     </div>
 </div>
+
+<md-list>
+    <md-list-item ng-click="joinCourse(course._id,currentUser._id)"
+                  class="md-3-line md-long-text" ng-repeat="course in allCourses track by $index">
+        <img ng-src="{{todos[0].face}}?25" class="md-avatar" alt="{{todos[0].who}}"/>
+        <div class="md-list-item-text">
+            <h3>{{course.title}}</h3>
+            <p>{{course.description}}</p>
+        </div>
+    </md-list-item>
+</md-list>

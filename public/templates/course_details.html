@@ -1,8 +1,6 @@
 {{selectedCourse | json}}
 
-
-
-<md-tabs md-dynamic-height md-border-bottom>
+<md-tabs md-dynamic-height md-border-bottom  md-selected="selectedTabIndex">
     <md-tab label="حول مسار">
         <md-content class="md-padding">
             <h1 class="md-display-2 text-right">Tab One</h1>
@@ -16,7 +14,7 @@
             <p>{{ selectedCourse.description }}</p> </p>
         </md-content>
     </md-tab>
-    <md-tab label="فيديوهات">
+    <md-tab label="الدروس">
         <md-content class="md-padding">
             <h1 class="md-display-2">Tab Two</h1>
 
@@ -32,7 +30,47 @@
             <h1 class="md-display-2">Tab Three</h1>
         </md-content>
     </md-tab>
+    <md-tab label="فيديوهات">
+        <md-content class="md-padding tab-md-content">
+            <div layout="row" layout-align="center start" layout-wrap>
+                <div class="md-whiteframe-1dp" layout-margin>
+                    <md-list>
+                        <md-list-item ng-click="null"
+                                      ng-repeat="video in [1,2,4,5,54,5,5,5,5,5,5,5,4,5,54,5,5] track by $index"
+                                      class="md-3-line video-list">
+                            <md-divider></md-divider>
+                            <md-divider></md-divider>
+                            <div class="md-list-item-text" layout="column">
+                                <h3> حين حاول بلديهما</h3>
+                                <p class="Al-Jazeera-Regular">
+                                    جهة, كردة ديسمبر يكن بل.
+
+                                    ل بلديهما الجديدة، بل, إحكام العاصمة هذا أن.
+                                    إعمار استبدال التّحول ثم ضرب, مسرح يقوم بالولايات أم مدن. ثم ولم أوسع مشاركة, وشعار
+                                </p>
+                            </div>
+                            <img src="../img/theme-01.jpg"/>
+                            <md-divider></md-divider>
+                        </md-list-item>
+                    </md-list>
+                </div>
+                <div class="md-whiteframe-1dp" layout-padding layout-margin>
+                    <iframe width="750" height="450" src="https://www.youtube.com/embed/vVmdXW8_nCQ" frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </md-content>
+    </md-tab>
 </md-tabs>
+<md-button ng-show="selectedTabIndex == 4" ng-click="toggleSidenav('upload-video-sidenav')" class="md-fab md-fab-top-left md-icon-button md-primary">
+    <md-tooltip md-direction="bottom">Upload Video</md-tooltip>
+    <ng-md-icon icon="add" class="fill-fff"></ng-md-icon>
+</md-button>
+
+<md-button  ng-show="selectedTabIndex == 1" ng-click="toggleSidenav('create-lesson-sidenav')" class="md-fab md-fab-top-left md-icon-button md-primary">
+    <md-tooltip md-direction="bottom">Create Lesson</md-tooltip>
+    <ng-md-icon icon="add" class="fill-fff"></ng-md-icon>
+</md-button>
 
 
 
