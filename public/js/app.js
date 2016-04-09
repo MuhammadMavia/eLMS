@@ -1,6 +1,6 @@
 angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angular-img-cropper', 'ngMessages'])
-    .constant('serverRef', 'https://elms-serv.herokuapp.com')
-    // .constant('serverRef', '')
+    // .constant('serverRef', 'https://elms-serv.herokuapp.com')
+    .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state, Tools) {
         $rootScope.yearOfStudy = ['1st Year', '2nd Year', '3rd Year', '4th Year',];
@@ -149,13 +149,13 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
                     }
                 }
             })
-            .state('teacher.course_details', {
-                url: '/teacher_course_details',
+            .state('teacher.my_created_courses', {
+                url: '/my_created_courses',
                 loginCompulsory: true,
                 isTeacher: true,
                 views: {
                     TeacherContent: {
-                        templateUrl: 'templates/course_details.html'
+                        templateUrl: 'templates/my_created_courses.html'
                     }
                 }
             })
@@ -239,8 +239,8 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
             });
 
         $urlRouterProvider.otherwise('/account/login');
-        /*$urlRouterProvider.otherwise('/student/student_dashboard');
-         $mdThemingProvider.definePalette('md-primary', {
+        $urlRouterProvider.otherwise('/student/student_dashboard');
+        /*         $mdThemingProvider.definePalette('md-primary', {
          '50': '000',
          '100': '000',
          '200': '000',
@@ -260,9 +260,9 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
          'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
          '200', '300', '400', 'A100'],
          'contrastLightColors': undefined    // could also specify this if default was 'dark'
-         });
-         $mdThemingProvider.theme('default')
-         .primaryPalette('md-primary')
-         .backgroundPalette('md-primary')*/
+         });*/
+        $mdThemingProvider.theme('default')
+            .primaryPalette('blue')
+        // .backgroundPalette('md-primary')
 
     });

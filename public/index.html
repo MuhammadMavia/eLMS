@@ -108,15 +108,19 @@
                                        step="1" min="0"
                                        max="100" aria-label="rating"></md-slider>
                         </div>
-                        <sup>{{Math.ceil(onProgressData.percentage)}}% done
+                        <sup>{{onProgressData.percentage}}% done
                             ({{onProgressData.loaded}}/{{onProgressData.total}})</sup>
                     </div>
                 </md-card>
                 <!--<md-button ng-disabled="onProgressData.percentage" class="md-primary md-raised float-right" id="video-uploader-button">Upload Video</md-button>-->
-                <md-button ng-disabled="onProgressData.percentage"
+                <md-button ng-hide="onProgressData.percentage == 100" ng-disabled="onProgressData.percentage"
                            class="md-primary md-raised float-right"
                            id="video-uploader-button">Upload Video
                 </md-button>
+                <md-button ng-show="onProgressData.percentage == 100" class="md-primary md-raised float-right">
+                    Done
+                </md-button>
+
             </md-list>
         </form>
     </md-content>

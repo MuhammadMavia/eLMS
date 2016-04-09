@@ -14,7 +14,7 @@ var user;
 account.get('/currentUserData', function (req, res) {
     usersModel.findOne({$or: [{email: req.query.data}, {userID: req.query.data}]}, function (error, success) {
         error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
-    })
+    }).populate('courses')
 });
 
 

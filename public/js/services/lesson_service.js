@@ -22,7 +22,8 @@ angular.module("Lms")
             console.log(video);
             Tools.loader();
             var loginData = JSON.parse(localStorage.getItem('loginData'));
-            $http.post(serverRef + '/lessons/pushVideo', {video: video, lessonID: '57078835b2be3dbc008b0a5a'}).then(
+            var selectedLesson = localStorage.getItem('selectedLesson');
+            $http.post(serverRef + '/lessons/pushVideo', {video: video, lessonID: selectedLesson}).then(
                 function (success) {
                     $mdDialog.hide();
                     success.data.code ? Tools.showMsg('') : Tools.showMsg('');

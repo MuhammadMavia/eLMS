@@ -8,7 +8,13 @@ var usersModel = schema.usersModel;
 courses.get('/allCourses', function (req, res) {
     coursesModel.find(function (err, success) {
         res.send(err || success)
-    })
+    }).populate('lessons')
+});
+
+courses.get('/myCreatedCourses', function (req, res) {
+    coursesModel.find({creatorID: req.query.creatorID}, function (err, success) {
+        res.send(err || success)
+    }).populate('lessons')
 });
 
 /*courses.get('/myCourses', function (req, res) {

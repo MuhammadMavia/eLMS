@@ -1,6 +1,6 @@
 angular.module("Lms")
     .service('CourseService', function ($q, $http, serverRef, Tools, $mdDialog) {
-        
+
         var scope = this;
         scope.createCourse = function (course) {
             Tools.loader();
@@ -20,6 +20,16 @@ angular.module("Lms")
         scope.getAllCourses = function () {
             var deferred = $q.defer();
             $http.get(serverRef + '/courses/allCourses').then(
+                function (success) {
+                    deferred.resolve(success.data);
+                }
+            );
+            return deferred.promise;
+        };
+        scope.getMyCreatedCourses = function () {
+            var loginData = JSON.parse(localStorage.getItem('loginData'));
+            var deferred = $q.defer();
+            $http.get(serverRef + '/courses/myCreatedCourses?creatorID=' + loginData._id).then(
                 function (success) {
                     deferred.resolve(success.data);
                 }
