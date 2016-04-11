@@ -47,6 +47,7 @@ var quizzes = {
 
 var mongoose = require("mongoose");
 var uniqueValidator = require('mongoose-unique-validator');
+
 var usersSchema = new mongoose.Schema({
     profileImg: {type: String},
     firstName: {type: String, required: true},
@@ -59,17 +60,18 @@ var usersSchema = new mongoose.Schema({
     role: {type: Number, default: 1},
     theme: {type: String, default: 1},
     createdOn: {type: Date, default: Date.now()},
-    courses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
+    createdCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
+    joinedCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
     quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]},
     userID: {type: String},
     link: {type: String}
-
 });
 exports.usersModel = mongoose.model("Users", usersSchema);
+exports.usersSchema = usersSchema;
 
 
 var coursesSchema = new mongoose.Schema({
-    // _creator: {type: String, ref: "Users"},
+    creator: {type: String, ref: "Users"},
     title: {type: String, required: true},
     description: {type: String, required: true},
     creatorID: {type: String, required: true},

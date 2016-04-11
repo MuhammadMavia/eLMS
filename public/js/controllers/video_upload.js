@@ -52,7 +52,7 @@ angular.module("Lms")
                     if (response.error) {
                         console.log(response.error.message);
                     } else {
-                        console.log(response.items[0].snippet);
+                        // console.log(response.items[0].snippet);
                         $scope.channel = response.items[0].snippet;
                         $scope.$apply();
                         // $('#channel-name').text(response.items[0].snippet.title);

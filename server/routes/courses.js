@@ -8,18 +8,21 @@ var usersModel = schema.usersModel;
 courses.get('/allCourses', function (req, res) {
     coursesModel.find(function (err, success) {
         res.send(err || success)
-    }).populate('lessons')
+    }).populate('creator', 'firstName lastName profileImg email');
 });
 
 courses.get('/myCreatedCourses', function (req, res) {
     coursesModel.find({creatorID: req.query.creatorID}, function (err, success) {
         res.send(err || success)
-    }).populate('lessons')
+    }).populate('lessons students')
 });
 
-/*courses.get('/myCourses', function (req, res) {
- console.log(req.body);
- });*/
+
+courses.get('/myJoinedCourses', function (req, res) {
+    coursesModel.findOne({_id: req.query.courseID}, function (error, success) {
+        res.send(error || success);
+    }).populate('lessons');
+});
 
 /*courses.use('/joinCourse', function (req, res, next) {
  usersModel.findOne({_id: req.body.userID}, {courses: {$in: [req.body.courseID]}}, function (e, a) {
@@ -28,8 +31,8 @@ courses.get('/myCreatedCourses', function (req, res) {
  })
  });*/
 courses.post('/joinCourse', function (req, res) {
-    // console.log(req.body);
-    usersModel.update({_id: req.body.userID}, {$push: {courses: req.body.courseID}}, function (err, success) {
+    console.log(req.body);
+    usersModel.update({_id: req.body.userID}, {$push: {joinedCourses: req.body.courseID}}, function (err, success) {
         if (success) {
             coursesModel.update({_id: req.body.courseID}, {$push: {students: req.body.userID}}, function (error, OK) {
                 OK ? res.send({code: 1}) : res.send(error);
@@ -42,9 +45,10 @@ courses.post('/joinCourse', function (req, res) {
 });
 
 courses.post('/create_course', function (req, res) {
+    req.body.creator = req.body.creatorID;
     var course = new coursesModel(req.body);
     course.save(function (error, success) {
-        usersModel.update({_id: req.body.creatorID}, {$push: {courses: success._id}}, function (err, OK) {
+        usersModel.update({_id: req.body.creatorID}, {$push: {createdCourses: success._id}}, function (err, OK) {
             success && OK ? res.send({code: 1, course: success}) : res.send(err || error);
         });
     });

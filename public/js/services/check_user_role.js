@@ -1,5 +1,5 @@
 angular.module("Lms")
-    .service('CheckUserRole', function ($q, $http, serverRef, Tools, $mdDialog) {
+    .service('CheckUserRole', function (CourseService, $q, $http, serverRef, Tools, $mdDialog) {
         this.checkUserRole = function (role) {
             var access = ['student.dashboard', 'teacher.dashboard', 'admin.dashboard'];
             return access[role - 1];
@@ -9,8 +9,17 @@ angular.module("Lms")
             var loginData = JSON.parse(localStorage.getItem('loginData'));
             $http.get(serverRef + '/account/currentUserData?data=' + (loginData.userID || loginData.email)).then(
                 function (success) {
-                    console.log(success.data.user);
-                    deferred.resolve(success);
+                    if (!success.data.user.joinedCourses.length) {
+                        deferred.resolve(success)
+                    }
+                    angular.forEach(success.data.user.joinedCourses, function (val, index, arr) {
+                        CourseService.fetchMyCourses(val._id).then(function (course) {
+                            success.data.user.joinedCourses[index] = course;
+                            if (index + 1 === arr.length) {
+                                deferred.resolve(success);
+                            }
+                        });
+                    });
                 }
             );
             return deferred.promise;

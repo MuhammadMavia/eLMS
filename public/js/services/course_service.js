@@ -11,7 +11,7 @@ angular.module("Lms")
                     $mdDialog.hide();
                     success.data.code ? Tools.showMsg('إنشاء الدورة بنجاح') : Tools.showMsg('فشل');
                 },
-                function (error) {
+                function (error) {  
                     $mdDialog.hide();
                     Tools.showMsg('فشل')
                 }
@@ -51,9 +51,9 @@ angular.module("Lms")
                 }
             )
         };
-        scope.fetchMyCourses = function () {
+        scope.fetchMyCourses = function (courseID) {
             var deferred = $q.defer();
-            $http.get(serverRef + '/courses/myCourses').then(
+            $http.get(serverRef + '/courses/myJoinedCourses?courseID='+courseID).then(
                 function (success) {
                     console.log(success);
                     deferred.resolve(success.data);

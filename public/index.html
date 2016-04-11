@@ -5,6 +5,7 @@
     <title>نظام إدارة التعلم</title>
 
     <link rel="stylesheet" href="lib/angular-material/angular-material.css">
+    <link rel="stylesheet" href="lib/angular-input-stars-directive/angular-input-stars.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
@@ -17,6 +18,8 @@
     <script type="text/javascript" src="lib/angularfire/dist/angularfire.min.js"></script>
     <script type="text/javascript" src="lib/angular-img-cropper/dist/angular-img-cropper.min.js"></script>
     <script type="text/javascript" src="lib/angular-material-icons/angular-material-icons.min.js"></script>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="js/angular-youtube-embed.js"></script>
     <!--<script type="text/javascript" src="lib/angular-facebook/lib/angular-facebook.js"></script>-->
 
 
@@ -48,7 +51,7 @@
 <md-sidenav md-component-id="upload-video-sidenav">
     <md-toolbar class=""></md-toolbar>
     <md-content class="" ng-controller="VideoUploadCtrl">
-        <div ng-hide="channel">
+        <div ng-hide="channel" class="signup-button-google">
             <span class="g-signin"
                   data-callback="signinCallback"
                   data-clientid="970630033444-a3n9pkmgmpj7g09no4ggkbvrk0npbapv.apps.googleusercontent.com"

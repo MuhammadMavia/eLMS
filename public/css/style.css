@@ -246,6 +246,11 @@ md-option div {
     font-family: Al-Jazeera-Arabic-Bold;
 }
 
+.signup-button-google {
+    text-align: center;
+    padding-top: 30%;
+}
+
 .content-column {
     /*height: calc(100vh - 100px);*/
 }
@@ -381,6 +386,8 @@ md-toast.md-default-theme .md-toast-content, md-toast .md-toast-content {
     margin-top: 70px !important;
     font-family: Al-Jazeera-Arabic-Bold;
 }
+
+/* Rating Stars CSS */
 
 /* Video Upload*/
 

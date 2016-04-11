@@ -3,10 +3,12 @@ var mongoose = require("mongoose");
 var userSchema = require("./schema");
 var bcrypt = require("bcrypt-nodejs");
 var usersModel = userSchema.usersModel;
+var usersSchema = userSchema.usersSchema;
+var coursesModel = userSchema.coursesModel;
 var account = express.Router();
 var user;
-
-
+var deepPopulate = require('mongoose-deep-populate')(mongoose);
+usersSchema.plugin(deepPopulate, {});
 
 // var usersModel = mongoose.model("Users", usersSchema);
 
@@ -14,7 +16,7 @@ var user;
 account.get('/currentUserData', function (req, res) {
     usersModel.findOne({$or: [{email: req.query.data}, {userID: req.query.data}]}, function (error, success) {
         error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
-    }).populate('courses')
+    }).populate('joinedCourses createdCourses')
 });
 
 

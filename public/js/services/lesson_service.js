@@ -3,6 +3,7 @@ angular.module("Lms")
         var scope = this;
         scope.createLesson = function (lesson, id) {
             lesson.courseID = id;
+            console.log(lesson, id);
             Tools.loader();
             var loginData = JSON.parse(localStorage.getItem('loginData'));
             lesson.creatorID = loginData._id;

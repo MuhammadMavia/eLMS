@@ -1,10 +1,14 @@
-angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angular-img-cropper', 'ngMessages'])
-    // .constant('serverRef', 'https://elms-serv.herokuapp.com')
-    .constant('serverRef', '')
+angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angular-img-cropper', 'ngMessages'])
+    .constant('serverRef', 'https://elms-serv.herokuapp.com')
+    // .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state, Tools) {
-        $rootScope.yearOfStudy = ['1st Year', '2nd Year', '3rd Year', '4th Year',];
-        $rootScope.categroies = ['Match', "English", "Physics", "Chemistry", "Urdu", "Arabic"];
+        $rootScope.doLogout = function () {
+            localStorage.removeItem('loginData');
+            $state.go('account.login')
+        };
+        $rootScope.yearOfStudy = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
+        $rootScope.categroies = ['الرياضيات', "الإنجليزية", "علوم فيزيائية", "كيمياء", "الأردية", "العربية"];
         $rootScope.defaultProfileImg = 'https://cdnil1.fiverrcdn.com/photos/20653442/original/1449238862808_facebook20151204-17124-1d8o6tw.jpg?1449238862';
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             var loginData = JSON.parse(localStorage.getItem("loginData"));
@@ -77,14 +81,35 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
                     }
                 }
             })
-            .state('admin.courses', {
-                url: '/admin_courses',
+            .state('admin.all_courses', {
+                url: '/all_courses',
                 isAdmin: true,
                 loginCompulsory: true,
                 views: {
                     AdminContent: {
-                        templateUrl: 'templates/courses.html',
+                        templateUrl: 'templates/all_courses.html',
                         // controller: 'AdminCtrl'
+                    }
+                }
+            })
+            .state('admin.joined_courses', {
+                url: '/joined_courses',
+                isAdmin: true,
+                loginCompulsory: true,
+                views: {
+                    AdminContent: {
+                        templateUrl: 'templates/joined_courses.html',
+                        // controller: 'AdminCtrl'
+                    }
+                }
+            })
+            .state('admin.course', {
+                url: '/course',
+                loginCompulsory: true,
+                isAdmin: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/course.html'
                     }
                 }
             })
@@ -149,6 +174,26 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
                     }
                 }
             })
+            .state('teacher.my_created_course_details', {
+                url: '/my_created_course_details',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/my_created_course_details.html'
+                    }
+                }
+            })
+            .state('teacher.course', {
+                url: '/course',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/course.html'
+                    }
+                }
+            })
             .state('teacher.my_created_courses', {
                 url: '/my_created_courses',
                 loginCompulsory: true,
@@ -159,36 +204,26 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
                     }
                 }
             })
-            /* .state('teacher.create_lesson', {
-             url: '/create_lesson',
-             loginCompulsory: true,
-             isTeacher: true,
-             views: {
-             TeacherContent: {
-             templateUrl: 'templates/create_lesson.html'
-             }
-             }
-             })*/
-            .state('teacher.courses', {
-                url: '/teacher_courses',
+            .state('teacher.all_courses', {
+                url: '/all_courses',
                 loginCompulsory: true,
                 isTeacher: true,
                 views: {
                     TeacherContent: {
-                        templateUrl: 'templates/courses.html'
+                        templateUrl: 'templates/all_courses.html'
                     }
                 }
             })
-            /*.state('teacher.create_course', {
-             url: '/create_course',
-             loginCompulsory: true,
-             isTeacher: true,
-             views: {
-             TeacherContent: {
-             templateUrl: 'templates/create_course.html'
-             }
-             }
-             })*/
+            .state('teacher.joined_courses', {
+                url: '/joined_courses',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/joined_courses.html'
+                    }
+                }
+            })
             .state('teacher.update_info', {
                 url: '/teacher_update_info',
                 loginCompulsory: true,
@@ -199,6 +234,7 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
                     }
                 }
             })
+
             /* Student Routes */
 
             .state('student', {
@@ -217,13 +253,33 @@ angular.module("Lms", ['ui.router', 'ngMaterial', 'firebase', 'ngMdIcons', 'angu
                     }
                 }
             })
-            .state('student.courses', {
-                url: '/student_courses',
+            .state('student.all_courses', {
+                url: '/all_courses',
                 loginCompulsory: true,
                 isStudent: true,
                 views: {
                     StudentContent: {
-                        templateUrl: 'templates/courses.html'
+                        templateUrl: 'templates/all_courses.html'
+                    }
+                }
+            })
+            .state('student.course', {
+                url: '/course',
+                loginCompulsory: true,
+                isStudent: true,
+                views: {
+                    StudentContent: {
+                        templateUrl: 'templates/course.html'
+                    }
+                }
+            })
+            .state('student.joined_courses', {
+                url: '/joined_courses',
+                loginCompulsory: true,
+                isStudent: true,
+                views: {
+                    StudentContent: {
+                        templateUrl: 'templates/joined_courses.html'
                     }
                 }
             })

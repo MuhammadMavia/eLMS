@@ -47,7 +47,7 @@ angular.module("Lms")
             if (isNaN(length))
                 length = 10;
 
-            
+
             if (end === undefined)
                 end = "...";
 

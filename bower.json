@@ -23,6 +23,9 @@
     "firebase": "^2.4.1",
     "angularfire": "^1.1.4",
     "angular-img-cropper": "^1.1.0",
-    "angular-material-icons": "^0.7.0"
+    "angular-material-icons": "^0.7.0",
+    "angular-youtube-embed": "^1.0.2",
+    "angular-input-stars-directive": "angular-input-stars#^1.5.5",
+    "ionic-rating": "^0.3.0"
   }
 }

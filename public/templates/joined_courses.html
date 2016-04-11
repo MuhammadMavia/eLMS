@@ -1,0 +1,20 @@
+<div layout="row" layout-align="center center" layout-wrap layout-padding style="overflow: auto;">
+
+<!--{{currentUser.joinedCourses | json}}-->
+    <div class="md-button md-whiteframe-8dp course-card"
+         layout-align="center center" layout="column" layout-padding
+         layout-margin
+         ng-repeat="course in currentUser.joinedCourses track by $index">
+        <div class="md-title">{{course.title}}</div>
+        <!--<div class="text-nowrap" layout-wrap>{{course.description | truncate : 150}}</div>-->
+        <div>
+            <md-button ng-click="goToMyJoinedCourseDetail(course)"
+                       class="md-button md-raised md-warn Al-Jazeera-Bold">عرض بالطبع
+            </md-button>
+
+        </div>
+        <div>
+            <!--<a>{{course.createdOn| date : medium}}</a> <a>تم إنشاؤها على</a>-->
+        </div>
+    </div>
+</div>
