@@ -34,6 +34,7 @@
     <script type="text/javascript" src="js/controllers/student.js"></script>
     <script type="text/javascript" src="js/controllers/add_teacher.js"></script>
     <script type="text/javascript" src="js/controllers/video_upload.js"></script>
+    <script type="text/javascript" src="js/controllers/courses_controller.js"></script>
     <script type="text/javascript" src="js/directive.js"></script>
     <script type="text/javascript" src="js/services/tools.js"></script>
     <script type="text/javascript" src="js/services/cropper.js"></script>
@@ -84,21 +85,21 @@
                 <md-list-item>
                     <md-input-container class="md-block full-width-input">
                         <label>Description</label>
-                        <textarea md-maxlength="1200" name="description" rows="5"
+                        <textarea md-maxlength="1200" ng-maxlength="1200" name="description" rows="5"
                                   ng-model="video.description"></textarea>
                         <div ng-messages="videoUploaderForm.description.$error">
                             <div ng-message="required">عنوان المطلوبة</div>
-                            <div ng-message="maxlength">عنوان maxlength</div>
+                            <div ng-message="maxlength"></div>
                         </div>
                     </md-input-container>
                 </md-list-item>
 
                 <md-list-item>
-                    <md-button class="md-raised" style="padding-top: 5%!important;">
+                    <md-button aria-label="file" class="md-raised" style="padding-top: 5%!important;">
                         <label for="file">
                             <ng-md-icon class="video-upload-icon" icon="video_library" size="50"></ng-md-icon>
                         </label>
-                        <input input style="display:none;" type="file" id="file" class="button" accept="video/*">
+                        <input ng-model="video.file" input style="display:none;" type="file" id="file" class="button" accept="video/*">
                     </md-button>
                 </md-list-item>
                 <md-card class="md-whiteframe-6dp"
@@ -116,11 +117,11 @@
                     </div>
                 </md-card>
                 <!--<md-button ng-disabled="onProgressData.percentage" class="md-primary md-raised float-right" id="video-uploader-button">Upload Video</md-button>-->
-                <md-button ng-hide="onProgressData.percentage == 100" ng-disabled="onProgressData.percentage"
+                <md-button ng-hide="onProgressData.percentage == 100" ng-disabled="!video.description || !video.title || onProgressData.percentage"
                            class="md-primary md-raised float-right"
                            id="video-uploader-button">Upload Video
                 </md-button>
-                <md-button ng-show="onProgressData.percentage == 100" class="md-primary md-raised float-right">
+                <md-button ng-click="postUpload()" ng-show="onProgressData.percentage == 100" class="md-primary md-raised float-right">
                     Done
                 </md-button>
 
@@ -128,7 +129,6 @@
         </form>
     </md-content>
 </md-sidenav>
-
 <script src="//apis.google.com/js/client:plusone.js"></script>
 <script src="js/cors_upload.js"></script>
 </body>

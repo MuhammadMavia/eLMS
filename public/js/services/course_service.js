@@ -11,7 +11,7 @@ angular.module("Lms")
                     $mdDialog.hide();
                     success.data.code ? Tools.showMsg('إنشاء الدورة بنجاح') : Tools.showMsg('فشل');
                 },
-                function (error) {  
+                function (error) {
                     $mdDialog.hide();
                     Tools.showMsg('فشل')
                 }
@@ -36,6 +36,24 @@ angular.module("Lms")
             );
             return deferred.promise;
         };
+        scope.findOneCourse = function (courseID) {
+            var deferred = $q.defer();
+            $http.get(serverRef + '/courses/findOneCourse?courseID=' + courseID).then(
+                function (success) {
+                    deferred.resolve(success.data);
+                }
+            );
+            return deferred.promise;
+        };
+        scope.findOneJoinedCourse = function (courseID) {
+            var deferred = $q.defer();
+            $http.get(serverRef + '/courses/findOneCourse?courseID=' + courseID).then(
+                function (success) {
+                    deferred.resolve(success.data);
+                }
+            );
+            return deferred.promise;
+        };
         scope.joinCourse = function (courseID, userID) {
             Tools.loader();
             $http.post(serverRef + '/courses/joinCourse', {courseID: courseID, userID: userID}).then(
@@ -53,9 +71,9 @@ angular.module("Lms")
         };
         scope.fetchMyCourses = function (courseID) {
             var deferred = $q.defer();
-            $http.get(serverRef + '/courses/myJoinedCourses?courseID='+courseID).then(
+            $http.get(serverRef + '/courses/myJoinedCourses?courseID=' + courseID).then(
                 function (success) {
-                    console.log(success);
+                    // console.log(success);
                     deferred.resolve(success.data);
                 },
                 function (err) {

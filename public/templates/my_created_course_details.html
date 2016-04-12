@@ -10,7 +10,10 @@
         </md-content>
     </md-tab>
     <md-tab ng-disabled="!selectedLesson" label="فيديوهات">
-        <md-content class="md-padding tab-md-content">
+        <div ng-if="!selectedLesson.videos.length" layout="row" layout-align="center center">
+            <div class="md-display-4 gray-color vh-center">أشرطة الفيديو الفارغة</div>
+        </div>
+        <md-content ng-if="selectedLesson.videos.length" class="md-padding tab-md-content">
             <div layout="row" layout-align="center start" layout-wrap>
                 <div class="md-whiteframe-1dp" layout-padding layout-margin ng-if="selectedVideo.videoID">
                     <youtube-video video-id="selectedVideo.videoID"></youtube-video>
@@ -35,7 +38,10 @@
         </md-content>
     </md-tab>
     <md-tab label="الدروس">
-        <md-content class="md-padding tab-md-content">
+        <div ng-if="!selectedCourse.lessons.length" layout="row" layout-align="center center">
+            <div class="md-display-4 gray-color vh-center">الدروس فارغة</div>
+        </div>
+        <md-content ng-if="selectedCourse.lessons.length" class="md-padding tab-md-content">
             <md-list>
                 <md-list-item ng-click="goToLessonDetail($index)"
                               class="md-3-line md-long-text"
@@ -50,16 +56,16 @@
         </md-content>
     </md-tab>
     <md-tab label="حول مسار">
-        <md-content class="md-padding">
-            <h1 class="md-display-2 text-right">Tab One</h1>
-            <p class="md-subhead text-right">Title {{ selectedCourse.title }} </p>
-            <p class="md-subhead text-right">Category {{ selectedCourse.category }} </p>
-            <p class="md-subhead text-right">Year Of Study {{ $root.yearOfStudy[selectedCourse.yearOfStudy]}} </p>
-            <p class="md-subhead text-right">Students {{ selectedCourse.students.length }} </p>
-            <p class="md-subhead text-right">Lessons {{ selectedCourse.lessons.length }} </p>
-            <p class="md-caption text-right">
-                <b class="md-subhead">Description</b>
-            <p>{{ selectedCourse.description }}</p> </p>
+        <md-content class="md-padding" layout-padding layout-margin>
+            <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.title }} : عنوان</p>
+            <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.category }} : فئة</p>
+            <p class="md-headline text-right Al-Jazeera-Regular"> {{ $root.yearOfStudy[selectedCourse.yearOfStudy]}} :
+                سنة من الدراسة </p>
+            <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.students.length }} : الطلاب </p>
+            <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.lessons.length }} الدروس</p>
+            <p class="md-headline text-right">
+            <p class="text-right Al-Jazeera-Regular"><b class="md-title text-right">وصف</b> : {{
+                selectedCourse.description }}</p>
         </md-content>
     </md-tab>
 </md-tabs>

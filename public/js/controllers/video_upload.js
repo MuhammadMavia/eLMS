@@ -1,6 +1,12 @@
 angular.module("Lms")
-    .controller('VideoUploadCtrl', function ($scope, LessonService) {
+    .controller('VideoUploadCtrl', function ($scope, LessonService, $mdSidenav) {
         var STATUS_POLLING_INTERVAL_MILLIS = 60 * 1000; // One minute.
+        $scope.postUpload = function () {
+            $scope.onProgressData = {};
+            $scope.uploadedVideoData = {};
+            // location.reload();
+            $mdSidenav('upload-video-sidenav').toggle();
+        };
         signinCallback = function (result) {
             if (result.access_token) {
                 var uploadVideo = new UploadVideo();

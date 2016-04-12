@@ -74,6 +74,16 @@
                             icon="create_new_folder"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
+            <md-list-item ng-click="toggleSidenav('create-course-sidenav');toggleSidenav('menu-sidenav')">
+                <p class="menu-option">إنشاء مسار جديد</p>
+                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder" icon="create_new_folder"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('admin.my_created_courses');toggleSidenav('menu-sidenav')" ui-sref-active="menu-active-item">
+                <p class="menu-option">بلدي خلق الدورات</p>
+                <ng-md-icon class="menu-option-icon" aria-label="school" icon="school"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
             <md-list-item ng-click="changeState('admin.students');toggleSidenav('menu-sidenav')">
                 <p class="menu-option">طلابي</p>
                 <ng-md-icon class="menu-option-icon" aria-label="people" icon="people"></ng-md-icon>
@@ -104,11 +114,89 @@
                 <ng-md-icon class="menu-option-icon" aria-label="person" icon="person"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
-            <md-list-item ng-click="$root.doLogout();toggleSidenav('teacher-menu-sidenav')">
+            <md-list-item ng-click="$root.doLogout();toggleSidenav('menu-sidenav')">
                 <p class="menu-option">خروج</p>
                 <ng-md-icon class="menu-option-icon" aria-label="logout" icon="logout"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
         </md-list>
+    </md-content>
+</md-sidenav>
+<md-sidenav class="md-sidenav-left" md-component-id="create-course-sidenav">
+    <md-toolbar class=""></md-toolbar>
+    <md-content class="">
+        <form name="addCourseForm" ng-submit="createCourse(course)">
+            <md-list>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">عنوان</label>
+                        <input name="title" type="text" required md-no-asterisk ng-model="course.title">
+                        <div ng-messages="addCourseForm.title.$error">
+                            <div ng-message="required">عنوان المطلوبة</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">وصف قصير</label>
+                         <textarea name="description" type="text" required md-no-asterisk
+                                   ng-model="course.description"></textarea>
+                        <div ng-messages="addCourseForm.description.$error">
+                            <div ng-message="required">مطلوب وصف قصير</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label>الفئة بالطبع</label>
+                        <md-select class="year-of-study" ng-model="course.category" required>
+                            <md-option ng-value="category" ng-repeat="category in $root.categroies">{{category}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label>سنة من الدراسة</label>
+                        <md-select class="year-of-study" ng-model="course.yearOfStudy" required>
+                            <md-option ng-value="1">العام الأول</md-option>
+                            <md-option ng-value="2">السنة الثانية</md-option>
+                            <md-option ng-value="3">السنة الثالثة</md-option>
+                            <md-option ng-value="4">العام عليها</md-option>
+                        </md-select>
+                    </md-input-container>
+                </md-list-item>
+                <button class="md-button md-raised submit-btn md-primary " value="submit">خلق</button>
+            </md-list>
+        </form>
+    </md-content>
+</md-sidenav>
+<md-sidenav md-is-open="0" class="md-sidenav-left" md-component-id="create-lesson-sidenav">
+    <md-toolbar class=""></md-toolbar>
+    <md-content class="">
+        <form name="addLessonForm" ng-submit="createLesson(lesson,selectedCourse._id)">
+            <md-list>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">عنوان</label>
+                        <input name="title" type="text" required md-no-asterisk ng-model="lesson.title">
+                        <div ng-messages="addLessonForm.title.$error">
+                            <div ng-message="required">عنوان المطلوبة</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">وصف قصير</label>
+                        <textarea name="description" type="text" required md-no-asterisk
+                                  ng-model="lesson.description"></textarea>
+                        <div ng-messages="addLessonForm.description.$error">
+                            <div ng-message="required">مطلوب وصف قصير</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <button class="md-button md-raised submit-btn md-primary" value="submit">خلق</button>
+            </md-list>
+        </form>
     </md-content>
 </md-sidenav>

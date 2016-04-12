@@ -3,9 +3,11 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
     // .constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state, Tools) {
+        $rootScope.membership = ['student', 'teacher', 'admin'];
         $rootScope.doLogout = function () {
             localStorage.removeItem('loginData');
-            $state.go('account.login')
+            $state.go('account.login');
+            location.reload()
         };
         $rootScope.yearOfStudy = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
         $rootScope.categroies = ['الرياضيات', "الإنجليزية", "علوم فيزيائية", "كيمياء", "الأردية", "العربية"];
@@ -81,6 +83,27 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                     }
                 }
             })
+            .state('admin.my_created_courses', {
+                url: '/my_created_courses',
+                loginCompulsory: true,
+                isAdmin: true,
+                views: {
+                    AdminContent: {
+                        templateUrl: 'templates/my_created_courses.html'
+                    }
+                }
+            })
+            .state('admin.my_created_course_details', {
+                url: '/my_created_course_details/:courseID',
+                loginCompulsory: true,
+                isAdmin: true,
+                views: {
+                    AdminContent: {
+                        templateUrl: 'templates/my_created_course_details.html',
+                        controller: 'CoursesCtrl'
+                    }
+                }
+            })
             .state('admin.all_courses', {
                 url: '/all_courses',
                 isAdmin: true,
@@ -104,12 +127,13 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 }
             })
             .state('admin.course', {
-                url: '/course',
+                url: '/course/:courseID',
                 loginCompulsory: true,
                 isAdmin: true,
                 views: {
-                    TeacherContent: {
-                        templateUrl: 'templates/course.html'
+                    AdminContent: {
+                        templateUrl: 'templates/course.html',
+                        controller: 'CoursesCtrl'
                     }
                 }
             })
@@ -165,32 +189,12 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 controller: 'TeacherCtrl'
             })
             .state('teacher.dashboard', {
-                url: '/teacher_dashboard',
+                url: '/dashboard',
                 loginCompulsory: true,
                 isTeacher: true,
                 views: {
                     TeacherContent: {
                         templateUrl: 'templates/teacher_dashboard.html'
-                    }
-                }
-            })
-            .state('teacher.my_created_course_details', {
-                url: '/my_created_course_details',
-                loginCompulsory: true,
-                isTeacher: true,
-                views: {
-                    TeacherContent: {
-                        templateUrl: 'templates/my_created_course_details.html'
-                    }
-                }
-            })
-            .state('teacher.course', {
-                url: '/course',
-                loginCompulsory: true,
-                isTeacher: true,
-                views: {
-                    TeacherContent: {
-                        templateUrl: 'templates/course.html'
                     }
                 }
             })
@@ -201,6 +205,28 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 views: {
                     TeacherContent: {
                         templateUrl: 'templates/my_created_courses.html'
+                    }
+                }
+            })
+            .state('teacher.my_created_course_details', {
+                url: '/my_created_course_details/:courseID',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/my_created_course_details.html',
+                        controller: 'CoursesCtrl'
+                    }
+                }
+            })
+            .state('teacher.course', {
+                url: '/course/:courseID',
+                loginCompulsory: true,
+                isTeacher: true,
+                views: {
+                    TeacherContent: {
+                        templateUrl: 'templates/course.html',
+                        controller: 'CoursesCtrl'
                     }
                 }
             })
@@ -244,7 +270,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 controller: 'StudentCtrl'
             })
             .state('student.dashboard', {
-                url: '/student_dashboard',
+                url: '/dashboard',
                 loginCompulsory: true,
                 isStudent: true,
                 views: {
@@ -264,12 +290,13 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 }
             })
             .state('student.course', {
-                url: '/course',
+                url: '/course/:courseID',
                 loginCompulsory: true,
                 isStudent: true,
                 views: {
                     StudentContent: {
-                        templateUrl: 'templates/course.html'
+                        templateUrl: 'templates/course.html',
+                        controller: 'CoursesCtrl'
                     }
                 }
             })
@@ -295,7 +322,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
             });
 
         $urlRouterProvider.otherwise('/account/login');
-        $urlRouterProvider.otherwise('/student/student_dashboard');
+        // $urlRouterProvider.otherwise('/student/student_dashboard');
         /*         $mdThemingProvider.definePalette('md-primary', {
          '50': '000',
          '100': '000',

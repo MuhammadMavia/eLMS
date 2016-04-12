@@ -31,21 +31,7 @@ function student(CourseService, $scope, serverRef, Tools, $mdSidenav, $state, fi
         $state.go(state);
     };
     $scope.goToMyJoinedCourseDetail = function (course) {
-        CourseService.selectedJoinedCourse = course;
-        $scope.selectedJoinedCourse = course;
-        console.log($scope.selectedJoinedCourse);
-        $state.go('student.course')
-    };
-    $scope.goToLessonDetailOfJoinedCourse = function (lesson) {
-        CourseService.selectedLesson = lesson;
-        $scope.selectedLessonOfJoinedCourse = lesson;
-
-        // localStorage.setItem('selectedLesson', $scope.selectedLesson._id);
-        // $state.go('teacher.my_created_courses')
-    };
-    $scope.watchVideo = function (video) {
-        // $scope.selectedVideo = $scope.selectedLesson.videos[index];
-        $scope.selectedVideo = video;
+        $state.go('student.course', {courseID: course._id})
     };
 }
 

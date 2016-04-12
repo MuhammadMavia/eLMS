@@ -5,7 +5,7 @@ angular.module("Lms")
             $mdToast.show(
                 $mdToast.simple()
                     .textContent(msg)
-                    .position("top right")
+                    .position("top left")
                     .hideDelay(3000)
             );
         };

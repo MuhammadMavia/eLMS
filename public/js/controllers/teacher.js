@@ -29,33 +29,10 @@ function teacher(CourseService, $state, $scope, $mdSidenav, Tools, LessonService
     $scope.joinCourse = CourseService.joinCourse;
     $scope.updateInfo = CheckUserRole.updateInfo;
     $scope.goToMyCreatedCourseDetail = function (course) {
-        CourseService.selectedCourse = course;
-        $scope.selectedCourse = course;
-        console.log($scope.selectedCourse);
-        $state.go('teacher.my_created_course_details')
-    };
-    $scope.goToLessonDetail = function (index) {
-        CourseService.selectedLesson = $scope.selectedCourse.lessons[index];
-        $scope.selectedLesson = $scope.selectedCourse.lessons[index];
-        localStorage.setItem('selectedLesson', $scope.selectedLesson._id);
-        // $state.go('teacher.my_created_courses')
+        $state.go('teacher.my_created_course_details', {courseID: course._id})
     };
     $scope.goToMyJoinedCourseDetail = function (course) {
-        CourseService.selectedJoinedCourse = course;
-        $scope.selectedJoinedCourse = course;
-        console.log($scope.selectedJoinedCourse);
-        $state.go('teacher.course')
-    };
-    $scope.goToLessonDetailOfJoinedCourse = function (lesson) {
-        CourseService.selectedLesson = lesson;
-        $scope.selectedLessonOfJoinedCourse = lesson;
-
-        // localStorage.setItem('selectedLesson', $scope.selectedLesson._id);
-        // $state.go('teacher.my_created_courses')
-    };
-    $scope.watchVideo = function (video) {
-        // $scope.selectedVideo = $scope.selectedLesson.videos[index];
-         $scope.selectedVideo = video;
+        $state.go('teacher.course', {courseID: course._id})
     };
 }
 

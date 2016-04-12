@@ -52,9 +52,39 @@ md-input-container .md-auto-hide .md-input-message-animation:not(.ng-animate) {
 
 .course-card {
     text-align: right;
-    height: 250px;
-    width: 200px;
-    background: #fff !important;
+    /* height: 300px;*/
+    width: 400px;
+    /*background: #fff !important;*/
+}
+
+/*
+.course-card-head{
+    width: 100%!important;
+}
+.course-card-head button{
+    float: left !important;
+
+}
+*/
+.course-card .content {
+    text-align: right;
+    max-height: 150px;
+    height: 150px;
+    overflow: auto;
+    font-family: Al-Jazeera;
+    padding: 3%;
+
+}
+
+md-card-title {
+    width: 100% !important;
+    text-align: right !important;
+    padding-right: 15px !important;
+}
+
+md-card-title span {
+    font-family: Al-Jazeera-Arabic-Bold;
+    margin-right: 30px !important;
 }
 
 .year-of-study {
@@ -86,6 +116,13 @@ md-option div {
     height: calc(100vh - 115px) !important;
     overflow: auto !important;
 }*/
+.gray-color {
+    color: #a8a8a8;
+}
+
+.vh-center {
+    margin-top: 10%;
+}
 
 .video-upload-icon {
     fill: #a8a8a8;
@@ -224,6 +261,20 @@ md-option div {
     /*border-right: 10px solid #525252 !important;*/
     /*background: rgba(0, 0, 0, 0.3) !important;*/
     /*color: #fff;*/
+}
+
+body {
+    height: 100% !important;
+}
+
+ui-view {
+    height: 100%;
+!important;
+}
+
+.main-content {
+    overflow: auto !important;
+    height: calc(100vh - 64px) !important;
 }
 
 .dashboard-main-div {

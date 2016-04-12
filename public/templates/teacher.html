@@ -99,7 +99,7 @@
         </form>
     </md-content>
 </md-sidenav>
-<md-sidenav md-is-open="0" class="md-sidenav-left" md-component-id="create-lesson-sidenav">
+<md-sidenav class="md-sidenav-left" md-component-id="create-lesson-sidenav">
     <md-toolbar class=""></md-toolbar>
     <md-content class="">
         <form name="addLessonForm" ng-submit="createLesson(lesson,selectedCourse._id)">
@@ -138,14 +138,16 @@
     <md-content class="">
         <md-list>
             <md-divider></md-divider>
-            <md-list-item ng-click="changeState('teacher.dashboard');toggleSidenav('teacher-menu-sidenav')" ui-sref-active="menu-active-item">
+            <md-list-item ng-click="changeState('teacher.dashboard');toggleSidenav('teacher-menu-sidenav')"
+                          ui-sref-active="menu-active-item">
                 <p class="menu-option">لوحة القيادة</p>
                 <ng-md-icon class="menu-option-icon" aria-label="dashboard" icon="dashboard"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
             <md-list-item ng-click="toggleSidenav('create-course-sidenav');toggleSidenav('teacher-menu-sidenav')">
                 <p class="menu-option">إنشاء مسار جديد</p>
-                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder" icon="create_new_folder"></ng-md-icon>
+                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder"
+                            icon="create_new_folder"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
             <md-list-item ng-click="changeState('teacher.joined_courses');toggleSidenav('teacher-menu-sidenav')">
@@ -154,11 +156,14 @@
                             icon="create_new_folder"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
-            <md-list-item ng-click="changeState('teacher.all_courses');toggleSidenav('teacher-menu-sidenav')" ui-sref-active="menu-active-item">
+            <md-list-item ng-click="changeState('teacher.all_courses');toggleSidenav('teacher-menu-sidenav')"
+                          ui-sref-active="menu-active-item">
                 <p class="menu-option">الدورات</p>
                 <ng-md-icon class="menu-option-icon" aria-label="school" icon="school"></ng-md-icon>
             </md-list-item>
-            <md-list-item ng-click="changeState('teacher.my_created_courses');toggleSidenav('teacher-menu-sidenav')" ui-sref-active="menu-active-item">
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('teacher.my_created_courses');toggleSidenav('teacher-menu-sidenav')"
+                          ui-sref-active="menu-active-item">
                 <p class="menu-option">بلدي خلق الدورات</p>
                 <ng-md-icon class="menu-option-icon" aria-label="school" icon="school"></ng-md-icon>
             </md-list-item>
@@ -170,7 +175,9 @@
                 <ng-md-icon class="menu-option-icon" aria-label="Chat" icon="message"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
-            <md-list-item ng-click="newUser = currentUser;changeState('teacher.update_info');toggleSidenav('teacher-menu-sidenav')" ui-sref-active="menu-active-item">
+            <md-list-item
+                    ng-click="newUser = currentUser;changeState('teacher.update_info');toggleSidenav('teacher-menu-sidenav')"
+                    ui-sref-active="menu-active-item">
                 <p class="menu-option">تحديث الملف</p>
                 <ng-md-icon class="menu-option-icon" aria-label="person" icon="person"></ng-md-icon>
             </md-list-item>

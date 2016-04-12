@@ -1,18 +1,65 @@
 <!--{{allCourses|json}}-->
 
-<div>
+<div class="main-content">
+
+    <div ng-if="!allCourses.length" layout="row" layout-align="center center">
+        <div class="md-display-4 gray-color vh-center">غير معثور عليه</div>
+    </div>
+
+
     <div layout="row" layout-align="center center" layout-wrap layout-padding style="overflow: auto;">
 
 
-        <div class="md-button md-whiteframe-8dp course-card"
+
+        <md-card class="course-card" ng-repeat="course in allCourses track by $index">
+            <md-card-header>
+                <md-card-avatar>
+                    <img class="md-user-avatar" ng-src="{{course.creator.profileImg || defaultProfileImg}}">
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-subhead">Created by</span>
+                    <span class="md-title">{{course.creator.firstName}} {{course.creator.lastName}}</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{course.title}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p class="content">{{course.description}}</p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="start center">
+                <md-button ng-click="joinCourse(course._id,currentUser._id)" aria-label="playlist_add"
+                           class="md-button md-fab md-icon-button md-raised md-warn">
+                    <ng-md-icon class="fill-fff" icon="playlist_add"></ng-md-icon>
+                </md-button>
+            </md-card-actions>
+        </md-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <!-- <div class="md-button md-whiteframe-8dp course-card"
              layout-align="center center" layout="column" layout-padding
              layout-margin
              ng-repeat="course in allCourses track by $index">
             <div class="md-title">{{course.title}}</div>
-            <!--<div class="text-nowrap" layout-wrap>{{course.description | truncate : 150}}</div>-->
+            &lt;!&ndash;<div class="text-nowrap" layout-wrap>{{course.description | truncate : 150}}</div>&ndash;&gt;
             <div layout="column">
-                <md-button ng-click="joinCourse(course._id,currentUser._id)" class="md-button md-raised md-warn Al-Jazeera-Bold">
-                                         انضمام بالطبع
+                <md-button ng-click="joinCourse(course._id,currentUser._id)"
+                           class="md-button md-raised md-warn Al-Jazeera-Bold">
+                    انضمام بالطبع
                 </md-button>
 
 
@@ -23,8 +70,8 @@
 
             </div>
             <div>
-                <!--<a>{{course.createdOn| date : medium}}</a> <a>تم إنشاؤها على</a>-->
+                &lt;!&ndash;<a>{{course.createdOn| date : medium}}</a> <a>تم إنشاؤها على</a>&ndash;&gt;
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
