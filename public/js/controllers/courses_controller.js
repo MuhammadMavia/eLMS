@@ -9,14 +9,15 @@ function courses(CourseService, $scope, $state, Tools, $mdSidenav, LessonService
     $scope.goToLessonDetail = function (index) {
         CourseService.selectedLesson = $scope.selectedCourse.lessons[index];
         $scope.selectedLesson = $scope.selectedCourse.lessons[index];
+        localStorage.setItem('selectedLesson', $scope.selectedLesson._id);
     };
     $scope.goToLessonDetailOfJoinedCourse = function (lesson) {
         CourseService.selectedLesson = lesson;
+        $scope.selectedLesson = lesson;
         $scope.selectedLessonOfJoinedCourse = lesson;
-
-        // localStorage.setItem('selectedLesson', $scope.selectedLesson._id);
-        // $state.go('teacher.my_created_courses')
+         localStorage.setItem('selectedLesson', $scope.selectedLesson._id);
     };
+    $scope.createLesson = LessonService.createLesson;
     $scope.watchVideo = function (video) {
         // $scope.selectedVideo = $scope.selectedLesson.videos[index];
         $scope.selectedVideo = video;

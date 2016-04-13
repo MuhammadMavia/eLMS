@@ -32,9 +32,8 @@ function admin(CourseService, $scope, $state, Tools, $mdSidenav, LessonService, 
         $state.go(state);
     };
     $scope.changeProfileImg = Cropper.changeProfileImg;
-    $scope.updateInfo = CheckUserRole.updateInfo;
+    $scope.updateMyProfile = CheckUserRole.updateMyProfile;
     $scope.createCourse = CourseService.createCourse;
-    $scope.createLesson = LessonService.createLesson;
     $scope.goToMyCreatedCourseDetail = function (course) {
         $state.go('admin.my_created_course_details', {courseID: course._id})
     };

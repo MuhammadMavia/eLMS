@@ -14,7 +14,7 @@ function teacher(CourseService, $state, $scope, $mdSidenav, Tools, LessonService
     });
     CourseService.getMyCreatedCourses().then(function (data) {
         $scope.myCreatedCourses = data;
-        // console.log(data);
+         console.log(data);
     });
     $scope.changeTheme = Tools.changeTheme;
     $scope.toggleSidenav = function (navId) {
@@ -25,9 +25,8 @@ function teacher(CourseService, $state, $scope, $mdSidenav, Tools, LessonService
     };
     $scope.changeProfileImg = Cropper.changeProfileImg;
     $scope.createCourse = CourseService.createCourse;
-    $scope.createLesson = LessonService.createLesson;
     $scope.joinCourse = CourseService.joinCourse;
-    $scope.updateInfo = CheckUserRole.updateInfo;
+    $scope.updateMyProfile = CheckUserRole.updateMyProfile;
     $scope.goToMyCreatedCourseDetail = function (course) {
         $state.go('teacher.my_created_course_details', {courseID: course._id})
     };

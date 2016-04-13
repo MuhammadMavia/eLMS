@@ -14,7 +14,7 @@ courses.get('/allCourses', function (req, res) {
 courses.get('/myCreatedCourses', function (req, res) {
     coursesModel.find({creatorID: req.query.creatorID}, function (err, success) {
         res.send(err || success)
-    }).populate('lessons students creator')
+    }).populate('lessons creator')
 });
 
 
@@ -27,7 +27,7 @@ courses.get('/myJoinedCourses', function (req, res) {
 courses.get('/findOneCourse', function (req, res) {
     coursesModel.findOne({_id: req.query.courseID}, function (error, success) {
         res.send(error || success);
-    }).populate('lessons');
+    }).populate('lessons students');
 });
 
 /*courses.use('/joinCourse', function (req, res, next) {

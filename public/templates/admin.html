@@ -14,7 +14,7 @@
         </div>
     </md-toolbar>
     <md-content class="main-md-content">
-        <div ui-view name="AdminContent"></div>
+        <ui-view name="AdminContent" class="main-content"></ui-view>
         <!--<section flex="15" class="menu-column">
             <div layout-padding>
                 <md-list layout-margin class="bg-opacity background">
@@ -76,10 +76,12 @@
             <md-divider></md-divider>
             <md-list-item ng-click="toggleSidenav('create-course-sidenav');toggleSidenav('menu-sidenav')">
                 <p class="menu-option">إنشاء مسار جديد</p>
-                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder" icon="create_new_folder"></ng-md-icon>
+                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder"
+                            icon="create_new_folder"></ng-md-icon>
             </md-list-item>
             <md-divider></md-divider>
-            <md-list-item ng-click="changeState('admin.my_created_courses');toggleSidenav('menu-sidenav')" ui-sref-active="menu-active-item">
+            <md-list-item ng-click="changeState('admin.my_created_courses');toggleSidenav('menu-sidenav')"
+                          ui-sref-active="menu-active-item">
                 <p class="menu-option">بلدي خلق الدورات</p>
                 <ng-md-icon class="menu-option-icon" aria-label="school" icon="school"></ng-md-icon>
             </md-list-item>
@@ -166,11 +168,14 @@
                         </md-select>
                     </md-input-container>
                 </md-list-item>
-                <button class="md-button md-raised submit-btn md-primary " value="submit">خلق</button>
+                <button ng-disabled="!course.yearOfStudy || !course.category || !course.title || !course.description"
+                        class="md-button md-raised submit-btn md-primary " value="submit">خلق
+                </button>
             </md-list>
         </form>
     </md-content>
 </md-sidenav>
+<!--
 <md-sidenav md-is-open="0" class="md-sidenav-left" md-component-id="create-lesson-sidenav">
     <md-toolbar class=""></md-toolbar>
     <md-content class="">
@@ -199,4 +204,4 @@
             </md-list>
         </form>
     </md-content>
-</md-sidenav>
+</md-sidenav>-->

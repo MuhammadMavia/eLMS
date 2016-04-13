@@ -44,7 +44,7 @@ angular.module("Lms")
             );
             return deferred.promise;
         };
-        this.updateInfo = function (updatedUser) {
+        this.updateMyProfile = function (updatedUser) {
             Tools.loader();
             $http.post(serverRef + '/account/updateProfile', updatedUser).then(
                 function (success) {

@@ -14,7 +14,7 @@
         </div>
     </md-toolbar>
     <md-content class="main-md-content">
-        <div ui-view name="TeacherContent"></div>
+        <ui-view name="TeacherContent" class="main-content"></ui-view>
         <!--<div layout="row">
             <section flex="100" class="content-column" layout-padding>
                 <div ui-view name="TeacherContent" class="md-whiteframe-6dp content-column-box ui-view-content"
@@ -94,36 +94,7 @@
                         </md-select>
                     </md-input-container>
                 </md-list-item>
-                <button class="md-button md-raised submit-btn md-primary " value="submit">خلق</button>
-            </md-list>
-        </form>
-    </md-content>
-</md-sidenav>
-<md-sidenav class="md-sidenav-left" md-component-id="create-lesson-sidenav">
-    <md-toolbar class=""></md-toolbar>
-    <md-content class="">
-        <form name="addLessonForm" ng-submit="createLesson(lesson,selectedCourse._id)">
-            <md-list>
-                <md-list-item>
-                    <md-input-container class="md-block full-width-input">
-                        <label class="right-label">عنوان</label>
-                        <input name="title" type="text" required md-no-asterisk ng-model="lesson.title">
-                        <div ng-messages="addLessonForm.title.$error">
-                            <div ng-message="required">عنوان المطلوبة</div>
-                        </div>
-                    </md-input-container>
-                </md-list-item>
-                <md-list-item>
-                    <md-input-container class="md-block full-width-input">
-                        <label class="right-label">وصف قصير</label>
-                        <textarea name="description" type="text" required md-no-asterisk
-                                  ng-model="lesson.description"></textarea>
-                        <div ng-messages="addLessonForm.description.$error">
-                            <div ng-message="required">مطلوب وصف قصير</div>
-                        </div>
-                    </md-input-container>
-                </md-list-item>
-                <button class="md-button md-raised submit-btn md-primary" value="submit">خلق</button>
+                <button ng-disabled="!course.yearOfStudy || !course.category || !course.title || !course.description" class="md-button md-raised submit-btn md-primary " value="submit">خلق</button>
             </md-list>
         </form>
     </md-content>

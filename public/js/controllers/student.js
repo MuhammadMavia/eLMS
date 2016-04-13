@@ -15,7 +15,7 @@ function student(CourseService, $scope, serverRef, Tools, $mdSidenav, $state, fi
     });
     $scope.changeTheme = Tools.changeTheme;
     $scope.changeProfileImg = Cropper.changeProfileImg;
-    $scope.updateInfo = CheckUserRole.updateInfo;
+    $scope.updateMyProfile = CheckUserRole.updateMyProfile;
     $scope.joinCourse = CourseService.joinCourse;
     $scope.fetchMyCourses = function () {
         CourseService.fetchMyCourses().then(

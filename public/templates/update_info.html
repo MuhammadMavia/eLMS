@@ -5,7 +5,7 @@
             <img ng-click="changeProfileImg()" class="profile-img" ng-src="{{$root.profileImg || currentUser.profileImg || defaultProfileImg}}">
         </div>
 
-        <form name="updateInfo" ng-submit="updateInfo(newUser)" class="teacher-add-form" layout="column" layout-align="center center"
+        <form name="updateInfo" ng-submit="updateMyProfile(newUser)" class="teacher-add-form" layout="column" layout-align="center center"
               layout-wrap>
             <md-input-container class="md-block">
                 <label class="right-label">الاسم الاول</label>

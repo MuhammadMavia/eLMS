@@ -267,8 +267,9 @@ body {
     height: 100% !important;
 }
 
-ui-view {
-    height: 100%;
+.main-md-content {
+    overflow: auto !important;
+    height: calc(100vh - 64px);
 !important;
 }
 
@@ -288,6 +289,10 @@ ui-view {
 }*/
 .tab-md-content {
     height: calc(100vh - (200px));
+}
+
+.lessons-card {
+
 }
 
 .menu-column p {

@@ -7,7 +7,7 @@ angular.module("Lms")
             Tools.loader();
             var loginData = JSON.parse(localStorage.getItem('loginData'));
             lesson.creatorID = loginData._id;
-            lesson.courseID = CourseService.selectedCourse._id;
+            lesson.courseID = id;
             $http.post(serverRef + '/lessons/createLesson', lesson).then(
                 function (success) {
                     $mdDialog.hide();
@@ -27,10 +27,12 @@ angular.module("Lms")
             $http.post(serverRef + '/lessons/pushVideo', {video: video, lessonID: selectedLesson}).then(
                 function (success) {
                     $mdDialog.hide();
+                    console.log(success);
                     success.data.code ? Tools.showMsg('') : Tools.showMsg('');
                 },
                 function (error) {
                     $mdDialog.hide();
+                    console.log(error);
                     Tools.showMsg('فشل')
                 }
             )
