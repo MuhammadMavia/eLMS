@@ -321,8 +321,8 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 }
             });
 
-        $urlRouterProvider.otherwise('/lms');
-        // $urlRouterProvider.otherwise('/account/login');
+        // $urlRouterProvider.otherwise('/lms');
+        $urlRouterProvider.otherwise('/account/login');
         // $urlRouterProvider.otherwise('/student/student_dashboard');
         /*         $mdThemingProvider.definePalette('md-primary', {
          '50': '000',

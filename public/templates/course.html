@@ -10,7 +10,7 @@
                 <h1 class="Al-Jazeera-Bold">الدروس</h1>
             </div>
         </md-toolbar>
-        <md-content layout-padding>
+        <md-content layout-padding class="vh-85">
             <md-list>
                 <md-divider></md-divider>
                 <md-list-item ng-click="goToLessonDetailOfJoinedCourse(lesson)"
@@ -18,7 +18,7 @@
                               ng-repeat="lesson in selectedJoinedCourse.lessons track by $index">
                     <div class="md-list-item-text">
                         <h3>{{lesson.title}}</h3>
-                        <p>{{lesson.description}}</p>
+                        <p>{{lesson.description  |  limitTo: 50}}</p>
                     </div>
                     <md-divider></md-divider>
                 </md-list-item>
@@ -58,7 +58,7 @@
                                 <md-divider></md-divider>
                                 <div class="md-list-item-text" layout="column">
                                     <h3> {{video.title}}</h3>
-                                    <p class="Al-Jazeera-Regular">{{video.description}}</p>
+                                    <p class="Al-Jazeera-Regular">{{video.description  |  limitTo: 80}}</p>
                                 </div>
                                 <img ng-src="{{video.thumbnails.default.url}}"/>
                                 <md-divider></md-divider>

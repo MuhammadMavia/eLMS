@@ -230,7 +230,9 @@ md-option div {
     outline: none;
     cursor: pointer;
 }
-
+.vh-85{
+    height: 85vh!important;
+}
 .text-right {
     text-align: right !important;
 }

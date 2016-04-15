@@ -12,7 +12,7 @@
         </md-toolbar>
 
 
-        <md-content layout-padding>
+        <md-content layout-padding class="vh-85">
             <md-list>
                 <md-divider></md-divider>
                 <md-list-item ng-click="goToLessonDetail($index)"
@@ -20,7 +20,7 @@
                               ng-repeat="lesson in selectedCourse.lessons track by $index">
                     <div class="md-list-item-text">
                         <h3>{{lesson.title}}</h3>
-                        <p>{{lesson.description}}</p>
+                        <p>{{lesson.description |  limitTo: 80}}</p>
                     </div>
                     <md-divider></md-divider>
                 </md-list-item>
@@ -29,7 +29,7 @@
 
 
             <md-button ng-click="toggleSidenav('create-lesson-sidenav')"
-                       class="md-fab md-fab-top-right md-icon-button md-primary">
+                       class="md-fab md-fab-bottom-right md-icon-button md-primary">
                 <md-tooltip md-direction="bottom" class="Al-Jazeera-Bold">إنشاء الدرس</md-tooltip>
                 <ng-md-icon icon="add" class="fill-fff"></ng-md-icon>
             </md-button>
@@ -64,7 +64,7 @@
                                 <md-divider></md-divider>
                                 <div class="md-list-item-text" layout="column">
                                     <h3> {{video.title}}</h3>
-                                    <p class="Al-Jazeera-Regular">{{video.description}}</p>
+                                    <p class="Al-Jazeera-Regular">{{video.description | limitTo: 180}}</p>
                                 </div>
                                 <img ng-src="{{video.thumbnails.default.url}}"/>
                                 <md-divider></md-divider>
@@ -143,19 +143,16 @@
             </md-content>
         </md-tab>
     </md-tabs>
-
-
     <md-button ng-show="selectedTabIndex == 2" ng-click="toggleSidenav('upload-video-sidenav')"
-               class="md-fab md-fab-top-right md-icon-button md-primary">
+               class="md-fab md-fab-bottom-right md-icon-button md-primary">
         <md-tooltip md-direction="bottom" class="Al-Jazeera-Bold">رفع فيديو</md-tooltip>
         <ng-md-icon icon="add" class="fill-fff"></ng-md-icon>
     </md-button>
-
 </div>
 
 <md-sidenav class="md-sidenav-left" md-component-id="create-lesson-sidenav">
     <md-toolbar class=""></md-toolbar>
-    <md-content class="">
+    <md-content>
         <form name="addLessonForm" ng-submit="createLesson(lesson,selectedCourse._id)">
             <md-list>
                 <md-list-item>

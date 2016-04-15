@@ -1,5 +1,5 @@
 angular.module("Lms")
-    .controller('VideoUploadCtrl', function ($scope, LessonService, $mdSidenav) {
+    .controller('VideoUploadCtrl', function (Tools,$scope, LessonService, $mdSidenav) {
         var STATUS_POLLING_INTERVAL_MILLIS = 60 * 1000; // One minute.
         $scope.postUpload = function () {
             $scope.onProgressData = {};
@@ -60,6 +60,7 @@ angular.module("Lms")
                     } else {
                         // console.log(response.items[0].snippet);
                         $scope.channel = response.items[0].snippet;
+                        console.log($scope.channel);
                         $scope.$apply();
                         // $('#channel-name').text(response.items[0].snippet.title);
                         // $('#channel-thumbnail').attr('src', response.items[0].snippet.thumbnails.default.url);
@@ -90,7 +91,8 @@ angular.module("Lms")
                     part: Object.keys(metadata).join(',')
                 },
                 onError: function (error) {
-                    console.log(error)
+                    console.log(JSON.parse(error));
+                    Tools.showMsg('فشل لتحميل يرجى إنشاء شانيل على يوتيوب')
                 }.bind(this),
                 onProgress: function (data) {
                     var bytesPerSecond = data.loaded / ((Date.now() - this.uploadStartTime) / 1000);

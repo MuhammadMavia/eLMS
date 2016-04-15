@@ -1,50 +1,3 @@
-/*
- var users = {
- firstName     : {type: String},
- lastName      : {type: String},
- email         : {type: String},
- theme         : {type: String},
- //yearOfStudy   : {type: String},
- password      : {type: String},
- progress      : {type: String},
- sex           : {type: Number},
- tel           : {type: Number},
- role          : {type: Number},
- createdOn     : {type: Date},
- courses       : {type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Courses' }]},
- quizzes       : {type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes' }]}
- };
- */
-/*
-
- var courses = {
- title         : {type: String},
- description   : {type: String},
- adminID       : {type: String},
- creatorID     : {type: String},
- yearOfStudy   : {type: Number},
- publish       : {type: Boolean},
- code          : {type: Number},
- rates         : {type: Array},
- comments      : {type: Array},
- createdOn     : {type: Date},
- lastModified  : {type: Date},
- lessons       : {type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Lessons' }]},
- quizzes       : {type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes' }]}
- };
- */
-
-
-var quizzes = {
-    title: {type: String},
-    courseID: {type: String},
-    duration: {type: String},
-    description: {type: String},
-    createdOn: {type: Date},
-    lastModified: {type: Date}
-};
-
-
 var mongoose = require("mongoose");
 var uniqueValidator = require('mongoose-unique-validator');
 
@@ -63,9 +16,9 @@ var usersSchema = new mongoose.Schema({
     createdCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
     joinedCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
     quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]},
-    userID: {type: String},
-    link: {type: String}
+    userID: {type: String}
 });
+usersSchema.plugin(uniqueValidator);
 exports.usersModel = mongoose.model("Users", usersSchema);
 exports.usersSchema = usersSchema;
 
@@ -87,7 +40,6 @@ var coursesSchema = new mongoose.Schema({
     students: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Users', unique: true}]},
     quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]}
 });
-usersSchema.plugin(uniqueValidator);
 coursesSchema.plugin(uniqueValidator);
 exports.coursesModel = mongoose.model("Courses", coursesSchema);
 
