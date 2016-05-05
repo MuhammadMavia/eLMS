@@ -1,35 +1,39 @@
-<div layout="column" layout-padding layout-align="center center">
-    <!-- <div layout="row" layout-align="center center" layout-wrap>
-         <md-button ui-sref="admin.teachers">
-             <md-card class="dashboard-card bg-opacity">
-                 <md-card-title>
-                     <md-card-title-text>
-                         <span class="md-display-3">544</span>
-                         <span class="md-headline">معلمون</span>
-                     </md-card-title-text>
-                 </md-card-title>
-             </md-card>
-         </md-button>
-         <md-button>
-             <md-card class="dashboard-card bg-opacity">
-                 <md-card-title>
-                     <md-card-title-text>
-                         <span class="md-display-3">912</span>
-                         <span class="md-headline">الطلاب</span>
-                     </md-card-title-text>
-                 </md-card-title>
-             </md-card>
-         </md-button>
-         <md-button>
-             <md-card class="dashboard-card bg-opacity">
-                 <md-card-title>
-                     <md-card-title-text>
-                         <span class="md-display-3">45</span>
-                         <span class="md-headline Al-Jazeera-Regular">الدورات</span>
-                     </md-card-title-text>
-                 </md-card-title>
-             </md-card>
-         </md-button>
-     </div>
-     <div class="md-whiteframe-1dp dashboard-chart bg-opacity"></div>-->
-</div>
+<nav class="navbar app-navbar navbar-inverse">
+    <!--<div class="container-fluid">-->
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Logo</a>
+    </div>
+
+    <!--<div class="collapse navbar-collapse navbar-right">-->
+
+    <ul class="nav navbar-nav navbar-right mr-r-10">
+        <li class="navbar-brand">
+            <i class="fa fa-bell fa-md cursor-pointer" aria-hidden="true"></i>
+        </li>
+        <li class="navbar-brand">User Name</li>
+        <li><a href="#"></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right ">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false">Subject<span
+                    class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+            </ul>
+        </li>
+    </ul>
+    <form class="navbar-form form-search w-40  col-md-6" role="search">
+        <div class="form-group has-feedback col-md-12">
+            <input type="text" class="form-control w-100" placeholder="Search">
+        </div>
+    </form>
+    <!--</div>-->
+    <!--</div>-->
+</nav>
+<ui-view name="AppContent"></ui-view>

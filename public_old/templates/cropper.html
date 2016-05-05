@@ -1,0 +1,23 @@
+<md-dialog aria-label="Cropper" layout-padding>
+    <md-dialog-content style="max-width:800px;max-height:810px;">
+        <div style="text-align: center">
+            <input ng-hide="true" type="file" img-cropper-fileread image="cropper.sourceImage"/>
+            <md-button onclick="this.previousElementSibling.click()" ng-show="cropper.sourceImage==null">
+                <img ng-src="{{$root.defaultProfileImg}}"
+                     height="300" width="300">
+            </md-button>
+
+            <canvas ng-show="cropper.sourceImage!=null" width="300" height="300" id="canvas" image-cropper
+                    image="cropper.sourceImage"
+                    cropped-image="cropper.croppedImage" crop-width="300" crop-height="300" keep-aspect="true"
+                    touch-radius="30" crop-area-bounds="bounds"></canvas>
+            <!--<img ng-src="{{cropper.croppedImage}}"/>-->
+        </div>
+
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <md-button ng-click="uploadProfileImg()" class="Al-Jazeera-Bold">إلغاء</md-button>
+        <md-button ng-click="uploadProfileImg(cropper.croppedImage)" class="md-raised md-primary Al-Jazeera-Bold">فعله
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>

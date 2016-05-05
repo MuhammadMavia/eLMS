@@ -1,0 +1,33 @@
+<div class="main-content">
+    <div ng-if="!myCreatedCourses.length" layout="row" layout-align="center center">
+        <div class="md-display-4 gray-color vh-center">غير معثور عليه</div>
+    </div>
+    <div layout="row" layout-align="center center" layout-wrap layout-padding>
+
+        <md-card class="course-card" ng-repeat="course in myCreatedCourses track by $index">
+            <md-card-header>
+                <md-card-avatar>
+                    <img class="md-user-avatar" ng-src="{{course.creator.profileImg || defaultProfileImg}}">
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-subhead">Created by</span>
+                    <span class="md-title">{{course.creator.firstName}} {{course.creator.lastName}}</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{course.title}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p class="content">{{course.description}}</p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="start center">
+                <md-button ng-click="goToMyCreatedCourseDetail(course)" aria-label="setting"
+                           class="md-button md-fab md-icon-button md-raised md-warn">
+                    <ng-md-icon class="fill-fff" icon="settings"></ng-md-icon>
+                </md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>

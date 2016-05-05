@@ -1,18 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/public/templates/register.html" line="37" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="e951f39c-7c38-4509-ae21-4a5eaaff41b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/controllers/AppCtrl.js" />
+      <change type="DELETED" beforePath="D:\eLMS\public\lib\font-awesome\less\extras.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\eLMS\public\lib\font-awesome\less\spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\eLMS\public\lib\font-awesome\scss\_extras.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\eLMS\public\lib\font-awesome\scss\_spinning.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/.bower.json" afterPath="$PROJECT_DIR$/public/lib/font-awesome/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/.bower.json" afterPath="$PROJECT_DIR$/public/lib/jquery/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/.gitignore" afterPath="$PROJECT_DIR$/public/lib/font-awesome/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/.jshintrc" afterPath="$PROJECT_DIR$/public/lib/jquery/src/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/AUTHORS.txt" afterPath="$PROJECT_DIR$/public/lib/jquery/AUTHORS.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core/DOMEval.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core/DOMEval.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/LICENSE.txt" afterPath="$PROJECT_DIR$/public/lib/jquery/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/sizzle/LICENSE.txt" afterPath="$PROJECT_DIR$/public/lib/jquery/sizzle/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Pana.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Pana.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/README.md" afterPath="$PROJECT_DIR$/public/lib/jquery/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/effects/Tween.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/data/var/acceptData.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/data/var/acceptData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/data/accepts.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/data/accepts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/account.js" afterPath="$PROJECT_DIR$/public/js/controllers/account.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/addGetHookIf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/adjustCSS.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/adjustCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/admin.js" afterPath="$PROJECT_DIR$/public/js/controllers/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/event/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/event/alias.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/effects/animatedSelector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/video_upload.js" afterPath="$PROJECT_DIR$/public/js/controllers/video_upload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/course.html" afterPath="$PROJECT_DIR$/public/templates/course.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/my_created_course_details.html" afterPath="$PROJECT_DIR$/public/templates/my_created_course_details.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/arr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/attributes/attr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/bower.json" afterPath="$PROJECT_DIR$/public/lib/font-awesome/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/bower.json" afterPath="$PROJECT_DIR$/public/lib/jquery/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/buildFragment.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/buildFragment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/class2type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/attributes/classes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/services/course_service.js" afterPath="$PROJECT_DIR$/public/js/services/course_service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/courses_controller.js" afterPath="$PROJECT_DIR$/public/js/controllers/courses_controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/createSafeFragment.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/createSafeFragment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/var/cssExpand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/curCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/dashboard.html" afterPath="$PROJECT_DIR$/public/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/data.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/data/var/dataPriv.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/data/var/dataPriv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/data/var/dataUser.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/data/var/dataUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/defaultDisplay.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/defaultDisplay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/queue/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/deletedIds.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/deletedIds.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/traversing/var/dir.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/traversing/var/dir.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directive.js" afterPath="$PROJECT_DIR$/public/js/directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/document.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/document.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/documentElement.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/documentElement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/effects.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/event.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/deferred/exceptionHook.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/deferred/exceptionHook.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/traversing/findFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/event/focusin.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/event/focusin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/getAll.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/getAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/var/getStyles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/exports/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/hasOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/index.js" afterPath="$PROJECT_DIR$/server/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/indexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/intro.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/var/isHidden.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/var/isHidden.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.slim.js" afterPath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.slim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.slim.min.js" afterPath="$PROJECT_DIR$/public/lib/jquery/dist/jquery.slim.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/services/lesson_service.js" afterPath="$PROJECT_DIR$/public/js/services/lesson_service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/lms.html" afterPath="$PROJECT_DIR$/public/templates/lms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/var/location.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/var/location.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/login.html" afterPath="$PROJECT_DIR$/public/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/nodeNames.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/nodeNames.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/var/nonce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/offset.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/outro.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/outro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core/parseHTML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/parseJSON.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/parseJSON.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/parseXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/pnum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/attributes/prop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/push.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/queue.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/queue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/rcssNum.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/rcssNum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/register.html" afterPath="$PROJECT_DIR$/public/templates/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rleadingWhitespace.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rleadingWhitespace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/var/rmargin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/rnotwhite.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/rnotwhite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/var/rquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rscriptType.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rscriptType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core/var/rsingleTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rtagName.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/var/rtagName.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/schema.js" afterPath="$PROJECT_DIR$/server/routes/schema.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/selector-native.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/selector-sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/selector.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/setGlobalEval.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/setGlobalEval.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/showHide.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/showHide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/traversing/var/siblings.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/traversing/var/siblings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/public/lib/jquery/sizzle/dist/sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/public/lib/jquery/sizzle/dist/sizzle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/slice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/student.js" afterPath="$PROJECT_DIR$/public/js/controllers/student.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/attributes/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/core/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/core/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/data/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/data/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/effects/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/effects/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/event/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/css/var/swap.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/css/var/swap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/teacher.js" afterPath="$PROJECT_DIR$/public/js/controllers/teacher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/var/toString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/services/tools.js" afterPath="$PROJECT_DIR$/public/js/services/tools.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/traversing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/event/trigger.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/event/trigger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/attributes/val.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/wrapMap.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/manipulation/wrapMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lib/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/public/lib/jquery/src/ajax/xhr.js" />
+      <change type="MOVED" beforePath="D:\eLMS\public\templates\change_theme.html" afterPath="$PROJECT_DIR$/public/templates/settings.html" />
     </list>
     <ignored path="eLMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,46 +194,33 @@
     <favorites_list name="eLMS" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+    <leaf>
+      <file leaf-file-name="lms.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3961">
-              <caret line="233" column="27" selection-start-line="233" selection-start-column="27" selection-end-line="233" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/course.html">
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
-              <folding>
-                <element signature="n#md-toolbar#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-content#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#3466#4570#0" expanded="false" />
-                <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courses_controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/courses_controller.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding>
-                <element signature="e#387#480#0" expanded="false" />
-                <element signature="e#530#759#0" expanded="false" />
-                <element signature="e#1144#1260#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="131" column="27" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,42 +228,45 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="325" column="40" selection-start-line="325" selection-start-column="40" selection-end-line="325" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/templates/settings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4994206">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="e#332#1924#0" expanded="false" />
-                <element signature="e#441#572#0" expanded="false" />
-                <element signature="e#1026#1917#0" expanded="false" />
-                <element signature="e#2055#2146#0" expanded="false" />
-                <element signature="e#2178#2355#0" expanded="false" />
-                <element signature="e#2393#2602#0" expanded="false" />
-                <element signature="e#2643#2858#0" expanded="false" />
-                <element signature="e#2921#3092#0" expanded="false" />
-                <element signature="e#3132#3469#0" expanded="false" />
-                <element signature="e#3518#3821#0" expanded="false" />
-                <element signature="e#3877#4255#0" expanded="false" />
-                <element signature="e#4297#4638#0" expanded="false" />
-                <element signature="e#4683#5030#0" expanded="false" />
-                <element signature="e#5067#5407#0" expanded="false" />
-                <element signature="e#5449#5796#0" expanded="false" />
-                <element signature="e#5838#6181#0" expanded="false" />
-                <element signature="e#6220#6509#0" expanded="false" />
-                <element signature="e#6548#6837#0" expanded="false" />
-                <element signature="e#6904#7084#0" expanded="false" />
-                <element signature="e#7126#7423#0" expanded="false" />
-                <element signature="e#7474#7781#0" expanded="false" />
-                <element signature="e#7839#8221#0" expanded="false" />
-                <element signature="e#8260#8604#0" expanded="false" />
-                <element signature="e#8648#8941#0" expanded="false" />
-                <element signature="e#8988#9287#0" expanded="false" />
-                <element signature="e#9331#9632#0" expanded="false" />
-                <element signature="e#9699#9879#0" expanded="false" />
-                <element signature="e#9921#10218#0" expanded="false" />
-                <element signature="e#10262#10555#0" expanded="false" />
-                <element signature="e#10594#10938#0" expanded="false" />
-                <element signature="e#10985#11284#0" expanded="false" />
-                <element signature="e#11328#11629#0" expanded="false" />
-                <element signature="e#11817#12581#0" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/directive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#truncate#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -123,76 +275,22 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_upload.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/video_upload.js">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/schema.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="119" selection-start-line="33" selection-start-column="119" selection-end-line="33" selection-end-column="119" />
               <folding>
-                <element signature="e#839#2556#0" expanded="false" />
-                <element signature="n#md-sidenav#0;n#!!top" expanded="false" />
-                <element signature="n#md-toolbar#0;n#md-sidenav#0;n#!!top" expanded="false" />
-                <element signature="n#md-sidenav#1;n#!!top" expanded="false" />
-                <element signature="e#9889#11461#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my_created_course_details.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/my_created_course_details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="150" column="6" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
-              <folding>
-                <element signature="n#md-sidenav#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-toolbar#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#3701#4716#0" expanded="false" />
-                <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#4;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-button#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#p#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -205,6 +303,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Html5" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -215,11 +314,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/youtube/youtube.html" />
-        <option value="$PROJECT_DIR$/youtube/youtube.js" />
-        <option value="$PROJECT_DIR$/youtube/oauth.js" />
-        <option value="$PROJECT_DIR$/youtube/auth.js" />
-        <option value="$PROJECT_DIR$/youtube/you.js" />
         <option value="$PROJECT_DIR$/youtube/search.html" />
         <option value="$PROJECT_DIR$/youtube/search.js" />
         <option value="$PROJECT_DIR$/youtube/upload.html" />
@@ -227,7 +321,6 @@
         <option value="$PROJECT_DIR$/youtube/upload_video.js" />
         <option value="$PROJECT_DIR$/youtube/upload_video.css" />
         <option value="$PROJECT_DIR$/youtube/app.js" />
-        <option value="$PROJECT_DIR$/public/templates/login.html" />
         <option value="$PROJECT_DIR$/public/templates/google.html" />
         <option value="$PROJECT_DIR$/public/templates/create_lesson.html" />
         <option value="$PROJECT_DIR$/public/templates/teacher_dashboard.html" />
@@ -235,37 +328,43 @@
         <option value="$PROJECT_DIR$/server/routes/lessons.js" />
         <option value="$PROJECT_DIR$/public/templates/course_details.html" />
         <option value="$PROJECT_DIR$/public/templates/student_dashboard.html" />
-        <option value="$PROJECT_DIR$/public/js/directive.js" />
         <option value="$PROJECT_DIR$/public/templates/view_couese.html" />
         <option value="$PROJECT_DIR$/public/templates/student.html" />
         <option value="$PROJECT_DIR$/server/routes/account.js" />
-        <option value="$PROJECT_DIR$/public/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/public/js/services/course_service.js" />
         <option value="$PROJECT_DIR$/public/js/services/tools.js" />
         <option value="$PROJECT_DIR$/public/templates/all_courses.html" />
         <option value="$PROJECT_DIR$/public/templates/my_created_courses.html" />
         <option value="$PROJECT_DIR$/public/templates/joined_courses.html" />
-        <option value="$PROJECT_DIR$/public/js/services/lesson_service.js" />
         <option value="$PROJECT_DIR$/public/templates/teacher.html" />
         <option value="$PROJECT_DIR$/public/templates/admin.html" />
         <option value="$PROJECT_DIR$/public/templates/update_info.html" />
-        <option value="$PROJECT_DIR$/public/js/controllers/student.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers/admin.js" />
         <option value="$PROJECT_DIR$/public/js/services/check_user_role.js" />
-        <option value="$PROJECT_DIR$/public/templates/lms.html" />
         <option value="$PROJECT_DIR$/youtube/index.html" />
-        <option value="$PROJECT_DIR$/public/js/controllers/teacher.js" />
-        <option value="$PROJECT_DIR$/server/routes/courses.js" />
         <option value="$PROJECT_DIR$/public/templates/students.html" />
-        <option value="$PROJECT_DIR$/public/js/controllers/courses_controller.js" />
-        <option value="$PROJECT_DIR$/server/index.js" />
-        <option value="$PROJECT_DIR$/server/routes/schema.js" />
-        <option value="$PROJECT_DIR$/public/js/app.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/video_upload.js" />
         <option value="$PROJECT_DIR$/public/templates/course.html" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/templates/my_created_course_details.html" />
+        <option value="$PROJECT_DIR$/server/routes/courses.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers/student.js" />
+        <option value="$PROJECT_DIR$/public/js/services/course_service.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers/admin.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers/teacher.js" />
+        <option value="$PROJECT_DIR$/public/js/services/lesson_service.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers/courses_controller.js" />
+        <option value="$PROJECT_DIR$/public_old/templates/register.html" />
+        <option value="$PROJECT_DIR$/public/templates/lms.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers/AppCtrl.js" />
+        <option value="$PROJECT_DIR$/server/index.js" />
+        <option value="$PROJECT_DIR$/server/routes/schema.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers/account.js" />
+        <option value="$PROJECT_DIR$/public/templates/register.html" />
+        <option value="$PROJECT_DIR$/public/templates/login.html" />
+        <option value="$PROJECT_DIR$/public/js/directive.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/public/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/templates/settings.html" />
       </list>
     </option>
   </component>
@@ -273,6 +372,9 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -301,8 +403,6 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
@@ -351,7 +451,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,10 +466,11 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -390,16 +491,21 @@
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="" />
-      <node-interpreter value="project" />
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
@@ -412,38 +518,27 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>C:/Program Files/nodejs/node.exe</node-interpreter>
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
       <pass-parent-env>true</pass-parent-env>
       <envs />
       <ui>bdd</ui>
       <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
       <test-directory />
       <recursive>false</recursive>
       <method />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -452,7 +547,6 @@
       <changelist id="e951f39c-7c38-4509-ae21-4a5eaaff41b9" name="Default" comment="" />
       <created>1458649180915</created>
       <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
       <updated>1458649180915</updated>
       <workItem from="1458910385774" duration="7369000" />
       <workItem from="1458980512161" duration="22696000" />
@@ -477,11 +571,13 @@
       <workItem from="1460613058997" duration="160000" />
       <workItem from="1460697708418" duration="5221000" />
       <workItem from="1460726508276" duration="480000" />
+      <workItem from="1460731598651" duration="74000" />
+      <workItem from="1460789651774" duration="13956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375390000" />
+    <option name="totallyTimeSpent" value="389420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,22 +592,23 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -527,422 +624,407 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/youtube/upload.html" />
-    <entry file="file://$PROJECT_DIR$/public/js/youtube/upload_video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/youtube/cors_upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/my_uploads.html" />
-    <entry file="file://$PROJECT_DIR$/youtube/angular.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/cors_upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/upload_video.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/google.html" />
-    <entry file="file://$PROJECT_DIR$/youtube/upload_video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/cors_upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/create_lesson.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/lessons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/teacher_dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/student_dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/angular-youtube-embed/dist/angular-youtube-embed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/account.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="89" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/joined_course.html">
+    <entry file="file://$PROJECT_DIR$/public_old/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/services/course_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/create_course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/course_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/services/tools.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/account.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/all_courses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/my_created_courses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/joined_courses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/student.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/services/lesson_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/student.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/update_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youtube/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/services/check_user_role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/teacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/courses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/students.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/teacher.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="101" column="63" selection-start-line="101" selection-start-column="63" selection-end-line="101" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <element signature="e#839#2556#0" expanded="false" />
-            <element signature="n#md-sidenav#0;n#!!top" expanded="false" />
-            <element signature="n#md-toolbar#0;n#md-sidenav#0;n#!!top" expanded="false" />
-            <element signature="n#md-sidenav#1;n#!!top" expanded="false" />
-            <element signature="e#9889#11461#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/courses_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="e#387#480#0" expanded="false" />
-            <element signature="e#530#759#0" expanded="false" />
-            <element signature="e#1144#1260#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/schema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="87" selection-start-line="35" selection-start-column="87" selection-end-line="35" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/AppCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_old/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="87" selection-start-line="35" selection-start-column="87" selection-end-line="35" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/AppCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/courses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/cors_upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/upload_video.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/upload_video.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/lessons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youtube/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/courses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48368955">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_old/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0162225">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/angular-ui-bootstrap/template/modal/backdrop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/angular-ui-bootstrap/template/modal/window.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/angular-ui-bootstrap/src/accordion/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19721578">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/AppCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48931384">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/lms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_old/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_old/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35457706">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="119" selection-start-line="33" selection-start-column="119" selection-end-line="33" selection-end-column="119" />
+          <folding>
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#truncate#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/toastr/toastr.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/toastr/toastr.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21744186">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_old/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6119235">
+          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3961">
-          <caret line="233" column="27" selection-start-line="233" selection-start-column="27" selection-end-line="233" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="27" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/my_created_course_details.html">
+    <entry file="file://$PROJECT_DIR$/public/templates/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="150" column="6" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.4994206">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="n#md-sidenav#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-toolbar#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#3701#4716#0" expanded="false" />
-            <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#4;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-button#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-content#0;n#md-sidenav#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
-          <folding>
-            <element signature="n#md-toolbar#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-content#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#3466#4570#0" expanded="false" />
-            <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="325" column="40" selection-start-line="325" selection-start-column="40" selection-end-line="325" selection-end-column="40" />
-          <folding>
-            <element signature="e#332#1924#0" expanded="false" />
-            <element signature="e#441#572#0" expanded="false" />
-            <element signature="e#1026#1917#0" expanded="false" />
-            <element signature="e#2055#2146#0" expanded="false" />
-            <element signature="e#2178#2355#0" expanded="false" />
-            <element signature="e#2393#2602#0" expanded="false" />
-            <element signature="e#2643#2858#0" expanded="false" />
-            <element signature="e#2921#3092#0" expanded="false" />
-            <element signature="e#3132#3469#0" expanded="false" />
-            <element signature="e#3518#3821#0" expanded="false" />
-            <element signature="e#3877#4255#0" expanded="false" />
-            <element signature="e#4297#4638#0" expanded="false" />
-            <element signature="e#4683#5030#0" expanded="false" />
-            <element signature="e#5067#5407#0" expanded="false" />
-            <element signature="e#5449#5796#0" expanded="false" />
-            <element signature="e#5838#6181#0" expanded="false" />
-            <element signature="e#6220#6509#0" expanded="false" />
-            <element signature="e#6548#6837#0" expanded="false" />
-            <element signature="e#6904#7084#0" expanded="false" />
-            <element signature="e#7126#7423#0" expanded="false" />
-            <element signature="e#7474#7781#0" expanded="false" />
-            <element signature="e#7839#8221#0" expanded="false" />
-            <element signature="e#8260#8604#0" expanded="false" />
-            <element signature="e#8648#8941#0" expanded="false" />
-            <element signature="e#8988#9287#0" expanded="false" />
-            <element signature="e#9331#9632#0" expanded="false" />
-            <element signature="e#9699#9879#0" expanded="false" />
-            <element signature="e#9921#10218#0" expanded="false" />
-            <element signature="e#10262#10555#0" expanded="false" />
-            <element signature="e#10594#10938#0" expanded="false" />
-            <element signature="e#10985#11284#0" expanded="false" />
-            <element signature="e#11328#11629#0" expanded="false" />
-            <element signature="e#11817#12581#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/video_upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>

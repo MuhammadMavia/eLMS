@@ -1,0 +1,33 @@
+<div>
+    <md-list>
+        <md-list-item>
+            <div class="md-avatar"></div>
+            <p>Name</p>
+            <p>Phone</p>
+            <p>Email</p>
+            <md-divider></md-divider>
+        </md-list-item>
+        <md-list-item ng-repeat="students in students">
+            <img ng-src="{{ students.profileImg || defaultProfileImg}}" class="md-avatar"/>
+            <p>{{ students.firstName }} {{ students.lastName }}</p>
+            <p>{{students.tel}}</p>
+            <p>{{students.email}}</p>
+
+            <md-menu>
+                <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                    <ng-md-icon style="fill: #000" md-menu-origin icon="keyboard_arrow_down"></ng-md-icon>
+                </md-button>
+                <md-menu-content width="2">
+                    <md-menu-item>
+                        <md-button><span md-menu-align-target>Block</span></md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button><span md-menu-align-target>Delete</span></md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-divider></md-divider>
+        </md-list-item>
+    </md-list>
+
+</div>

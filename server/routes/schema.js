@@ -8,14 +8,11 @@ var usersSchema = new mongoose.Schema({
     email: {type: String, unique: true},
     password: {type: String},
     progress: {type: Array},
-    sex: {type: Number},
-    tel: {type: Number},
     role: {type: Number, default: 1},
-    theme: {type: String, default: 1},
     createdOn: {type: Date, default: Date.now()},
     createdCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
     joinedCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
-    quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]},
+    //quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]},
     userID: {type: String}
 });
 usersSchema.plugin(uniqueValidator);

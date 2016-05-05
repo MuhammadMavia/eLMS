@@ -1,79 +1,74 @@
-<div layout-wrap layout-padding layout="row" layout-align="center center" class="register-main">
-    <md-content layout-padding flex-gt-lg="20" flex-gt-md="35" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50"
-                class="md-whiteframe-4dp register-form bg-opacity">
-        <form name="registerForm" ng-submit="doRegister(user)">
-            <md-input-container class="md-block">
-                <label class="right-label">الاسم الاول</label>
-                <input name="firstName" type="text" required md-no-asterisk ng-model="user.firstName">
-                <div ng-messages="registerForm.firstName.$error">
-                    <div ng-message="required">مطلوب الاسم الأول</div>
-                </div>
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label class="right-label">اسم العائلة</label>
-                <input name="lastName" type="text" required md-no-asterisk ng-model="user.lastName">
-                <div ng-messages="registerForm.lastName.$error">
-                    <div ng-message="required">مطلوب اسم العائلة</div>
-                </div>
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label class="right-label">البريد الإلكتروني</label>
-                <input name="email" type="email" required md-no-asterisk ng-model="user.email">
-                <div ng-messages="registerForm.email.$error">
-                    <div ng-message="required">مطلوب البريد الإلكتروني</div>
-                </div>
-            </md-input-container>
-           <!-- <md-input-container class="md-block">
-                <label class="right-label">جنس</label>
-                <md-radio-group name="sex" required class="Al-Jazeera-Bold" ng-model="user.sex" layout="row" layout-align="center center">
-                    <md-radio-button value="1" class="md-primary">ذكر</md-radio-button>
-                    <md-radio-button value="2" class="md-primary"> أنثى</md-radio-button>
-                    <md-radio-button value="3" class="md-primary">آخر</md-radio-button>
-                </md-radio-group>
-                <div ng-messages="registerForm.sex.$error">
-                    <div ng-message="required">جنس</div>
-                </div>
-            </md-input-container>-->
-
-            <!--<md-input-container class="md-block">
-                <label class="right-label">هاتف</label>
-                <input name="tel" type="text" required md-no-asterisk ng-model="user.tel">
-                <div ng-messages="registerForm.tel.$error">
-                    <div ng-message="required">مطلوب الهاتف</div>
-                </div>
-            </md-input-container>-->
-            <md-input-container class="md-block">
-                <label class="right-label">كلمه المرور</label>
-                <input name="password" type="password" required md-no-asterisk ng-model="user.password">
-                <div ng-messages="registerForm.password.$error">
-                    <div ng-message="required">كلمة المرور مطلوبة</div>
-                </div>
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label class="right-label">تأكيد كلمة المرور</label>
-                <input compare-to="user.password" type="password" required md-no-asterisk ng-model="user.confirmPassword" name="confirmPassword">
-                <div ng-messages="registerForm.confirmPassword.$error">
-                    <!--<div ng-message="required">كلمة المرور غير مطابقين</div>-->
-                    <div ng-message="compareTo">كلمة المرور غير مطابقين</div>
-                </div>
-            </md-input-container>
-
-
-            <div layout="row" layout-wrap layout-align="center center">
-                <md-button type="submit" class="md-button md-primary md-raised submit-btn">إصنع حساب</md-button>
-                <md-button ui-sref="account.login" class="md-primary submit-btn">تسجيل الدخول</md-button>
+<div class="col-md-8 col-md-8 col-md-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-2">
+    <div class="login-form-main-div">
+        <form ng-submit="doRegister(user)" class="">
+            <div>
+                <p><strong class="no-text-shadow color-pc">Sign in with</strong></p>
             </div>
-            <h3>أو</h3>
+            <div class="">
+                <button ng-click="socialLogin('facebook')" type="button" class="btn btn-primary btn-block no-outline">Facebook</button>
+                <br/>
+                <button ng-click="socialLogin('google')" type="button" class="btn btn-danger btn-block no-outline">Google+</button>
+            </div>
+            <hr class="margin-none">
+            <p class="color-pc no-text-shadow">or</p>
 
-            <div layout="row" layout-wrap layout-align="center center">
-                <md-button aria-label="Facebook" class="social-login-btn" ng-click="socialLogin('facebook')">
-                    <img src="../img/fb_login.png" class="md-button social-login-png">
-                </md-button>
-                <md-button aria-label="Google" class="social-login-btn" ng-click="socialLogin('google')">
-                    <img src="../img/loginGoogle.png" class="md-button social-login-png">
-                </md-button>
+            <div>
+                <p><strong class="no-text-shadow color-pc">Sign in with your account</strong></p>
             </div>
 
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <input required ng-model="user.firstName" type="text" class="form-control input-lg"
+                               placeholder="First Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input required ng-model="user.lastName" type="text" class="form-control input-lg"
+                               placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group" ng-init="user.yearOfStudy = 'YOS'">
+                        <select required ng-model="user.yearOfStudy" class="selectpicker y-o-s-d-btn form-control input-lg">
+                            <option value="YOS" selected disabled> Year of Study</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <input required ng-model="user.email" type="email" class="form-control input-lg" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input required ng-model="user.password" type="password" class="form-control input-lg" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input required ng-model="user.confirmPassword" type="password" class="form-control input-lg"
+                       placeholder="Retype Password">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
+            </div>
         </form>
-    </md-content>
+
+        <br/>
+
+        <p>
+            <small class="color-pc no-text-shadow">
+                <span class="">By logging in, you agree our </span>
+                <a class="link-color" href="#">Terms of Service</a>
+                <span>and</span>
+                <a class="link-color" href="#">Privacy Policy</a>
+            </small>
+        </p>
+    </div>
+
+
 </div>

@@ -1,40 +1,60 @@
-<div layout-wrap layout-padding layout="row" layout-align="center center" class="login-main">
-    <md-content layout-padding flex-gt-lg="20" flex-gt-md="30" flex-gt-sm="40" flex-lt-md="50" flex-gt-xs="50"
-                class="md-whiteframe-4dp bg-opacity login-form">
-        <form name="loginForm" ng-submit="doLogin(user)">
-            <md-input-container class="md-block">
-                <label class="right-label">البريد الإلكتروني</label>
-                <input name="email" type="text" required md-no-asterisk ng-model="user.email">
-                <div ng-messages="loginForm.email.$error">
-                    <div ng-message="required">مطلوب البريد الإلكتروني</div>
-                </div>
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label class="right-label">كلمه المرور</label>
-                <input name="password" type="password" required md-no-asterisk ng-model="user.password">
-                <div ng-messages="loginForm.password.$error">
-                    <div ng-message="required">كلمة المرور مطلوبة</div>
-                </div>
-            </md-input-container>
-
-
-            <div layout="row" layout-wrap layout-align="center center">
-                <md-button type="submit" class="md-primary md-raised submit-btn">تسجيل الدخول</md-button>
-                <md-button ui-sref="account.register" class="md-primary submit-btn">إصنع حساب</md-button>
+<div class="col-md-8 col-md-8 col-md-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-2">
+    <div class="login-form-main-div">
+        <form name="loginForm" ng-submit="doLogin(user)" class="">
+            <div>
+                <p><strong class="no-text-shadow color-pc">Login with</strong></p>
             </div>
-            <h3>أو</h3>
-
-
-            <div layout="row" layout-wrap layout-align="center center">
-                <md-button aria-label="Facebook" class="social-login-btn" ng-click="socialLogin('facebook')">
-                    <img src="../img/fb_login.png" class="md-button social-login-png">
-                </md-button>
-                <md-button aria-label="Google" class="social-login-btn" ng-click="socialLogin('google')">
-                    <img src="../img/loginGoogle.png" class="md-button social-login-png">
-                </md-button>
+            <div class="">
+                <button ng-click="socialLogin('facebook')" type="button" class="btn btn-primary btn-block no-outline">
+                    Facebook
+                </button>
+                <br/>
+                <button ng-click="socialLogin('google')" type="button" class="btn btn-danger btn-block no-outline">
+                    Google+
+                </button>
             </div>
 
+            <br/>
 
+            <p>
+                <small class="no-text-shadow color-pc">We will never post without your permission</small>
+            </p>
+            <hr class="margin-none">
+            <p class="color-pc no-text-shadow">or</p>
+
+            <div>
+                <p><strong class="no-text-shadow color-pc">Login with your account</strong></p>
+            </div>
+
+            <div class="form-group">
+                <input name="email" ng-model="user.email" required type="text" class="form-control input-lg"
+                       placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input name="password" ng-model="user.password" required type="password" class="form-control input-lg" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
+            </div>
         </form>
-    </md-content>
+        <br/>
+
+        <p>
+            <small>
+                <a href="#" class="link-color float-left no-text-shadow">Forgot Password?</a>
+                <a ng-click="$root.signInDialog('templates/register.html')" href="#"
+                   class="link-color float-right no-text-shadow">Create now account</a>
+            </small>
+        </p>
+        <br/>
+
+        <p>
+            <small class="color-pc no-text-shadow">
+                <span class="">By logging in, you agree our </span>
+                <a class="link-color" href="#">Terms of Service</a>
+                <span>and</span>
+                <a class="link-color" href="#">Privacy Policy</a>
+            </small>
+        </p>
+    </div>
 </div>

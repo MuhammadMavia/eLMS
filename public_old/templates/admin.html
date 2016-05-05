@@ -1,0 +1,207 @@
+<div class="dashboard-main-div">
+    <md-toolbar class="custom-toolbar">
+        <div class="md-toolbar-tools">
+            <span>{{currentUser.firstName}} {{currentUser.lastName}}</span>
+            <md-list-item>
+                <img ng-src="{{currentUser.profileImg || $root.profileImg || defaultProfileImg}}"
+                     class="md-avatar no-outline">
+            </md-list-item>
+            <span flex></span>
+            <h1 class="Al-Jazeera-Bold">نظام إدارة التعلم</h1>
+            <md-button aria-label="menu" class="md-icon-button" ng-click="toggleSidenav('menu-sidenav')">
+                <ng-md-icon icon="menu" class="fill-fff"></ng-md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content class="main-md-content">
+        <ui-view name="AdminContent" class="main-content"></ui-view>
+        <!--<section flex="15" class="menu-column">
+            <div layout-padding>
+                <md-list layout-margin class="bg-opacity background">
+                    <md-divider></md-divider>
+                    <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.dashboard"><p>لوحة القيادة</p>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.teachers"
+                                  class="background md-raised"><p>معلمون</p></md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.students"><p>الطلاب</p></md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.courses"><p>الدورات</p></md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item ui-sref-active="menu-active-item" ui-sref="admin.add_teacher"><p>إضافة معلم</p>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item ng-click="changeTheme()"><p>موضوع</p></md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item ng-click="newUser = currentUser;" ui-sref-active="menu-active-item"
+                                  ui-sref="admin.update_info"><p>تحديث الملف</p></md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item ng-click="a()"><p>ضبط</p></md-list-item>
+                    <md-divider></md-divider>
+                </md-list>
+            </div>
+        </section>-->
+    </md-content>
+</div>
+
+
+<md-sidenav class="md-sidenav-right" md-component-id="menu-sidenav">
+    <md-toolbar class="">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <h1 class="Al-Jazeera-Bold">قائمة طعام</h1>
+        </div>
+    </md-toolbar>
+    <md-content class="">
+        <md-list>
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('admin.dashboard');toggleSidenav('menu-sidenav')"
+                          ui-sref-active="menu-active-item">
+                <p class="menu-option">لوحة القيادة</p>
+                <ng-md-icon class="menu-option-icon" aria-label="dashboard" icon="dashboard"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('admin.teachers');toggleSidenav('menu-sidenav')">
+                <p class="menu-option">معلمون</p>
+                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder"
+                            icon="create_new_folder"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('admin.joined_courses');toggleSidenav('menu-sidenav')">
+                <p class="menu-option">دورات انضم</p>
+                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder"
+                            icon="create_new_folder"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="toggleSidenav('create-course-sidenav');toggleSidenav('menu-sidenav')">
+                <p class="menu-option">إنشاء مسار جديد</p>
+                <ng-md-icon class="menu-option-icon" aria-label="create_new_folder"
+                            icon="create_new_folder"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('admin.my_created_courses');toggleSidenav('menu-sidenav')"
+                          ui-sref-active="menu-active-item">
+                <p class="menu-option">بلدي خلق الدورات</p>
+                <ng-md-icon class="menu-option-icon" aria-label="school" icon="school"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('admin.students');toggleSidenav('menu-sidenav')">
+                <p class="menu-option">طلابي</p>
+                <ng-md-icon class="menu-option-icon" aria-label="people" icon="people"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click=";toggleSidenav('menu-sidenav')">
+                <p class="menu-option">الطلاب</p>
+                <ng-md-icon class="menu-option-icon" aria-label="people" icon="people"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="changeState('admin.all_courses');toggleSidenav('menu-sidenav')"
+                          ui-sref-active="menu-active-item">
+                <p class="menu-option">الدورات</p>
+                <ng-md-icon class="menu-option-icon" aria-label="school" icon="school"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <!--<md-list-item ng-click="changeTheme()"><p>موضوع</p></md-list-item>-->
+            <!--<md-divider></md-divider>-->
+            <md-list-item ng-click="changeState('admin.add_teacher');toggleSidenav('menu-sidenav')">
+                <p class="menu-option">إضافة معلم</p>
+                <ng-md-icon class="menu-option-icon" aria-label="Chat" icon="message"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item
+                    ng-click="newUser = currentUser;changeState('admin.update_info');toggleSidenav('menu-sidenav')"
+                    ui-sref-active="menu-active-item">
+                <p class="menu-option">تحديث الملف</p>
+                <ng-md-icon class="menu-option-icon" aria-label="person" icon="person"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item ng-click="$root.doLogout();toggleSidenav('menu-sidenav')">
+                <p class="menu-option">خروج</p>
+                <ng-md-icon class="menu-option-icon" aria-label="logout" icon="logout"></ng-md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+        </md-list>
+    </md-content>
+</md-sidenav>
+<md-sidenav class="md-sidenav-left" md-component-id="create-course-sidenav">
+    <md-toolbar class=""></md-toolbar>
+    <md-content class="">
+        <form name="addCourseForm" ng-submit="createCourse(course)">
+            <md-list>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">عنوان</label>
+                        <input name="title" type="text" required md-no-asterisk ng-model="course.title">
+                        <div ng-messages="addCourseForm.title.$error">
+                            <div ng-message="required">عنوان المطلوبة</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">وصف قصير</label>
+                         <textarea name="description" type="text" required md-no-asterisk
+                                   ng-model="course.description"></textarea>
+                        <div ng-messages="addCourseForm.description.$error">
+                            <div ng-message="required">مطلوب وصف قصير</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label>الفئة بالطبع</label>
+                        <md-select class="year-of-study" ng-model="course.category" required>
+                            <md-option ng-value="category" ng-repeat="category in $root.categroies">{{category}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label>سنة من الدراسة</label>
+                        <md-select class="year-of-study" ng-model="course.yearOfStudy" required>
+                            <md-option ng-value="1">العام الأول</md-option>
+                            <md-option ng-value="2">السنة الثانية</md-option>
+                            <md-option ng-value="3">السنة الثالثة</md-option>
+                            <md-option ng-value="4">العام عليها</md-option>
+                        </md-select>
+                    </md-input-container>
+                </md-list-item>
+                <button ng-disabled="!course.yearOfStudy || !course.category || !course.title || !course.description"
+                        class="md-button md-raised submit-btn md-primary " value="submit">خلق
+                </button>
+            </md-list>
+        </form>
+    </md-content>
+</md-sidenav>
+<!--
+<md-sidenav md-is-open="0" class="md-sidenav-left" md-component-id="create-lesson-sidenav">
+    <md-toolbar class=""></md-toolbar>
+    <md-content class="">
+        <form name="addLessonForm" ng-submit="createLesson(lesson,selectedCourse._id)">
+            <md-list>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">عنوان</label>
+                        <input name="title" type="text" required md-no-asterisk ng-model="lesson.title">
+                        <div ng-messages="addLessonForm.title.$error">
+                            <div ng-message="required">عنوان المطلوبة</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item>
+                    <md-input-container class="md-block full-width-input">
+                        <label class="right-label">وصف قصير</label>
+                        <textarea name="description" type="text" required md-no-asterisk
+                                  ng-model="lesson.description"></textarea>
+                        <div ng-messages="addLessonForm.description.$error">
+                            <div ng-message="required">مطلوب وصف قصير</div>
+                        </div>
+                    </md-input-container>
+                </md-list-item>
+                <button class="md-button md-raised submit-btn md-primary" value="submit">خلق</button>
+            </md-list>
+        </form>
+    </md-content>
+</md-sidenav>-->

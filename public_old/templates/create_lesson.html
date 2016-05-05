@@ -1,0 +1,30 @@
+<div layout="row" layout-align="center center" layout-wrap>
+    <div class="" flex-gt-sm="100" flex-gt-md="100" flex-gt-sm-initial="100" flex-gt-xs="100" layout-padding>
+        <form name="addLessonForm" ng-submit="createLesson(lesson,selectedCourse._id)" class="course-add-form"
+              layout="column"
+              layout-align="center center" layout-wrap>
+            <div layout="row" layout-align="center center" layout-wrap>
+                <md-input-container class="md-block">
+                    <label class="right-label">عنوان</label>
+                    <input name="title" type="text" required md-no-asterisk ng-model="lesson.title">
+                    <div ng-messages="addLessonForm.title.$error">
+                        <div ng-message="required">عنوان المطلوبة</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label class="right-label">وصف قصير</label>
+                <textarea name="description" type="text" required md-no-asterisk
+                          ng-model="lesson.description"></textarea>
+                    <div ng-messages="addLessonForm.description.$error">
+                        <div ng-message="required">مطلوب وصف قصير</div>
+                    </div>
+                </md-input-container>
+            </div>
+
+
+
+
+            <button class="md-button md-raised submit-btn md-primary" value="submit">خلق</button>
+        </form>
+    </div>
+</div>

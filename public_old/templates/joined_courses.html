@@ -1,0 +1,51 @@
+<div class="main-content">
+    <!--{{currentUser.joinedCourses | json}}-->
+    <div ng-if="!currentUser.joinedCourses.length" layout="row" layout-align="center center">
+        <div class="md-display-4 gray-color vh-center">غير معثور عليه</div>
+    </div>
+
+    <!--<md-content ng-if="currentUser.joinedCourses.length"
+         class="md-button md-whiteframe-8dp course-card"
+         layout-align="center center" layout="column" layout-padding
+         layout-margin
+         ng-repeat="course in currentUser.joinedCourses track by $index">
+        <div class="md-title">{{course.title}}</div>
+        &lt;!&ndash;<div class="text-nowrap" layout-wrap>{{course.description | truncate : 150}}</div>&ndash;&gt;
+        <div>
+            <md-button ng-click="goToMyJoinedCourseDetail(course)"
+                       class="md-button md-raised md-warn Al-Jazeera-Bold">عرض بالطبع
+            </md-button>
+
+        </div>
+        <div>
+            &lt;!&ndash;<a>{{course.createdOn| date : medium}}</a> <a>تم إنشاؤها على</a>&ndash;&gt;
+        </div>
+    </md-content>-->
+    <div layout="row" layout-align="center center" layout-wrap layout-padding>
+        <md-card class="course-card" ng-repeat="course in currentUser.joinedCourses track by $index">
+            <md-card-header>
+                <md-card-avatar>
+                    <img class="md-user-avatar" ng-src="{{course.creator.profileImg || defaultProfileImg}}">
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-subhead">Created by</span>
+                    <span class="md-title">{{course.creator.firstName}} {{course.creator.lastName}}</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{course.title}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p class="content">{{course.description}}</p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="start center">
+                <md-button ng-click="goToMyJoinedCourseDetail(course)" aria-label="menu"
+                           class="md-button md-fab md-icon-button md-raised md-warn">
+                    <ng-md-icon class="fill-fff" icon="menu"></ng-md-icon>
+                </md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>

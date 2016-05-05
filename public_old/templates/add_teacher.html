@@ -1,0 +1,64 @@
+<div layout="row" layout-align="center center" layout-wrap>
+    <div class="" flex-gt-sm="100" flex-gt-md="50" flex-gt-sm-initial="100" flex-gt-xs="100" layout-padding>
+        <form name="addTeacherForm" ng-submit="addTeacher(teacher)" class="teacher-add-form" layout="column" layout-align="center center" layout-wrap>
+            <md-input-container class="md-block">
+                <label class="right-label">الاسم الاول</label>
+                <input name="firstName" type="text" required md-no-asterisk ng-model="teacher.firstName">
+                <div ng-messages="addTeacherForm.firstName.$error">
+                    <div ng-message="required">مطلوب الاسم الأول</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">اسم العائلة</label>
+                <input name="lastName" type="text" required md-no-asterisk ng-model="teacher.lastName">
+                <div ng-messages="addTeacherForm.lastName.$error">
+                    <div ng-message="required">مطلوب اسم العائلة</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label class="right-label">البريد الإلكتروني</label>
+                <input name="email" type="email" required md-no-asterisk ng-model="teacher.email">
+                <div ng-messages="addTeacherForm.email.$error">
+                    <div ng-message="required">مطلوب البريد الإلكتروني</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label class="right-label">جنس</label><br><br>
+                <md-radio-group name="sex" required class="Al-Jazeera-Bold" ng-model="teacher.sex" layout="row" layout-align="end end" layout-wrap="">
+                    <md-radio-button value="1" class="md-primary">ذكر</md-radio-button>
+                    <md-radio-button value="2" class="md-primary"> أنثى</md-radio-button>
+                    <md-radio-button value="3" class="md-primary">آخر</md-radio-button>
+                </md-radio-group>
+                <div ng-messages="addTeacherForm.sex.$error">
+                    <div ng-message="required">جنس</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label class="right-label">هاتف</label>
+                <input name="tel" type="text" required md-no-asterisk ng-model="teacher.tel">
+                <div ng-messages="addTeacherForm.tel.$error">
+                    <div ng-message="required">مطلوب الهاتف</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">كلمه المرور</label>
+                <input name="password" type="password" required md-no-asterisk ng-model="teacher.password">
+                <div ng-messages="addTeacherForm.password.$error">
+                    <div ng-message="required">كلمة المرور مطلوبة</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label class="right-label">تأكيد كلمة المرور</label>
+                <input compare-to="teacher.password" name="confirmPassword" type="password" required md-no-asterisk ng-model="teacher.confirmPassword">
+                <div ng-messages="addTeacherForm.confirmPassword.$error">
+                    <!--<div ng-message="required">كلمة المرور غير مطابقين</div>-->
+                    <div ng-message="compareTo">كلمة المرور غير مطابقين</div>
+                </div>
+            </md-input-container>
+            <button class="md-button md-raised submit-btn md-primary" value="submit">خلق</button>
+        </form>
+    </div>
+</div>

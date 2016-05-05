@@ -1,0 +1,105 @@
+<div layout="row" class="main-md-content">
+    <md-sidenav class="md-sidenav-left"
+                md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-md')"
+                md-disable-backdrop
+                md-whiteframe="4">
+        <md-toolbar class="">
+            <div class="md-toolbar-tools">
+                <span flex></span>
+                <h1 class="Al-Jazeera-Bold">الدروس</h1>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding class="vh-85">
+            <md-list>
+                <md-divider></md-divider>
+                <md-list-item ng-click="goToLessonDetailOfJoinedCourse(lesson)"
+                              class="md-3-line lessons-card"
+                              ng-repeat="lesson in selectedJoinedCourse.lessons track by $index">
+                    <div class="md-list-item-text">
+                        <h3>{{lesson.title}}</h3>
+                        <p>{{lesson.description  |  limitTo: 50}}</p>
+                    </div>
+                    <md-divider></md-divider>
+                </md-list-item>
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+    <md-tabs flex md-dynamic-height md-border-bottom md-selected="selectedTabIndex">
+        <md-tab ng-disabled="!selectedLessonOfJoinedCourse" label="قوات الدفاع الشعبي">
+            <md-content class="md-padding">
+
+            </md-content>
+        </md-tab>
+        <md-tab ng-disabled="!selectedLessonOfJoinedCourse" label="وثائق">
+            <md-content class="md-padding">
+                <h1 class="md-display-2">Tab Three</h1>
+            </md-content>
+        </md-tab>
+        <md-tab ng-disabled="!selectedLessonOfJoinedCourse" label="فيديوهات">
+
+            <div ng-if="!selectedLessonOfJoinedCourse.videos.length" layout="row" layout-align="center center">
+                <div class="md-display-4 gray-color vh-center">أشرطة الفيديو الفارغة</div>
+            </div>
+
+
+            <md-content ng-if="selectedLessonOfJoinedCourse.videos.length" class="md-padding tab-md-content">
+                <div layout="row" layout-align="center start" layout-wrap>
+                    <div class="md-whiteframe-1dp" layout-padding layout-margin ng-if="selectedVideo.videoID">
+                        <youtube-video video-id="selectedVideo.videoID"></youtube-video>
+                    </div>
+                    <div class="md-whiteframe-1dp" layout-margin>
+                        <md-list>
+                            <md-list-item ng-click="watchVideo(video)"
+                                          ng-repeat="video in selectedLessonOfJoinedCourse.videos track by $index"
+                                          class="md-3-line video-list">
+                                <md-divider></md-divider>
+                                <md-divider></md-divider>
+                                <div class="md-list-item-text" layout="column">
+                                    <h3> {{video.title}}</h3>
+                                    <p class="Al-Jazeera-Regular">{{video.description  |  limitTo: 80}}</p>
+                                </div>
+                                <img ng-src="{{video.thumbnails.default.url}}"/>
+                                <md-divider></md-divider>
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </div>
+            </md-content>
+        </md-tab>
+        <!--<md-tab label="الدروس">
+            <div ng-if="!selectedJoinedCourse.lessons.length" layout="row" layout-align="center center">
+                <div class="md-display-4 gray-color vh-center">الدروس فارغة</div>
+            </div>
+            <md-content class="md-padding tab-md-content" ng-if="selectedJoinedCourse.lessons.length">
+                <div layout="row">
+                    <md-card layout-margin layout-padding ng-click="goToLessonDetailOfJoinedCourse(lesson)"
+                             aria-label=""
+                             class="md-3-line lessons-card"
+                             ng-repeat="lesson in selectedJoinedCourse.lessons track by $index">
+                        &lt;!&ndash;<img ng-src="{{todos[0].face}}?25" class="md-avatar" alt="{{todos[0].who}}"/>&ndash;&gt;
+                        <div class="md-list-item-text">
+                            <h3>{{lesson.title}}</h3>
+                            <p>{{lesson.description}}</p>
+                        </div>
+                    </md-card>
+                </div>
+            </md-content>
+        </md-tab>-->
+        <md-tab label="حول مسار">
+            <md-content class="md-padding" layout-padding layout-margin>
+                <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.title }} : عنوان</p>
+                <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.category }} : فئة</p>
+                <p class="md-headline text-right Al-Jazeera-Regular"> {{ $root.yearOfStudy[selectedCourse.yearOfStudy]}}
+                    :
+                    سنة من الدراسة </p>
+                <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.students.length }} : الطلاب </p>
+                <p class="md-headline text-right Al-Jazeera-Regular"> {{ selectedCourse.lessons.length }} الدروس</p>
+                <p class="md-headline text-right">
+                <p class="text-right Al-Jazeera-Regular"><b class="md-title text-right">وصف</b> : {{
+                    selectedCourse.description }}</p>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</div>

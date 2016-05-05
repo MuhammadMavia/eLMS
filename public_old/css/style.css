@@ -1,0 +1,460 @@
+/* FONTS */
+
+@font-face {
+    font-family: Al-Jazeera;
+    src: url(../fonts/font2/aljazeera.ttf);
+}
+
+@font-face {
+    font-family: Al-Jazeera-Arabic-Bold;
+    src: url(../fonts/font1/Al-Jazeera-Arabic-Bold.ttf);
+}
+
+@font-face {
+    font-family: Al-Jazeera-Arabic-Light;
+    src: url(../fonts/font1/Al-Jazeera-Arabic-Light.ttf);
+}
+
+@font-face {
+    font-family: Al-Jazeera-Arabic-Regular;
+    src: url(../fonts/font1/Al-Jazeera-Arabic-Regular.ttf);
+}
+
+.Al-Jazeera {
+    font-family: Al-Jazeera !important;
+}
+
+.Al-Jazeera-Bold {
+    font-family: Al-Jazeera-Arabic-Bold !important;
+}
+
+.Al-Jazeera-Light {
+    font-family: Al-Jazeera-Arabic-Light !important;
+}
+
+.Al-Jazeera-Regular {
+    font-family: Al-Jazeera-Arabic-Regular !important;
+}
+
+.md-toolbar-tools {
+    /*color: #000 !important;*/
+}
+
+.md-toolbar-tools span {
+    /*color: #000 !important;*/
+    font-family: Al-Jazeera-Arabic-Regular;
+}
+
+md-input-container .md-auto-hide .md-input-message-animation:not(.ng-animate) {
+    text-align: right !important;
+    font-family: Al-Jazeera-Arabic-Bold;
+}
+
+.course-card {
+    text-align: right;
+    /* height: 300px;*/
+    width: 400px;
+    /*background: #fff !important;*/
+}
+
+/*
+.course-card-head{
+    width: 100%!important;
+}
+.course-card-head button{
+    float: left !important;
+
+}
+*/
+.course-card .content {
+    text-align: right;
+    max-height: 150px;
+    height: 150px;
+    overflow: auto;
+    font-family: Al-Jazeera;
+    padding: 3%;
+
+}
+
+md-card-title {
+    width: 100% !important;
+    text-align: right !important;
+    padding-right: 15px !important;
+}
+
+md-card-title span {
+    font-family: Al-Jazeera-Arabic-Bold;
+    margin-right: 30px !important;
+}
+
+.year-of-study {
+    /*width: 90% !important;*/
+}
+
+.menu-option {
+    text-align: right !important;
+    margin-right: 30px !important;
+    color: #7e7e7e;
+    font-family: Al-Jazeera-Arabic-Bold;
+}
+
+.menu-option-icon {
+    fill: #7e7e7e;
+    margin-top: 10px;
+}
+
+md-option div {
+    position: absolute !important;
+    right: 10px !important;
+    /* width: 100% !important;
+     display: block !important;
+     text-align: right !important;*/
+    font-family: Al-Jazeera-Arabic-Bold;
+}
+
+/*.ui-view-content {
+    height: calc(100vh - 115px) !important;
+    overflow: auto !important;
+}*/
+.gray-color {
+    color: #a8a8a8;
+}
+
+.vh-center {
+    margin-top: 10%;
+}
+
+.video-upload-icon {
+    fill: #a8a8a8;
+    cursor: pointer
+}
+
+.float-right {
+    float: right !important;
+}
+
+/* LOGIN CSS*/
+
+.account-bg {
+    background: url("https://wallpaperscraft.com/image/macbook_apple_laptop_louis_vuitton_99088_3840x2400.jpg");
+    /*background: #eceae3;*/
+    background-size: 100% 100%;
+    height: calc(100vh);
+    width: 100%;
+}
+
+.login-main {
+    margin-top: 10vh;
+    /*    !*background: url("../img/login-bg.jpg");*!
+        !*background: #eceae3;*!
+        background-size: 100% 100%;
+        height: calc(100vh - 64px);
+        width: 100%;*/
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.4);
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+    border-radius: 10px;
+}
+
+.register-main {
+    /*!*background: url("../img/login-bg.jpg");*!
+    background: #eceae3;
+    background-size: 100% 100%;
+    height: calc(100vh - 64px);
+    width: 100%;*/
+}
+
+.register-form {
+    background: rgba(255, 255, 255, 0.4);
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+    border-radius: 10px;
+}
+
+.submit-btn {
+    width: 80%;
+    font-family: Al-Jazeera-Arabic-Bold;
+}
+
+.social-login-btn {
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 0 !important;
+    max-height: 50px !important;
+}
+
+.social-login-png {
+    border-radius: 15px !important;
+    /*width: 40%;*/
+    height: 25px;
+}
+
+.login-main h3 {
+    /*color: #000 ;*/
+    text-align: center;
+    /*font-style: italic;*/
+}
+
+.register-main h3 {
+    /*color: #fff;*/
+    text-align: center;
+    /*font-style: italic;*/
+}
+
+.right-label {
+    font-family: Al-Jazeera !important;
+    color: #000;
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* Dashboard CSS */
+/*.custom-toolbar {
+    background: rgba(255, 255, 255, 0.7) !important;
+    !*border-bottom: 0.1pt solid #fff;*!
+}*/
+
+/*
+.bg-opacity {
+    background: rgba(255, 255, 255, 0.7) !important;
+    color: #000 !important;
+}
+*/
+
+.profile-img {
+    border-radius: 10px;
+    height: 15vh;
+    width: 15vh;
+    outline: none;
+    cursor: pointer;
+}
+.vh-85{
+    height: 85vh!important;
+}
+.text-right {
+    text-align: right !important;
+}
+
+.no-outline {
+    outline: none;
+}
+
+.no-margin {
+    margin: 0 0 0 0 !important;
+}
+
+.menu-column md-list {
+    /*margin: 8px 0 0 0 !important;*/
+    /*padding: 0 0 0 0 !important;*/
+}
+
+.menu-column md-list-item {
+    /*border-left: 10px solid transparent;*/
+    /*margin: 0 0 0 0 !important;*/
+}
+
+.menu-column md-divider {
+    margin: 0 0 0 0 !important;
+}
+
+.menu-active-item {
+    /*border-right: 10px solid #525252 !important;*/
+    /*background: rgba(0, 0, 0, 0.3) !important;*/
+    /*color: #fff;*/
+}
+
+body {
+    height: 100% !important;
+}
+
+.main-md-content {
+    overflow: auto !important;
+    height: calc(100vh - 64px);
+!important;
+}
+
+.main-content {
+    overflow: auto !important;
+    height: calc(100vh - 64px) !important;
+}
+
+.dashboard-main-div {
+    /*background: url("../img/theme-01.jpg");*/
+    /*background-size: 100% 100%;*/
+}
+
+/*.main-md-content, .dashboard-md-content {
+    !*height: calc(100vh - 64px);*!
+    background: transparent !important;
+}*/
+.tab-md-content {
+    height: calc(100vh - (200px));
+}
+
+.lessons-card {
+
+}
+
+.menu-column p {
+    /*color: #fff;*/
+    /*padding-right: 20%;*/
+    text-align: right;
+    font-family: Al-Jazeera-Arabic-Bold;
+}
+
+.signup-button-google {
+    text-align: center;
+    padding-top: 30%;
+}
+
+.content-column {
+    /*height: calc(100vh - 100px);*/
+}
+
+/*.content-column .content-column-box {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7) !important;
+}*/
+
+.dashboard-card span {
+    text-align: center;
+}
+
+md-card md-card-title {
+    text-align: center;
+    width: 220px;
+    /*padding: 24px 100px 16px !important;*/
+}
+
+/*.dashboard-chart {
+    width: 50%;
+    !*height: 50vh;*!
+    background: #fff;
+}*/
+
+/*.bg-tsp {
+    background: transparent !important;
+}*/
+
+.teacher-add-form md-input-container {
+    width: 100%;
+}
+
+.video-list {
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*padding: 10px 0 10px 0 !important;*/
+    /*margin: 0 0 0 0 !important;*/
+    max-width: 700px;
+    min-width: 500px;
+}
+
+.video-list button {
+    padding: 0 0 0 0 !important;
+}
+
+.video-list .md-list-item-text {
+    text-align: right;
+    padding-right: 12px;
+}
+
+.video-list img {
+    width: 120px;
+    height: 90px;
+}
+
+.theme-thumbnail {
+    height: 140px;
+    width: 200px;
+    text-align: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.theme-thumbnail ng-md-icon {
+    display: none;
+}
+
+.thumbnail-box {
+    /*height: 500px;*/
+}
+
+.theme-thumbnail-select {
+    border: 5px solid #fff;
+}
+
+.theme-thumbnail-select ng-md-icon {
+    display: inline-block;
+    margin-top: 15px;
+    fill: #fff;
+}
+
+.fill-fff {
+    fill: #fff;
+}
+
+md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    font-family: Al-Jazeera-Arabic-Bold;
+}
+
+md-pagination-wrapper {
+    position: absolute !important;
+    left: auto;
+    right: 10% !important;
+}
+
+/* Scroll bar Css*/
+/* For the "inset" look only */
+html {
+    overflow: auto;
+}
+
+.full-width-input {
+    width: 100%;
+}
+
+.cursor-hand {
+    cursor: hand;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fcfcfc;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #2196F3;
+}
+
+md-toast.md-default-theme .md-toast-content, md-toast .md-toast-content {
+    text-align: right;
+    margin-top: 70px !important;
+    font-family: Al-Jazeera-Arabic-Bold;
+}
+
+/* Rating Stars CSS */
+
+/* Video Upload*/
+
+/*signup-button*/
+
+.signup-button-login {
+    padding: 10% !important;
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 30vh !important;
+    left: 45% !important;
+}
