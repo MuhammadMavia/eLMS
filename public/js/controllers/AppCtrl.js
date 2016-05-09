@@ -7,7 +7,7 @@ function appCtrl($uibModal, $rootScope, $scope) {
     $rootScope.signInDialog = function (tmp, ctrl) {
         dialog ? dialog.close() : null;
         dialog = $uibModal.open({
-            animation: $scope.animationsEnabled,
+            animation: true,
             templateUrl: tmp,
             controller: 'AccountCtrl',
             size: 'lg'

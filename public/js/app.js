@@ -13,19 +13,28 @@ angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
                 controller: 'AppCtrl'
             })
             .state('app', {
-                url: '/app',
-                templateUrl: 'templates/dashboard.html',
+                //url: '/app',
+                templateUrl: 'templates/app.html',
                 controller: 'AppCtrl'
             })
             .state('app.settings', {
                 url: '/settings',
                 views: {
                     AppContent: {
-                        templateUrl: 'templates/settings.html'
-                        // controller: 'AdminCtrl'
+                        templateUrl: 'templates/settings.html',
+                        controller: 'SettingsCtrl'
+                    }
+                }
+            })
+            .state('app.dashboard', {
+                url: '/dashboard',
+                views: {
+                    AppContent: {
+                        templateUrl: 'templates/dashboard.html',
+                        controller: 'DashboardCtrl'
                     }
                 }
             });
-        $urlRouterProvider.otherwise('/app/settings');
+        $urlRouterProvider.otherwise('/settings');
 
     });

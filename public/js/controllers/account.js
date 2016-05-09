@@ -4,14 +4,13 @@ angular.module("Lms")
 
 function account($http, $scope, serverRef, $state, firebaseRef) {
     $scope.doLogin = function (user) {
-        console.log(user);
         $http.post(serverRef + '/account/login', user).then(
             function (success) {
                 if (success.data.code === 0) {
-                    toastr.success('Login Successfull');
+                    toastr.error('Wrong email or password!');
                 } else {
                     toastr.success('Login Successfull');
-                    localStorage.setItem('loginData', JSON.stringify(success.data.user));
+                    //localStorage.setItem('loginData', JSON.stringify(success.data.user));
                 }
             },
             function (error) {
@@ -23,7 +22,6 @@ function account($http, $scope, serverRef, $state, firebaseRef) {
     $scope.doRegister = function (user) {
         $http.post(serverRef + '/account/signup', user).then(
             function (success) {
-                console.log(success);
                 if (success.data.errors) {
                     toastr.info('Email is already in use!');
                 }

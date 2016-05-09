@@ -69,7 +69,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
             .state('admin', {
                 url: '/admin',
                 abstract: true,
-                templateUrl: 'templates/admin.html',
+                templateUrl: 'templates/dashboard.html',
                 controller: 'AdminCtrl'
             })
             .state('admin.dashboard', {
@@ -78,7 +78,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 loginCompulsory: true,
                 views: {
                     AdminContent: {
-                        templateUrl: 'templates/dashboard.html',
+                        templateUrl: 'templates/app.html',
                         // controller: 'AdminCtrl'
                     }
                 }

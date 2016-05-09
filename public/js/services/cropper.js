@@ -1,5 +1,5 @@
 angular.module("Lms")
-    .service('Cropper', function ($mdDialog, $mdToast, $http, serverRef, Tools,$rootScope) {
+    .service('Cropper', function ($http, serverRef, $rootScope) {
         var scope = this;
         scope.changeProfileImg = function () {
             $mdDialog.show({

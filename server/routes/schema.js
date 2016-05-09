@@ -13,7 +13,8 @@ var usersSchema = new mongoose.Schema({
     createdCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
     joinedCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],
     //quizzes: {type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quizzes'}]},
-    userID: {type: String}
+    facebookID: {type: String},
+    googleID: {type: String}
 });
 usersSchema.plugin(uniqueValidator);
 exports.usersModel = mongoose.model("Users", usersSchema);
