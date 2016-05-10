@@ -1,16 +1,19 @@
 angular.module("Lms")
 
-    .controller('AccountCtrl', ['$http', '$scope', 'serverRef', '$state', 'firebaseRef', account]);
+    .controller('AccountCtrl', ['$http', '$scope', 'serverRef', '$state', 'firebaseRef', 'AccountService', account]);
 
-function account($http, $scope, serverRef, $state, firebaseRef) {
+function account($http, $scope, serverRef, $state, firebaseRef, AccountService) {
+    $scope.signInDialog = AccountService.signInDialog;
     $scope.doLogin = function (user) {
         $http.post(serverRef + '/account/login', user).then(
             function (success) {
                 if (success.data.code === 0) {
                     toastr.error('Wrong email or password!');
                 } else {
+                    AccountService.signInDialog();
+                    localStorage.setItem('userID', success.data.user._id);
                     toastr.success('Login Successfull');
-                    //localStorage.setItem('loginData', JSON.stringify(success.data.user));
+                    $state.go('app.dashboard');
                 }
             },
             function (error) {
@@ -26,6 +29,9 @@ function account($http, $scope, serverRef, $state, firebaseRef) {
                     toastr.info('Email is already in use!');
                 }
                 else {
+                    AccountService.signInDialog();
+                    $state.go('app.dashboard');
+                    localStorage.setItem('userID', success.data._id);
                     toastr.success('Sign in Successfull');
                 }
             },
@@ -45,15 +51,15 @@ function account($http, $scope, serverRef, $state, firebaseRef) {
                 socialUser.profileImg = authData[provider].profileImageURL;
                 socialUser.firstName = authData[provider].cachedUserProfile.first_name || authData[provider].cachedUserProfile.given_name;
                 socialUser.lastName = authData[provider].cachedUserProfile.last_name || authData[provider].cachedUserProfile.family_name;
-                socialUser.userID = authData[provider].id;
+                socialUser[provider + "ID"] = authData[provider].id;
                 socialUser.role = 1;
                 socialUser.email = socialUser.userID;
                 $http.post(serverRef + "/account/socialUserAuth", socialUser).then(
                     function (success) {
-                        localStorage.setItem('loginData', JSON.stringify(success.data.user));
                         console.log(success.data.user);
                         toastr.success('Sign Successfull');
-                        //$state.go('student.dashboard')
+                        AccountService.signInDialog();
+                        $state.go('app.dashboard')
                     },
                     function (error) {
                         console.log(error);

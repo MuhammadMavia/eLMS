@@ -14,7 +14,8 @@ usersSchema.plugin(deepPopulate, {});
 
 /* Get Current User Data*/
 account.get('/currentUserData', function (req, res) {
-    usersModel.findOne({$or: [{email: req.query.data}, {userID: req.query.data}]}, function (error, success) {
+    console.log(req.query.userID);
+    usersModel.findOne({_id: req.query.userID}, function (error, success) {
         error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
     }).populate('joinedCourses createdCourses')
 });

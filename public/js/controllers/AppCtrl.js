@@ -1,16 +1,7 @@
 angular.module("Lms")
 
-    .controller('AppCtrl', ['$uibModal', '$rootScope', '$scope', appCtrl]);
+    .controller('AppCtrl', ['$uibModal', '$scope', 'AccountService', appCtrl]);
 
-function appCtrl($uibModal, $rootScope, $scope) {
-    var dialog;
-    $rootScope.signInDialog = function (tmp, ctrl) {
-        dialog ? dialog.close() : null;
-        dialog = $uibModal.open({
-            animation: true,
-            templateUrl: tmp,
-            controller: 'AccountCtrl',
-            size: 'lg'
-        });
-    };
+function appCtrl($uibModal, $scope, AccountService) {
+    $scope.signInDialog = AccountService.signInDialog;
 }
