@@ -1,9 +1,11 @@
 angular.module("Lms")
 
-    .controller('SettingsCtrl', ['$state', '$scope', 'Cropper', 'firebaseRef', settings]);
+    .controller('SettingsCtrl', ['UserService', '$scope', 'Cropper', 'firebaseRef', settings]);
 
-function settings($state, $scope, Cropper, firebaseRef) {
-
+function settings(UserService, $scope, Cropper, firebaseRef) {
+    UserService.getCurrentUser().then(function (currentUser) {
+        $scope.currentUser = currentUser;
+    })
 }
 
 

@@ -1,6 +1,17 @@
 angular.module("Lms")
-    .filter('truncate', truncate);
+    .filter('truncate', truncate)
+    .filter('capitalize', function () {
+        return function (input, all) {
+            var reg = (all) ? /([^\W_]+[^\s-]*) */g : /([^\W_]+[^\s-]*)/;
+            return (!!input) ? input.replace(reg, function (txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            }) : '';
+        }
+    });
 
+function Ctrl($scope) {
+    $scope.msg = 'hello, world.';
+}
 
 function truncate() {
     return function (text, length, end) {
@@ -20,3 +31,4 @@ function truncate() {
 
     };
 }
+

@@ -4,8 +4,9 @@ angular.module("Lms")
 
 function dashboard($scope, UserService, $state, firebaseRef) {
 
-    $scope.data = UserService
-    console.log(UserService.getCurrentUser());
+    UserService.getCurrentUser().then(function (currentUser) {
+        $scope.currentUser = currentUser;
+    })
 }
 
 

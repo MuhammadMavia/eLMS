@@ -10,21 +10,39 @@
         <li class="navbar-brand">
             <i class="fa fa-bell fa-md cursor-pointer" aria-hidden="true"></i>
         </li>
-        <li class="navbar-brand">User Name</li>
+        <li>
+            <ul class="nav navbar-nav navbar-right ">
+                <li class="dropdown">
+                    <a class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {{currentUser.firstName | capitalize}} {{currentUser.lastName}}
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a>Profile</a></li>
+                        <li><a ui-sref="app.settings">Settings</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
         <li><a href="#"></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right ">
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false">Subject<span
+            <a class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button"
+               aria-expanded="false">Subject<span
                     class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a>Action</a></li>
+                <li><a>Another action</a></li>
+                <li><a>Something else here</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a>Separated link</a></li>
                 <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a>One more separated link</a></li>
             </ul>
         </li>
     </ul>

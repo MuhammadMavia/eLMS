@@ -8,6 +8,8 @@ var usersSchema = new mongoose.Schema({
     email: {type: String, unique: true},
     password: {type: String},
     progress: {type: Array},
+    birthDate: {type: String},
+    yearOfStudy: {type: String},
     role: {type: Number, default: 1},
     createdOn: {type: Date, default: Date.now()},
     createdCourses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Courses', unique: true}],

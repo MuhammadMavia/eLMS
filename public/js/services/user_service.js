@@ -10,9 +10,9 @@ angular.module("Lms")
                     user = success.data.user;
                     deferred.resolve(user);
                 }, function (err) {
-                    deferred.resolve();
+                    deferred.reject(err);
                 }
             );
-            return deferred
+            return deferred.promise
         }
     });

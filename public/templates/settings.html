@@ -1,10 +1,10 @@
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#email" data-toggle="tab" aria-expanded="true">Email</a></li>
-        <li class=""><a href="#account" data-toggle="tab" aria-expanded="false">Account</a></li>
+        <li class=""><a href="#email_page" data-toggle="tab" aria-expanded="true">Email</a></li>
+        <li class="active"><a href="#account_page" data-toggle="tab" aria-expanded="false">Account</a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="email">
+        <div class="tab-pane fade in active" id="email_page">
             <form class="form-horizontal">
                 <div class="container">
                     <fieldset class="col-md-12">
@@ -58,31 +58,36 @@
 
             </form>
         </div>
-
-        <div class="tab-pane fade in" id="account">
+        <div class="tab-pane fade in" id="account_page">
             <form class="form-horizontal">
                 <div class="container">
                     <fieldset class="col-md-12">
                         <legend class="text-right padding-8">Basics</legend>
                         <div class="form-group">
                             <div class="col-lg-6">
-                                <input id="realName" type="text" class="form-control" placeholder="Real Name">
+                                <input ng-model="currentUser.firstName" id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name">
                             </div>
-                            <label for="realName" class="col-lg-2 control-label">Real Name</label>
+                            <label for="firstName" class="col-lg-2 control-label">First Name</label>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-6">
-                                <input id="userName" type="text" class="form-control" placeholder="Email">
+                                <input ng-model="currentUser.lastName" id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name">
                             </div>
-                            <label for="userName" class="col-lg-2 control-label">Username</label>
+                            <label for="lastName" class="col-lg-2 control-label">Last Name</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <input ng-model="currentUser.email" id="email" name="email" type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <label for="email" class="col-lg-2 control-label">Email</label>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-6">
                                 <label class="radio-inline color-pc">
-                                    <input type="radio" name="gender">Boy
+                                    <input ng-model="currentUser.gender" type="radio" name="gender">Boy
                                 </label>
                                 <label class="radio-inline color-pc">
-                                    <input type="radio" name="gender">Girl
+                                    <input ng-model="currentUser.gender" type="radio" name="gender">Girl
                                 </label>
                             </div>
                             <label class="col-lg-2 control-label">Gender</label>
@@ -96,9 +101,8 @@
                             <label for="birthDate" class="col-lg-2 control-label">Birth Date</label>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-6" ng-init="user.yearOfStudy = 'YOS'">
-                                <select required ng-model="user.yearOfStudy"
-                                        class="selectpicker y-o-s-d-btn form-control">
+                            <div class="col-lg-6" ng-init="currentUser.yearOfStudy = currentUser.yearOfStudy || 'YOS'">
+                                <select required ng-model="currentUser.yearOfStudy" class="selectpicker y-o-s-d-btn form-control">
                                     <option value="YOS" selected disabled> Year of Study</option>
                                     <option>Ketchup</option>
                                     <option>Relish</option>
