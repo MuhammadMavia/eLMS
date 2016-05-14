@@ -2,6 +2,7 @@ var mongoose = require("mongoose");
 var uniqueValidator = require('mongoose-unique-validator');
 
 var usersSchema = new mongoose.Schema({
+    verified: {type: Boolean, default: false},
     profileImg: {type: String},
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
@@ -9,6 +10,7 @@ var usersSchema = new mongoose.Schema({
     password: {type: String},
     progress: {type: Array},
     birthDate: {type: String},
+    gender: {type: Number},
     yearOfStudy: {type: String},
     role: {type: Number, default: 1},
     createdOn: {type: Date, default: Date.now()},

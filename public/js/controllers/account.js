@@ -53,10 +53,12 @@ function account($http, $scope, serverRef, $state, firebaseRef, AccountService) 
                 socialUser.lastName = authData[provider].cachedUserProfile.last_name || authData[provider].cachedUserProfile.family_name;
                 socialUser[provider + "ID"] = authData[provider].id;
                 socialUser.role = 1;
+                socialUser.provider = provider + "ID";
                 socialUser.email = socialUser.userID;
                 $http.post(serverRef + "/account/socialUserAuth", socialUser).then(
                     function (success) {
                         console.log(success.data.user);
+                        localStorage.setItem('userID', success.data.user._id);
                         toastr.success('Sign Successfull');
                         AccountService.signInDialog();
                         $state.go('app.dashboard')
@@ -68,5 +70,5 @@ function account($http, $scope, serverRef, $state, firebaseRef, AccountService) 
                 );
             }
         });
-    }
+    };
 }

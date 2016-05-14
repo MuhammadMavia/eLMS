@@ -16,7 +16,13 @@ usersSchema.plugin(deepPopulate, {});
 account.get('/currentUserData', function (req, res) {
     console.log(req.query.userID);
     usersModel.findOne({_id: req.query.userID}, function (error, success) {
-        error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
+        if (success) {
+            success.password ? success.password = true : null;
+            res.send({code: 1, user: success})
+        }
+        else {
+            res.send({code: 0, msg: error})
+        }
     }).populate('joinedCourses createdCourses')
 });
 
@@ -46,17 +52,29 @@ account.post('/updateProfile', function (req, res) {
 
 /* Social User Auth*/
 account.use('/socialUserAuth', function (req, res, next) {
-    usersModel.findOne({userID: req.body.userID}, function (error, success) {
+    var obj = {};
+    obj[req.body.provider] = req.body[req.body.provider];
+    usersModel.findOne(obj, function (error, success) {
         success ? res.send({code: 1, user: success}) : next();
     });
 });
-
 account.post('/socialUserAuth', function (req, res) {
     var user = new usersModel(req.body);
     user.save(function (error, success) {
         console.log(error, success);
         error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
     })
+});
+/* Linked Account */
+account.use('/linkedAccount', function (req, res, next) {
+    usersModel.findOne(req.body, function (error, success) {
+        success ? res.send({code: 0, msg: 'This Account Is Already Linked!'}) : next();
+    });
+});
+account.post('/linkedAccount', function (req, res) {
+    usersModel.update({_id: req.query.userID}, {$set: req.body}, function (error, success) {
+        res.send(success || error)
+    });
 });
 
 /* Checking Email Middleware */
@@ -106,6 +124,52 @@ account.post('/updateInfo', function (req, res) {
         res.send(err || success);
     });
 });
+
+account.use('/changePassword', function (req, res, next) {
+    usersModel.findOne({_id: req.body.userID})
+        .exec(function (err, success) {
+            if (success) {
+                bcrypt.compare(req.body.currentPassword, success.password, function (err, isMatch) {
+                    console.log(isMatch);
+                    isMatch ? next() : res.send({msg: "Wrong Password!"});
+                });
+            }
+            else {
+                res.send({code: 0});
+            }
+        });
+});
+
+account.use('/changePassword', function (req, res, next) {
+    bcrypt.genSalt(10, function (err, salt) {
+        bcrypt.hash(req.body.password, salt, null, function (err, hashed) {
+            req.body.password = hashed;
+            next();
+        });
+    });
+});
+
+account.post('/changePassword', function (req, res) {
+    usersModel.update({_id: req.body.userID}, {$set: req.body}, function (err, success) {
+        res.send(err || success);
+    });
+});
+
+account.use('/setPassword', function (req, res, next) {
+    bcrypt.genSalt(10, function (err, salt) {
+        bcrypt.hash(req.body.password, salt, null, function (err, hashed) {
+            req.body.password = hashed;
+            next();
+        });
+    });
+});
+
+account.post('/setPassword', function (req, res) {
+    usersModel.update({_id: req.body.userID}, {$set: req.body}, function (err, success) {
+        res.send(err || success);
+    });
+});
+
 
 account.post('/changeTheme', function (req, res) {
     usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
