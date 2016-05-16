@@ -1,8 +1,8 @@
 angular.module("Lms")
 
-    .controller('AccountCtrl', ['$http', '$scope', 'serverRef', '$state', 'firebaseRef', 'AccountService', account]);
+    .controller('AccountCtrl', ['$http', 'Tools', '$scope', 'serverRef', '$state', 'firebaseRef', 'AccountService', account]);
 
-function account($http, $scope, serverRef, $state, firebaseRef, AccountService) {
+function account($http, Tools, $scope, serverRef, $state, firebaseRef, AccountService) {
     $scope.signInDialog = AccountService.signInDialog;
     $scope.doLogin = function (user) {
         $http.post(serverRef + '/account/login', user).then(
@@ -23,22 +23,25 @@ function account($http, $scope, serverRef, $state, firebaseRef, AccountService) 
         );
     };
     $scope.doRegister = function (user) {
-        $http.post(serverRef + '/account/signup', user).then(
-            function (success) {
-                if (success.data.errors) {
-                    toastr.info('Email is already in use!');
+        if (Tools.confirmPassword(user.password, user.confirmPassword)) {
+            $http.post(serverRef + '/account/signup', user).then(
+                function (success) {
+                    if (success.data.errors) {
+                        toastr.info('Email is already in use!');
+                    }
+                    else {
+                        AccountService.signInDialog();
+                        $state.go('app.dashboard');
+                        localStorage.setItem('userID', success.data._id);
+                        toastr.success('Sign in Successfull');
+                    }
+                },
+                function (error) {
+                    toastr.error('Sign in Failed!');
                 }
-                else {
-                    AccountService.signInDialog();
-                    $state.go('app.dashboard');
-                    localStorage.setItem('userID', success.data._id);
-                    toastr.success('Sign in Successfull');
-                }
-            },
-            function (error) {
-                toastr.error('Sign in Failed!');
-            }
-        );
+            );
+        }
+
     };
     $scope.socialLogin = function (provider) {
         var ref = new Firebase(firebaseRef);

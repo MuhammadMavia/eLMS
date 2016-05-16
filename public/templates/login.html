@@ -1,4 +1,4 @@
-<div class="col-md-8 col-md-8 col-md-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-2">
+<div class="col-sm-8 col-xs-6 col-md-8 col-lg-8 col-md-offset-2 col-xs-offset-3 col-sm-offset-2 col-lg-offset-2">
     <div class="login-form-main-div">
         <form name="loginForm" ng-submit="doLogin(user)" class="">
             <div>
@@ -14,19 +14,23 @@
                 </button>
             </div>
             <br/>
+
             <p>
                 <small class="no-text-shadow color-pc">We will never post without your permission</small>
             </p>
             <hr class="margin-none">
             <p class="color-pc no-text-shadow">or</p>
+
             <div>
                 <p><strong class="no-text-shadow color-pc">Login with your account</strong></p>
             </div>
             <div class="form-group">
-                <input name="email" ng-model="user.email" required type="text" class="form-control input-lg" placeholder="Email">
+                <input name="email" ng-model="user.email" required type="text" class="form-control input-lg"
+                       placeholder="Email">
             </div>
             <div class="form-group">
-                <input name="password" ng-model="user.password" required type="password" class="form-control input-lg" placeholder="Password">
+                <input name="password" ng-model="user.password" required type="password" class="form-control input-lg"
+                       placeholder="Password">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
