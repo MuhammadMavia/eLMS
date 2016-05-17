@@ -10,6 +10,7 @@ function settings(UserService, $scope, Cropper, firebaseRef) {
     $scope.changePassword = UserService.changePassword;
     $scope.setPassword = UserService.setPassword;
     $scope.linkedAccount = UserService.linkedAccount;
+    $scope.deleteAccount = UserService.deleteAccount;
 }
 
 

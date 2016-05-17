@@ -1,5 +1,5 @@
 angular.module("Lms")
-    .service('UserService', function ($http, serverRef, $q, firebaseRef) {
+    .service('UserService', function ($http, $uibModal, Tools, serverRef, $q, firebaseRef) {
         var vm = this;
         vm.userID = localStorage.getItem('userID');
         vm.getCurrentUser = function () {
@@ -30,27 +30,31 @@ angular.module("Lms")
         };
         vm.changePassword = function (updateData, userID) {
             updateData.userID = userID;
-            $http.post(serverRef + '/account/changePassword', updateData).then(
-                function (success) {
-                    success.data.msg ? toastr.error("Invalid Current Password") : null;
-                    success.data.nModified ? toastr.success("Password Successfully Updated") : null;
-                    console.log(success)
-                }, function (err) {
-                    toastr.error("Failed!")
-                }
-            )
+            if (Tools.confirmPassword(updateData.password, updateData.confirmPassword)) {
+                $http.post(serverRef + '/account/changePassword', updateData).then(
+                    function (success) {
+                        success.data.msg ? toastr.error("Invalid Current Password") : null;
+                        success.data.nModified ? toastr.success("Password Successfully Updated") : null;
+                        console.log(success)
+                    }, function (err) {
+                        toastr.error("Failed!")
+                    }
+                )
+            }
         };
         vm.setPassword = function (updateData, userID) {
             updateData.userID = userID;
-            $http.post(serverRef + '/account/setPassword', updateData).then(
-                function (success) {
-                    //success.data.msg ? toastr.error("Invalid Current Password") : null;
-                    success.data.nModified ? toastr.success("Password Successfully Save") : null;
-                    console.log(success)
-                }, function (err) {
-                    toastr.error("Failed!")
-                }
-            )
+            if (Tools.confirmPassword(updateData.password, updateData.confirmPassword)) {
+                $http.post(serverRef + '/account/setPassword', updateData).then(
+                    function (success) {
+                        //success.data.msg ? toastr.error("Invalid Current Password") : null;
+                        success.data.nModified ? toastr.success("Password Successfully Save") : null;
+                        console.log(success)
+                    }, function (err) {
+                        toastr.error("Failed!")
+                    }
+                )
+            }
         };
         vm.linkedAccount = function (provider, userID) {
             var ref = new Firebase(firebaseRef);
@@ -74,5 +78,61 @@ angular.module("Lms")
                     );
                 }
             })
+        };
+        vm.deleteAccount = function (userData) {
+            vm.deleteConfirmationDialog = $uibModal.open({
+                animation: true,
+                templateUrl: 'templates/deleteAccountDialog.html',
+                controller: function ($scope, UserService) {
+                    $scope.doDelete = function (password) {
+                        UserService.deleteConfirmationDialog.close();
+                        $http.post(serverRef + '/account/deleteAccount', {
+                            userID: userData._id,
+                            password: password
+                        }).then(
+                            function (success) {
+                                console.log(success);
+                                if (success.data.code == 0) {
+                                    toastr.error(success.data.msg)
+                                }
+                                else {
+                                    toastr.success('Your account successfully delete!');
+                                }
+                            },
+                            function (err) {
+                                toastr.error('Failed!');
+                            }
+                        )
+                    }
+                },
+                size: 'sm'
+            });
+            vm.deleteConfirmationDialog2 = $uibModal.open({
+                animation: true,
+                templateUrl: 'templates/deleteAccountDialog.html',
+                controller: function ($scope, UserService) {
+                    $scope.doDelete = function (password) {
+                        UserService.deleteConfirmationDialog.close();
+                        $http.post(serverRef + '/account/deleteAccount', {
+                            userID: userData._id,
+                            password: password
+                        }).then(
+                            function (success) {
+                                console.log(success);
+                                if (success.data.code == 0) {
+                                    toastr.error(success.data.msg)
+                                }
+                                else {
+                                    toastr.success('Your account successfully delete!');
+                                }
+                            },
+                            function (err) {
+                                toastr.error('Failed!');
+                            }
+                        )
+                    }
+                },
+                size: 'sm'
+            });
         }
     });

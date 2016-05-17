@@ -14,7 +14,6 @@ usersSchema.plugin(deepPopulate, {});
 
 /* Get Current User Data*/
 account.get('/currentUserData', function (req, res) {
-    console.log(req.query.userID);
     usersModel.findOne({_id: req.query.userID}, function (error, success) {
         if (success) {
             success.password ? success.password = true : null;
@@ -36,7 +35,6 @@ account.get('/usersFind', function (req, res) {
 
 /* Update Profile Image */
 account.post('/updateProfileImg', function (req, res) {
-    console.log(req.body._id);
     usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
         res.send(err || success);
     });
@@ -44,7 +42,6 @@ account.post('/updateProfileImg', function (req, res) {
 
 /* Update Profile */
 account.post('/updateProfile', function (req, res) {
-    console.log(req.body._id);
     usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
         res.send(err || success);
     });
@@ -61,7 +58,6 @@ account.use('/socialUserAuth', function (req, res, next) {
 account.post('/socialUserAuth', function (req, res) {
     var user = new usersModel(req.body);
     user.save(function (error, success) {
-        console.log(error, success);
         error ? res.send({code: 0, msg: error}) : res.send({code: 1, user: success});
     })
 });
@@ -130,7 +126,6 @@ account.use('/changePassword', function (req, res, next) {
         .exec(function (err, success) {
             if (success) {
                 bcrypt.compare(req.body.currentPassword, success.password, function (err, isMatch) {
-                    console.log(isMatch);
                     isMatch ? next() : res.send({msg: "Wrong Password!"});
                 });
             }
@@ -170,11 +165,31 @@ account.post('/setPassword', function (req, res) {
     });
 });
 
-
 account.post('/changeTheme', function (req, res) {
     usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
         res.send(err || success);
     });
+});
+
+
+/* Delete Account */
+account.use('/deleteAccount', function (req, res, next) {
+    usersModel.findOne({_id: req.body.userID}, function (err, success) {
+        if (success.password) {
+            bcrypt.compare(req.body.password, success.password, function (err, isMatch) {
+                req.body.password = null;
+                isMatch ? next() : res.send({code: 0, msg: "Wrong Password!"});
+            });
+        }
+        else {
+            next()
+        }
+    })
+});
+account.post('/deleteAccount', function (req, res) {
+    usersModel.findOneAndRemove({_id: req.body.userID}, function (err, success) {
+        res.send(err || success)
+    })
 });
 
 module.exports = account;
