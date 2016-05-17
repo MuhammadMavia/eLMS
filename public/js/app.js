@@ -1,6 +1,6 @@
 angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
-    // .constant('serverRef', 'https://elms-serv.herokuapp.com')
-    .constant('serverRef', '')
+     .constant('serverRef', 'https://elms-serv.herokuapp.com')
+    //.constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state) {
 
