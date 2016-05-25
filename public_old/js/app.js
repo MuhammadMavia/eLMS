@@ -132,7 +132,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 isAdmin: true,
                 views: {
                     AdminContent: {
-                        templateUrl: 'templates/course.html',
+                        templateUrl: 'templates/subjects.html',
                         controller: 'CoursesCtrl'
                     }
                 }
@@ -225,7 +225,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 isTeacher: true,
                 views: {
                     TeacherContent: {
-                        templateUrl: 'templates/course.html',
+                        templateUrl: 'templates/subjects.html',
                         controller: 'CoursesCtrl'
                     }
                 }
@@ -295,7 +295,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
                 isStudent: true,
                 views: {
                     StudentContent: {
-                        templateUrl: 'templates/course.html',
+                        templateUrl: 'templates/subjects.html',
                         controller: 'CoursesCtrl'
                     }
                 }

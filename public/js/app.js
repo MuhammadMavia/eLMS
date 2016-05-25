@@ -34,8 +34,17 @@ angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
                         controller: 'DashboardCtrl'
                     }
                 }
+            })
+            .state('app.subject', {
+                url: '/subject',
+                views: {
+                    AppContent: {
+                        templateUrl: 'templates/subjects.html',
+                        //controller: 'DashboardCtrl'
+                    }
+                }
             });
         //$urlRouterProvider.otherwise('/lms');
-        $urlRouterProvider.otherwise('/settings');
+        $urlRouterProvider.otherwise('/subject');
 
     });
