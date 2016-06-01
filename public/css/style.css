@@ -35,6 +35,13 @@
     text-align: right !important;
 }
 
+.text-left {
+    text-align: left !important;
+}
+.no-border {
+    border: none !important;
+}
+
 .padding-8 {
     padding: 8px !important;
 }

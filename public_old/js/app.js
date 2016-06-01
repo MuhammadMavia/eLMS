@@ -185,7 +185,7 @@ angular.module("Lms", ['youtube-embed', 'ui.router', 'ngMaterial', 'firebase', '
             .state('teacher', {
                 url: '/teacher',
                 // abstract: true,
-                templateUrl: 'templates/teacher.html',
+                templateUrl: 'templates/topics.html',
                 controller: 'TeacherCtrl'
             })
             .state('teacher.dashboard', {
