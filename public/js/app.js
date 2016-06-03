@@ -81,6 +81,7 @@ angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
                 }
             });
         $urlRouterProvider.otherwise('/lms');
+        //$urlRouterProvider.otherwise('/settings');
         //$urlRouterProvider.otherwise('/subject');
 
     });
