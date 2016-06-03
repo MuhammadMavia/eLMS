@@ -61,8 +61,26 @@ angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
                         //controller: 'DashboardCtrl'
                     }
                 }
+            })
+            .state('app.subtopics', {
+                url: '/subtopics',
+                views: {
+                    AppContent: {
+                        templateUrl: 'templates/subtopics.html',
+                        //controller: 'DashboardCtrl'
+                    }
+                }
+            })
+            .state('app.video', {
+                url: '/video',
+                views: {
+                    AppContent: {
+                        templateUrl: 'templates/video.html',
+                        //controller: 'DashboardCtrl'
+                    }
+                }
             });
-        //$urlRouterProvider.otherwise('/lms');
-        $urlRouterProvider.otherwise('/topics');
+        $urlRouterProvider.otherwise('/lms');
+        //$urlRouterProvider.otherwise('/subject');
 
     });

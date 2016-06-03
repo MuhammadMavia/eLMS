@@ -1,24 +1,50 @@
 <div class="">
-    <div class="col-sm-6 col-lg-6 col-md-6 text-right">
+    <div class="col-sm-7 col-lg-7 col-md-7 text-right">
         <ul class="list-group class-course-list">
-            <li class="list-group-item no-border row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
-                <div class="col-md-8 col-lg-9 col-sm-8">
-                    <h3>Course {{item}}</h3>
+
+            <li class="list-group-item row">
+                <h4>All Content in Course Name</h4>
+            </li>
+
+            <li class="list-group-item row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <ul class="list-group">
+                        <li ui-sref="app.video" class="cursor-hand list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
+                            ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
+                            <h4 style="margin-right: 10px;display: inline">Subtopic {{a}}</h4>
+                            <!--<span class="icon-round-border">-->
+                            <i ng-if="$index%3==1" style="padding-left: 10px"
+                               class="fa fa-2x icon-round-border fa-play"></i>
+                            <i ng-if="$index%3==2" class="fa fa-2x icon-round-border fa-star" aria-hidden="true"></i>
+                            <i ng-if="$index%3==0" class="fa fa-2x icon-round-border fa-file-pdf-o "></i>
+                            <!--</span>-->
+                        </li>
+                        <li ui-sref="app.subtopics" class="cursor-hand list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
+                            ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
+                            <h4 style="margin-right: 10px;display: inline">Subtopic {{a}}</h4>
+                            <!--<span class="icon-round-border">-->
+                            <i ng-if="$index%3==1" style="padding-left: 10px"
+                               class="fa fa-2x icon-round-border fa-play"></i>
+                            <i ng-if="$index%3==2" class="fa fa-2x icon-round-border fa-star" aria-hidden="true"></i>
+                            <i ng-if="$index%3==0" class="fa fa-2x icon-round-border fa-file-pdf-o "></i>
+                            <!--</span>-->
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <h3>Topic {{item}}</h3>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cum, dolorem
                         doloremque eius eligendi incidunt ipsa maxime nisi perferendis perspiciatis
                         possimus quam quas repellat reprehenderit sapiente sunt, ut voluptatibus?</p>
-
-                </div>
-                <div class="col-md-4 col-lg-3 col-sm-4 text-left" style="padding: 0 0 0 0">
-                    <img src="./img/125x125.jpg" class="img-rounded">
                 </div>
 
             </li>
         </ul>
     </div>
-    <div class="col-sm-6 col-md-6 left-col">
-        <h4>Subject</h4>
+    <div class="col-sm-5 col-lg-5 col-md-5 left-col">
+        <h5>Subject Name</h5>
+        <h4>Course Name</h4>
 
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi commodi,
@@ -47,17 +73,40 @@
         overflow-x: hidden;
     }
 
+    .icon-round-border {
+        text-align: center;
+        border: 2px solid rgba(0, 0, 0, 0.58);
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        padding: 3px;
+        border-radius: 50px;
+    }
+
     .left-col {
         text-align: right;
-
         border-left: 2px solid #ccc;
         height: 94vh;
         padding: 0 100px 0 100px;
     }
 
+    .left-right-border-none {
+        border-right: none !important;
+        border-left: none !important;
+    }
+
+    .list-group ::first-child {
+        border: none !important;
+    }
+
     .left-col h4 {
         padding: 20px 20px 15px 0;
         border-bottom: 1px solid;
+    }
+
+    .left-col h5 {
+        padding: 20px 20px 15px 0;
+        /*border-bottom: 1px solid;*/
     }
 
     .left-col p {

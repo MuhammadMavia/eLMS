@@ -38,6 +38,24 @@
 .text-left {
     text-align: left !important;
 }
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.margin-right-8 {
+    margin-right: 8px !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.padding-left-right {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+}
+
 .no-border {
     border: none !important;
 }
@@ -188,7 +206,7 @@ html {
 }
 
 .cursor-hand {
-    cursor: hand;
+    cursor: pointer !important;
 }
 
 /* Let's get this party started */

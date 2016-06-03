@@ -13,7 +13,7 @@ function account($http, Tools, $scope, serverRef, $state, firebaseRef, AccountSe
                     AccountService.signInDialog();
                     localStorage.setItem('userID', success.data.user._id);
                     toastr.success('Login Successfull');
-                    $state.go('app.dashboard');
+                    $state.go('app.subject');
                 }
             },
             function (error) {
@@ -31,7 +31,7 @@ function account($http, Tools, $scope, serverRef, $state, firebaseRef, AccountSe
                     }
                     else {
                         AccountService.signInDialog();
-                        $state.go('app.dashboard');
+                        $state.go('app.subject');
                         localStorage.setItem('userID', success.data._id);
                         toastr.success('Sign in Successfull');
                     }
@@ -64,7 +64,7 @@ function account($http, Tools, $scope, serverRef, $state, firebaseRef, AccountSe
                         localStorage.setItem('userID', success.data.user._id);
                         toastr.success('Sign Successfull');
                         AccountService.signInDialog();
-                        $state.go('app.dashboard')
+                        $state.go('app.subject')
                     },
                     function (error) {
                         console.log(error);

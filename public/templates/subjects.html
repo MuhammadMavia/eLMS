@@ -1,14 +1,68 @@
 <div class="">
-    <div class="jumbotron col-sm-8">
+    <div class="jumbotron jumbotron-div col-sm-8 col-md-8 col-lg-8">
         <h3 class="header-title">Subject</h3>
+
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <ul class="list-group sub-list-3-col">
+                    <li class="list-group-item"><h4>TOPIC</h4></li>
+                    <li ng-repeat="x in [1,2,3,4,5,6,7,8,9]" class="list-group-item"><b>Subtopic {{x}}</b></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <ul class="list-group sub-list-3-col">
+                    <li class="list-group-item"><h4>TOPIC</h4></li>
+                    <li ng-repeat="x in [1,2,3,4,5,6,7,8,9]" class="list-group-item"><b>Subtopic {{x}}</b></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <ul class="list-group sub-list-3-col">
+                    <li class="list-group-item"><h4>TOPIC</h4></li>
+                    <li ng-repeat="x in [1,2,3,4,5,6,7,8,9]" class="list-group-item"><b>Subtopic {{x}}</b></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4"></div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <ul class="list-group sub-list-ui" style="height: 85vh;overflow: auto">
+            <li class="list-group-item"><b>Home</b></li>
+            <li ng-click="null" ui-sref="app.course" ng-repeat="x in [1,2,3,4,5,6,7,8,9]" class="list-group-item cursor-hand"><b>Subject {{x}}</b></li>
+        </ul>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2"></div>
 </div>
 <style>
+    .jumbotron-div {
+        height: 70vh;
+        padding: 2% 5% 0 5%;
+    }
+
+    .sub-list-3-col {
+        height: 55vh;
+        overflow: auto;
+        border: none;
+    }
+
+    .sub-list-3-col li {
+        background: transparent;
+        border: none;
+    }
+
+    .sub-list-ui {
+        margin-top: 10%;
+    }
+
+    .sub-list-ui li {
+        border: none;
+        border-radius: 0 !important;
+        text-align: right;
+        margin-top: 10px;
+        border-right: 10px solid #ccc;
+    }
+
     .header-title {
         text-align: right;
         padding-bottom: 15px;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid #ccc;
     }
 </style>
