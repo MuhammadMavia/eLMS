@@ -35,8 +35,7 @@
                     <div class="form-group" ng-init="user.yearOfStudy = 'YOS'">
                         <select required ng-model="user.yearOfStudy" class="selectpicker y-o-s-d-btn form-control input-lg">
                             <option value="YOS" selected disabled>Year of Study</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
+                            <option ng-value="$index" ng-repeat="y in $root.yearOfStydy">{{y}}</option>
                         </select>
                     </div>
                 </div>

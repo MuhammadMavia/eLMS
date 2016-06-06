@@ -1,9 +1,9 @@
 angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
-     .constant('serverRef', 'https://elms-serv.herokuapp.com')
+    .constant('serverRef', 'https://elms-serv.herokuapp.com')
     //.constant('serverRef', '')
     .constant('firebaseRef', 'https://elms.firebaseio.com')
     .run(function ($rootScope, $state) {
-
+        $rootScope.yearOfStydy = ["1st year","2nd Year","3rd Year","4th Year"]
     })
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
@@ -80,8 +80,8 @@ angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
                     }
                 }
             });
-        $urlRouterProvider.otherwise('/lms');
-        //$urlRouterProvider.otherwise('/settings');
+        //$urlRouterProvider.otherwise('/lms');
+        $urlRouterProvider.otherwise('/settings');
         //$urlRouterProvider.otherwise('/subject');
 
     });

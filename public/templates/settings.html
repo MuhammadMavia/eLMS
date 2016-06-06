@@ -1,10 +1,7 @@
-<div class="container">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#email_page" data-toggle="tab" aria-expanded="true">Email</a></li>
-        <li class=""><a href="#account_page" data-toggle="tab" aria-expanded="false">Account</a></li>
-    </ul>
-    <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="email_page">
+<uib-tabset active="1" class="container">
+    <uib-tab index="0" heading="Email">
+        <div class="tab-pane tab-content fade in active">
+
             <form class="form-horizontal">
                 <div class="container">
                     <fieldset class="col-md-12">
@@ -28,7 +25,7 @@
                         <div class="form-group">
                             <div class="col-lg-offset-5 col-lg-2">
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mastery"
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id=""
                                            checked>
                                     <label class="onoffswitch-label" for="mastery"></label>
                                 </div>
@@ -38,7 +35,7 @@
                         <div class="form-group">
                             <div class="col-lg-offset-5 col-lg-2">
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mastery"
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id=""
                                            checked>
                                     <label class="onoffswitch-label" for="mastery"></label>
                                 </div>
@@ -62,14 +59,16 @@
 
             </form>
         </div>
-        <div class="tab-pane fade in" id="account_page">
+    </uib-tab>
+    <uib-tab index="1" heading="Account">
+        <div class="tab-pane tab-content fade in">
             <form class="form-horizontal">
                 <div class="container">
                     <fieldset class="col-md-12">
                         <legend class="text-right padding-8">Basics</legend>
                         <div class="form-group">
                             <div class="col-lg-6">
-                                <input ng-model="currentUser.firstName" id="firstName" name="firstName" type="text"
+                                <input ng-model="currentUser.firstName" id="firstName" type="text"
                                        class="form-control" placeholder="First Name">
                             </div>
                             <label for="firstName" class="col-lg-2 control-label">First Name</label>
@@ -113,8 +112,7 @@
                                 <select required ng-model="currentUser.yearOfStudy"
                                         class="selectpicker y-o-s-d-btn form-control">
                                     <option value="YOS" selected disabled> Year of Study</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
+                                    <option ng-value="$index" ng-repeat="y in $root.yearOfStydy">{{y}}</option>
                                 </select>
                             </div>
                             <label for="birthDate" class="col-lg-2 control-label">Year of Study</label>
@@ -237,8 +235,7 @@
                                 <select required ng-model="currentUser.yearOfStudy" id="yearOfStudy"
                                         class="selectpicker y-o-s-d-btn form-control">
                                     <option value="YOS" selected disabled>Year of study</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
+                                    <option ng-value="$index" ng-repeat="y in $root.yearOfStydy">{{y}}</option>
                                 </select>
                             </div>
                             <label for="yearOfStudy" class="col-lg-2 control-label">Year of Study</label>
@@ -262,7 +259,8 @@
                         <div class="form-group">
                             <div class="col-lg-6">
                                 <div class="">
-                                    <button ng-click="deleteAccount(currentUser)" type="button" class="btn btn-danger btn-block no-outline">Delete Account
+                                    <button ng-click="deleteAccount(currentUser)" type="button"
+                                            class="btn btn-danger btn-block no-outline">Delete Account
                                     </button>
                                 </div>
                             </div>
@@ -275,5 +273,5 @@
                 </div>
             </form>
         </div>
-    </div>
-</div>
+    </uib-tab>
+</uib-tabset>
