@@ -24,11 +24,12 @@
 
                  </div>-->
                 <div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZYxhbl4cc5Y"></iframe>
-                    </div>
+                    <!--<div class="embed-responsive embed-responsive-16by9">-->
+                    <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZYxhbl4cc5Y"></iframe>-->
+                    <!--</div>-->
                 </div>
-                <p class="padding-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quisquam sequi unde! Aut
+                <p class="padding-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quisquam sequi
+                    unde! Aut
                     consequatur, dolorum earum esse expedita illum ipsam iste, molestiae optio placeat possimus quam
                     recusandae rerum tempora veniam.</p>
                 <i class="icon-gear"></i>
@@ -41,14 +42,28 @@
                 </select>
                 <i class="margin-right-8 icon-info-sign"></i>Info
             </li>
-            <li class="list-group-item">
-                <input type="text" class="form-control" placeholder="Search">
-                <button>
-                    Submit
-                </button>
-
+            <li class="list-group-item row">
+                <div class="input-group">
+                    <!--<input type="text" class="form-control input-lg" placeholder="Search for...">-->
+                    <textarea style="height: 46px;resize: none;" maxlength="200" id="bio" type="text"
+                              class="form-control" placeholder="Ask a Question"></textarea>
+                    <span class="input-group-btn">
+                       <button class="btn btn-primary btn-lg" type="button">Submit</button>
+                    </span>
+                </div>
             </li>
         </ul>
+        <div class="">
+            <h4>Questions</h4>
+            <hr/>
+            <h4>Lorem ipsum dolor sit amet,itate deleniti
+                excepturi mollitia placeat voluptates</h4>
+            <span>62 votes
+                <i class="fa fa-2x fa-sort-desc" aria-hidden="true"></i>
+                <i class="fa fa-2x fa-sort-asc" aria-hidden="true"></i>
+
+                1 comment Flag</span>
+        </div>
     </div>
     <div class="col-sm-4 col-lg-4 col-md-4 left-col no-margin no-padding">
         <!--<h5>Subject Name</h5>-->
@@ -89,7 +104,7 @@
 </div>
 <style>
     .class-course-list {
-        height: 92vh;
+        /*height: 92vh;*/
         overflow: auto;
         overflow-x: hidden;
     }
