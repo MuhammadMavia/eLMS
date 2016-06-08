@@ -5,6 +5,7 @@ angular.module("Lms")
 function settings(UserService, $scope, Cropper, firebaseRef) {
     UserService.getCurrentUser().then(function (currentUser) {
         $scope.currentUser = currentUser;
+        //$scope.$digest();
         console.log(currentUser);
     });
     $scope.updateProfile = UserService.updateProfile;

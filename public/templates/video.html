@@ -1,5 +1,5 @@
-<div class="">
-    <div class="col-sm-8 col-lg-8 col-md-8 text-right">
+<div class="col-sm-10 col-lg-10 col-md-10 right-col text-right">
+    <div>
         <ul class="list-group class-course-list">
 
             <li class="list-group-item row">
@@ -24,9 +24,9 @@
 
                  </div>-->
                 <div>
-                    <!--<div class="embed-responsive embed-responsive-16by9">-->
-                    <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZYxhbl4cc5Y"></iframe>-->
-                    <!--</div>-->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZYxhbl4cc5Y"></iframe>
+                    </div>
                 </div>
                 <p class="padding-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quisquam sequi
                     unde! Aut
@@ -53,116 +53,73 @@
                 </div>
             </li>
         </ul>
-        <div class="">
-            <h4>Questions</h4>
-            <hr/>
-            <h4>Lorem ipsum dolor sit amet,itate deleniti
-                excepturi mollitia placeat voluptates</h4>
-            <span>62 votes
-                <i class="fa fa-2x fa-sort-desc" aria-hidden="true"></i>
-                <i class="fa fa-2x fa-sort-asc" aria-hidden="true"></i>
+        <h4>Questions</h4>
+        <br/>
 
-                1 comment Flag</span>
-        </div>
-    </div>
-    <div class="col-sm-4 col-lg-4 col-md-4 left-col no-margin no-padding">
-        <!--<h5>Subject Name</h5>-->
-        <!--<h4>Course Name</h4>-->
-        <div class="text-right" style="border-bottom: 1px solid #ccc">
-            <h4>
-                <span style="margin-right: 15px">Prev Section</span>
-                <i class="fa-lg icon-caret-right" style="position: absolute;right: 12px;margin-top: 11px;"></i>
+        <div class="ques-sec" ng-repeat="a in [1,2,3]">
+            <h5>Lorem ipsum dolor sit amet,itate deleniti excepturi mollitia placeat voluptates</h5>
+            <sub class="posted-time">25 mint ago by Muhammad Mavia</sub>
+            <span class="margin-right-25">Flag</span>
+            <span class="margin-right-25">1 comment</span>
+        <span>
+                    <i class="fa fa-2x fa-sort-desc margin-right-25" aria-hidden="true"></i>
+                    <i class="fa fa-2x fa-sort-asc up-sort" aria-hidden="true"></i>62 votes
+                </span>
+
+            <div class="res-section">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa dolores doloribus esse
+                    eum explicabo illum inventore iste necessitatibus nesciunt. Cupiditate distinctio exercitationem
+                    maiores mollitia quisquam ratione sequi velit, voluptas. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Ad debitis, incidunt quaerat quasi reprehenderit voluptas voluptatibus. A
+                    aliquam animi blanditiis corporis, ducimus iure nulla reprehenderit sapiente ullam ut vero
+                    voluptates.
+                </p>
+                <sub class="posted-time">25 mint ago by Muhammad Mavia</sub>
+                <span class="margin-right-25">Flag</span>
+                <span class="margin-right-25">1 comment</span>
+                <span style="position: relative">
+                    <i class="fa fa-2x fa-sort-desc margin-right-25" aria-hidden="true"></i>
+                    <i class="fa fa-2x fa-sort-asc up-sort" aria-hidden="true"></i>62 votes
+                </span>
                 <br/>
-                <b style="margin-right: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
-            </h4>
-        </div>
-        <!--<div class="col-md-6 col-lg-6 col-sm-6">-->
-        <ul class="list-group padding-left-right">
-            <li class="list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
-                ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
-                <h4 style="margin-right: 10px;display: inline">Subtopic {{a}}</h4>
-                <!--<span class="icon-round-border">-->
-                <i ng-if="$index%3==1" style="padding-left: 10px" class="fa fa-2x icon-round-border fa-play"></i>
-                <i ng-if="$index%3==2" class="fa fa-2x icon-round-border fa-star"></i>
-                <i ng-if="$index%3==0" class="fa fa-2x icon-round-border fa-file-pdf-o "></i>
-                <!--</span>-->
-            </li>
-        </ul>
-
-        <div class="text-left" style="border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-left: 15px">
-
-            <h4>
-                <span style="margin-left: 15px">Next Section</span>
-                <i class="fa-lg icon-caret-left" style="position: absolute;left: 12px;margin-top: 11px;"></i>
                 <br/>
-                <b style="margin-left: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
-            </h4>
+                <a class="margin-right-25" href="">Show All 5 Answer</a>
+                <a href="">Answer this Question</a>
+            </div>
         </div>
-        <!--</div>-->
-
     </div>
 </div>
+<div class="col-sm-2 col-lg-2 col-md-2 video-left-col left-col no-padding">
+    <div class="text-right" style="border-bottom: 1px solid #ddd">
+        <h4>
+            <span style="margin-right: 15px">Prev Section</span>
+            <i class="fa-lg icon-caret-right" style="position: absolute;right: 12px;margin-top: 11px;"></i>
+            <br/>
+            <b style="margin-right: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
+        </h4>
+    </div>
+    <ul class="list-group padding-left-right">
+        <li class="list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
+            ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
+            <h5 style="margin-right: 10px;display: inline">Subtopic {{a}}</h5>
+            <i ng-if="$index%3==1" style="padding-left: 10px" class="fa color-icon fa-2x icon-round-border fa-play"></i>
+            <i ng-if="$index%3==2" class="fa color-icon fa-2x icon-round-border fa-star"></i>
+            <i ng-if="$index%3==0" class="fa color-icon fa-2x icon-round-border fa-file-pdf-o "></i>
+        </li>
+    </ul>
+
+    <div class="text-left" style="border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 15px">
+
+        <h4>
+            <span style="margin-left: 15px">Next Section</span>
+            <i class="fa-lg icon-caret-left" style="position: absolute;left: 12px;margin-top: 11px;"></i>
+            <br/>
+            <b style="margin-left: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
+        </h4>
+    </div>
+    <!--</div>-->
+
+</div>
 <style>
-    .class-course-list {
-        /*height: 92vh;*/
-        overflow: auto;
-        overflow-x: hidden;
-    }
 
-    .icon-round-border {
-        text-align: center;
-        border: 2px solid rgba(0, 0, 0, 0.58);
-        height: 40px;
-        width: 40px;
-        display: inline-block;
-        padding: 3px;
-        border-radius: 50px;
-    }
-
-    .left-col {
-        text-align: right;
-        border-left: 2px solid #ccc;
-        height: 94vh;
-        padding: 0 100px 0 100px;
-    }
-
-    .left-right-border-none {
-        border-right: none !important;
-        border-left: none !important;
-    }
-
-    .list-group ::first-child {
-        border: none !important;
-    }
-
-    .left-col h4 {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col h5 {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col p {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col div {
-        margin-top: 5%;
-        text-align: center;
-    }
-
-    .left-col div button {
-        /*text-align: left;*/
-        width: 60%;
-    }
-
-    .left-col div button i {
-        float: left;
-        margin-top: 5px;
-        /*width: 60%;*/
-    }
 </style>

@@ -1,140 +1,55 @@
-<div class="">
-    <div class="col-sm-8 col-lg-8 col-md-8 text-right">
-        <ul class="list-group class-course-list">
-
-            <li class="list-group-item row">
-                <h4>Subtopic Name</h4>
-            </li>
-
-            <li class="list-group-item row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
-                <!-- <div class="col-md-6 col-lg-6 col-sm-6">
-                     <ul class="list-group">
-                         <li class="list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
-                             ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
-                             <h4 style="margin-right: 10px;display: inline">Subtopic {{a}}</h4>
-                             &lt;!&ndash;<span class="icon-round-border">&ndash;&gt;
-                             <i ng-if="$index%3==1" style="padding-left: 10px"
-                                class="fa fa-2x icon-round-border fa-play"></i>
-                             <i ng-if="$index%3==2" class="fa fa-2x icon-round-border fa-star" aria-hidden="true"></i>
-                             <i ng-if="$index%3==0" class="fa fa-2x icon-round-border fa-file-pdf-o "></i>
-                             &lt;!&ndash;</span>&ndash;&gt;
-                         </li>
-                     </ul>
-
-
-                 </div>-->
-                <div>
-                    <h3>Title {{item}}</h3>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cum, dolorem
-                        doloremque eius eligendi incidunt ipsa maxime nisi perferendis perspiciatis
-                        possimus quam quas repellat reprehenderit sapiente sunt, ut voluptatibus? Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Ad consequatur eaque et explicabo fuga ipsum magni obcaecati
-                        perspiciatis, quae quidem, sunt, tempora veniam voluptate? Commodi deserunt doloremque obcaecati
-                        quas velit?</p>
-                </div>
-
-            </li>
-        </ul>
-    </div>
-    <div class="col-sm-4 col-lg-4 col-md-4 left-col no-margin no-padding">
-        <!--<h5>Subject Name</h5>-->
-        <!--<h4>Course Name</h4>-->
-        <div class="text-right" style="border-bottom: 1px solid #ccc">
-            <h4>
-                <span style="margin-right: 15px">Prev Section</span>
-                <i class="fa-lg icon-caret-right" style="position: absolute;right: 12px;margin-top: 11px;"></i>
-                <br/>
-                <b style="margin-right: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
-            </h4>
-        </div>
-        <!--<div class="col-md-6 col-lg-6 col-sm-6">-->
-        <ul class="list-group padding-left-right">
-            <li class="list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
-                ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
-                <h4 style="margin-right: 10px;display: inline">Subtopic {{a}}</h4>
-                <!--<span class="icon-round-border">-->
-                <i ng-if="$index%3==1" style="padding-left: 10px" class="fa fa-2x icon-round-border fa-play"></i>
-                <i ng-if="$index%3==2" class="fa fa-2x icon-round-border fa-star"></i>
-                <i ng-if="$index%3==0" class="fa fa-2x icon-round-border fa-file-pdf-o "></i>
-                <!--</span>-->
-            </li>
-        </ul>
-
-        <div class="text-left" style="border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-left: 15px">
-
-            <h4>
-                <span style="margin-left: 15px">Next Section</span>
-                <i class="fa-lg icon-caret-left" style="position: absolute;left: 12px;margin-top: 11px;"></i>
-                <br/>
-                <b style="margin-left: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
-            </h4>
-        </div>
-        <!--</div>-->
-
-    </div>
+<div class="col-sm-10 col-lg-10 col-md-10 right-col text-right">
+    <ul class="list-group class-course-list">
+        <li class="list-group-item row">
+            <h4>Subtopic Name</h4>
+        </li>
+        <li class="list-group-item row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+            <div>
+                <h3>Title {{item}}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cum, dolorem
+                    doloremque eius eligendi incidunt ipsa maxime nisi perferendis perspiciatis
+                    possimus quam quas repellat reprehenderit sapiente sunt, ut voluptatibus? Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit. Ad consequatur eaque et explicabo fuga ipsum magni obcaecati
+                    perspiciatis, quae quidem, sunt, tempora veniam voluptate? Commodi deserunt doloremque obcaecati
+                    quas velit?
+                </p>
+            </div>
+        </li>
+    </ul>
 </div>
-<style>
-    .class-course-list {
-        height: 92vh;
-        overflow: auto;
-        overflow-x: hidden;
-    }
+<div class="col-sm-2 col-lg-2 col-md-2 margin-navbar subtopic-left-col left-col no-padding">
+    <!--<h5>Subject Name</h5>-->
+    <!--<h4>Course Name</h4>-->
+    <div class="text-right" style="border-bottom: 1px solid #ddd">
+        <h4>
+            <span style="margin-right: 15px">Prev Section</span>
+            <i class="fa-lg icon-caret-right" style="position: absolute;right: 12px;margin-top: 11px;"></i>
+            <br/>
+            <b style="margin-right: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
+        </h4>
+    </div>
+    <!--<div class="col-md-6 col-lg-6 col-sm-6">-->
+    <ul class="list-group padding-left-right">
+        <li class="list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
+            ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
+            <h5 style="margin-right: 10px;display: inline">Subtopic {{a}}</h5>
+            <!--<span class="icon-round-border">-->
+            <i ng-if="$index%3==1" style="padding-left: 10px" class="fa color-icon fa-2x icon-round-border fa-play"></i>
+            <i ng-if="$index%3==2" class="fa color-icon fa-2x icon-round-border fa-star"></i>
+            <i ng-if="$index%3==0" class="fa color-icon fa-2x icon-round-border fa-file-pdf-o "></i>
+            <!--</span>-->
+        </li>
+    </ul>
 
-    .icon-round-border {
-        text-align: center;
-        border: 2px solid rgba(0, 0, 0, 0.58);
-        height: 40px;
-        width: 40px;
-        display: inline-block;
-        padding: 3px;
-        border-radius: 50px;
-    }
+    <div class="text-left" style="border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 15px">
 
-    .left-col {
-        text-align: right;
-        border-left: 2px solid #ccc;
-        height: 94vh;
-        padding: 0 100px 0 100px;
-    }
+        <h4>
+            <span style="margin-left: 15px">Next Section</span>
+            <i class="fa-lg icon-caret-left" style="position: absolute;left: 12px;margin-top: 11px;"></i>
+            <br/>
+            <b style="margin-left: 15px;margin-top: 10px;display: inline-block;">Topic Name</b>
+        </h4>
+    </div>
+    <!--</div>-->
 
-    .left-right-border-none {
-        border-right: none !important;
-        border-left: none !important;
-    }
-
-    .list-group ::first-child {
-        border: none !important;
-    }
-
-    .left-col h4 {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col h5 {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col p {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col div {
-        margin-top: 5%;
-        text-align: center;
-    }
-
-    .left-col div button {
-        /*text-align: left;*/
-        width: 60%;
-    }
-
-    .left-col div button i {
-        float: left;
-        margin-top: 5px;
-        /*width: 60%;*/
-    }
-</style>
+</div>

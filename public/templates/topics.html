@@ -1,132 +1,58 @@
-<div class="">
-    <div class="col-sm-7 col-lg-7 col-md-7 text-right">
-        <ul class="list-group class-course-list">
+<div class="col-sm-7 col-lg-7 col-md-7 right-col text-right">
+    <ul class="list-group class-course-list">
 
-            <li class="list-group-item row">
-                <h4>All Content in Course Name</h4>
-            </li>
+        <li class="list-group-item row">
+            <h4>All Content in Course Name</h4>
+        </li>
 
-            <li class="list-group-item row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
-                <div class="col-md-6 col-lg-6 col-sm-6">
-                    <ul class="list-group">
-                        <li ui-sref="app.video" class="cursor-hand list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
-                            ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
-                            <h4 style="margin-right: 10px;display: inline">Subtopic {{a}}</h4>
-                            <!--<span class="icon-round-border">-->
-                            <i ng-if="$index%3==1" style="padding-left: 10px"
-                               class="fa fa-2x icon-round-border fa-play"></i>
-                            <i ng-if="$index%3==2" class="fa fa-2x icon-round-border fa-star" aria-hidden="true"></i>
-                            <i ng-if="$index%3==0" class="fa fa-2x icon-round-border fa-file-pdf-o "></i>
-                            <!--</span>-->
-                        </li>
-                        <li ui-sref="app.subtopics" class="cursor-hand list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
-                            ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
-                            <h4 style="margin-right: 10px;display: inline">Subtopic {{a}}</h4>
-                            <!--<span class="icon-round-border">-->
-                            <i ng-if="$index%3==1" style="padding-left: 10px"
-                               class="fa fa-2x icon-round-border fa-play"></i>
-                            <i ng-if="$index%3==2" class="fa fa-2x icon-round-border fa-star" aria-hidden="true"></i>
-                            <i ng-if="$index%3==0" class="fa fa-2x icon-round-border fa-file-pdf-o "></i>
-                            <!--</span>-->
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-6">
-                    <h3>Topic {{item}}</h3>
+        <li class="list-group-item row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+            <div class="col-md-6 col-lg-6 col-sm-6">
+                <ul class="list-group">
+                    <li class="cursor-hand list-group-item left-right-border-none" ng-repeat="a in [1,2,3,4,5]"
+                        ng-style="$first?{'border-top':'none'}:$last?{'border-bottom':'none'}:null">
+                        <h5 style="margin-right: 10px;display: inline">Subtopic {{a}}</h5>
+                        <!--<span class="icon-round-border">-->
+                        <i ng-if="$index%3==1" style="padding-left: 10px" ui-sref="app.video"
+                           class="fa color-icon fa-2x icon-round-border fa-play"></i>
+                        <i ng-if="$index%3==2" class="fa color-icon fa-2x icon-round-border fa-star"
+                           aria-hidden="true"></i>
+                        <i ng-if="$index%3==0" ui-sref="app.subtopics"
+                           class="fa color-icon fa-2x icon-round-border fa-file-pdf-o "></i>
+                        <!--</span>-->
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6">
+                <h3>Topic {{item}}</h3>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cum, dolorem
-                        doloremque eius eligendi incidunt ipsa maxime nisi perferendis perspiciatis
-                        possimus quam quas repellat reprehenderit sapiente sunt, ut voluptatibus?</p>
-                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cum, dolorem
+                    doloremque eius eligendi incidunt ipsa maxime nisi perferendis perspiciatis
+                    possimus quam quas repellat reprehenderit sapiente sunt, ut voluptatibus?</p>
+            </div>
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+</div>
+<div class="col-sm-5 col-lg-5 col-md-5 topic-left-col left-col">
+    <h5>Subject Name</h5>
+    <h4>Course Name</h4>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi commodi,
+        deleniti dolor dolore, eos et fugiat ipsum libero magnam maxime necessitatibus,
+        nulla quam sapiente tenetur unde ut veniam vitae?
+    </p>
+
+    <div style="margin-top: 40%">
+        <button type="button" class="btn btn-primary">
+            <i class="icon-question icon-large"></i>
+            Help Request
+        </button>
     </div>
-    <div class="col-sm-5 col-lg-5 col-md-5 left-col">
-        <h5>Subject Name</h5>
-        <h4>Course Name</h4>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi commodi,
-            deleniti dolor dolore, eos et fugiat ipsum libero magnam maxime necessitatibus,
-            nulla quam sapiente tenetur unde ut veniam vitae?
-        </p>
-
-        <div style="margin-top: 40%">
-            <button type="button" class="btn btn-primary">
-                <i class="icon-question icon-large"></i>
-                Help Request
-            </button>
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary">
-                <i class="icon-comments icon-large"></i>
-                Community Questions
-            </button>
-        </div>
+    <div>
+        <button type="button" class="btn btn-primary">
+            <i class="icon-comments icon-large"></i>
+            Community Questions
+        </button>
     </div>
 </div>
-<style>
-    .class-course-list {
-        height: 92vh;
-        overflow: auto;
-        overflow-x: hidden;
-    }
-
-    .icon-round-border {
-        text-align: center;
-        border: 2px solid rgba(0, 0, 0, 0.58);
-        height: 40px;
-        width: 40px;
-        display: inline-block;
-        padding: 3px;
-        border-radius: 50px;
-    }
-
-    .left-col {
-        text-align: right;
-        border-left: 2px solid #ccc;
-        height: 94vh;
-        padding: 0 100px 0 100px;
-    }
-
-    .left-right-border-none {
-        border-right: none !important;
-        border-left: none !important;
-    }
-
-    .list-group ::first-child {
-        border: none !important;
-    }
-
-    .left-col h4 {
-        padding: 20px 20px 15px 0;
-        border-bottom: 1px solid;
-    }
-
-    .left-col h5 {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col p {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col div {
-        margin-top: 5%;
-        text-align: center;
-    }
-
-    .left-col div button {
-        /*text-align: left;*/
-        width: 60%;
-    }
-
-    .left-col div button i {
-        float: left;
-        margin-top: 5px;
-        /*width: 60%;*/
-    }
-</style>

@@ -1,83 +1,44 @@
-<div class="">
-    <div class="col-sm-6 col-lg-6 col-md-6 text-right">
-        <ul class="list-group class-course-list">
-            <li ui-sref="app.topics" class="list-group-item cursor-hand no-border row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
-                <div class="col-md-8 col-lg-9 col-sm-8">
-                    <h3>Course {{item}}</h3>
+<div class="col-sm-6 col-lg-6 col-md-6 right-col text-right">
+    <ul class="list-group class-course-list">
+        <li ui-sref="app.topics" class="list-group-item cursor-hand no-border row"
+            ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+            <div class="col-md-8 col-lg-9 col-sm-8">
+                <h3>Course {{item}}</h3>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cum, dolorem
-                        doloremque eius eligendi incidunt ipsa maxime nisi perferendis perspiciatis
-                        possimus quam quas repellat reprehenderit sapiente sunt, ut voluptatibus?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cum, dolorem
+                    doloremque eius eligendi incidunt ipsa maxime nisi perferendis perspiciatis
+                    possimus quam quas repellat reprehenderit sapiente sunt, ut voluptatibus?</p>
 
-                </div>
-                <div class="col-md-4 col-lg-3 col-sm-4 text-left" style="padding: 0 0 0 0">
-                    <img src="./img/125x125.jpg" class="img-rounded">
-                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-4 text-left" style="padding: 0 0 0 0">
+                <img src="./img/125x125.jpg" class="img-rounded">
+            </div>
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+</div>
+<div class="col-sm-6 col-md-6 course-page-left-col left-col">
+    <h4>Subject</h4>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi commodi,
+        deleniti dolor dolore, eos et fugiat ipsum libero magnam maxime necessitatibus,
+        nulla quam sapiente tenetur unde ut veniam vitae?
+    </p>
+
+    <div style="margin-top: 40%">
+        <button type="button" class="btn btn-primary">
+            <i class="icon-question icon-large"></i>
+            Help Request
+        </button>
     </div>
-    <div class="col-sm-6 col-md-6 left-col">
-        <h4>Subject</h4>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi commodi,
-            deleniti dolor dolore, eos et fugiat ipsum libero magnam maxime necessitatibus,
-            nulla quam sapiente tenetur unde ut veniam vitae?
-        </p>
-
-        <div style="margin-top: 40%">
-            <button type="button" class="btn btn-primary">
-                <i class="icon-question icon-large"></i>
-                Help Request
-            </button>
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary">
-                <i class="icon-comments icon-large"></i>
-                Community Questions
-            </button>
-        </div>
+    <div>
+        <button type="button" class="btn btn-primary">
+            <i class="icon-comments icon-large"></i>
+            Community Questions
+        </button>
     </div>
 </div>
 <style>
-    .class-course-list {
-        height: 92vh;
-        overflow: auto;
-        overflow-x: hidden;
-    }
 
-    .left-col {
-        text-align: right;
-
-        border-left: 2px solid #ccc;
-        height: 94vh;
-        padding: 0 100px 0 100px;
-    }
-
-    .left-col h4 {
-        padding: 20px 20px 15px 0;
-        border-bottom: 1px solid;
-    }
-
-    .left-col p {
-        padding: 20px 20px 15px 0;
-        /*border-bottom: 1px solid;*/
-    }
-
-    .left-col div {
-        margin-top: 5%;
-        text-align: center;
-    }
-
-    .left-col div button {
-        /*text-align: left;*/
-        width: 60%;
-    }
-
-    .left-col div button i {
-        float: left;
-        margin-top: 5px;
-        /*width: 60%;*/
-    }
 </style>

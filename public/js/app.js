@@ -10,7 +10,7 @@ angular.module("Lms", ['ui.router', 'ui.bootstrap', 'firebase', 'ngMessages'])
             .state('lms', {
                 url: '/lms',
                 templateUrl: 'templates/lms.html',
-                controller: 'AppCtrl'
+                controller: 'AccountCtrl'
             })
             .state('app', {
                 //url: '/app',

@@ -3,6 +3,7 @@ angular.module("Lms")
     .controller('AccountCtrl', ['$http', 'Tools', '$scope', 'serverRef', '$state', 'firebaseRef', 'AccountService', account]);
 
 function account($http, Tools, $scope, serverRef, $state, firebaseRef, AccountService) {
+    //$scope.signInDialog = AccountService.signInDialog;
     $scope.signInDialog = AccountService.signInDialog;
     $scope.doLogin = function (user) {
         $http.post(serverRef + '/account/login', user).then(
