@@ -1,5 +1,5 @@
 angular.module("Lms")
-    .service('UserService', function ($http, $uibModal, Tools, serverRef, $q, firebaseRef) {
+    .service('UserService', function ($http, $uibModal, Tools, $state, serverRef, $q, firebaseRef) {
         var vm = this;
         vm.userID = localStorage.getItem('userID');
         vm.getCurrentUser = function () {
@@ -49,6 +49,7 @@ angular.module("Lms")
                     function (success) {
                         //success.data.msg ? toastr.error("Invalid Current Password") : null;
                         success.data.nModified ? toastr.success("Password Successfully Save") : null;
+                        Tools.reloadAfter(3);
                         console.log(success)
                     }, function (err) {
                         toastr.error("Failed!")
@@ -80,59 +81,24 @@ angular.module("Lms")
             })
         };
         vm.deleteAccount = function (userData) {
-            vm.deleteConfirmationDialog = $uibModal.open({
-                animation: true,
-                templateUrl: 'templates/deleteAccountDialog.html',
-                controller: function ($scope, UserService) {
-                    $scope.doDelete = function (password) {
-                        UserService.deleteConfirmationDialog.close();
-                        $http.post(serverRef + '/account/deleteAccount', {
-                            userID: userData._id,
-                            password: password
-                        }).then(
-                            function (success) {
-                                console.log(success);
-                                if (success.data.code == 0) {
-                                    toastr.error(success.data.msg)
-                                }
-                                else {
-                                    toastr.success('Your account successfully delete!');
-                                }
-                            },
-                            function (err) {
-                                toastr.error('Failed!');
-                            }
-                        )
-                    }
-                },
-                size: 'sm'
-            });
-            vm.deleteConfirmationDialog2 = $uibModal.open({
-                animation: true,
-                templateUrl: 'templates/deleteAccountDialog.html',
-                controller: function ($scope, UserService) {
-                    $scope.doDelete = function (password) {
-                        UserService.deleteConfirmationDialog.close();
-                        $http.post(serverRef + '/account/deleteAccount', {
-                            userID: userData._id,
-                            password: password
-                        }).then(
-                            function (success) {
-                                console.log(success);
-                                if (success.data.code == 0) {
-                                    toastr.error(success.data.msg)
-                                }
-                                else {
-                                    toastr.success('Your account successfully delete!');
-                                }
-                            },
-                            function (err) {
-                                toastr.error('Failed!');
-                            }
-                        )
-                    }
-                },
-                size: 'sm'
-            });
+            vm.userData = userData;
+            if (userData.password) {
+                vm.deleteConfirmationDialog = $uibModal.open({
+                    animation: true,
+                    templateUrl: 'templates/deleteAccountDialog.html',
+                    controller: 'DeleteAccountDialogCtrl',
+                    size: 'sm'
+                });
+            }
+            else {
+                vm.deleteConfirmationDialog = $uibModal.open({
+                    animation: true,
+                    templateUrl: 'templates/deleteAccountDialog2.html',
+                    controller: 'DeleteAccountDialogCtrl',
+                    size: 'sm'
+                });
+            }
+
+
         }
     });

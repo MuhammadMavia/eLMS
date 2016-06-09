@@ -105,17 +105,16 @@
                                     <input ng-model="currentUser.birthDate" is-open="openCalendar"
                                            ng-click="openCalendar = true"
                                            id="birthDate" uib-datepicker-popup="dd-MMMM-yyyy" class="form-control"
-                                           placeholder="Birth Date">
+                                           placeholder="{{currentUser.birthDate | date:'dd-MMMM-yyyy' || 'Birth Date'}}">
                                 </div>
                                 <label for="birthDate" class="col-lg-2 control-label">Birth Date</label>
                             </div>
                             <div class="form-group">
-                                <div class="col-lg-6"
-                                     ng-init="currentUser.yearOfStudy = currentUser.yearOfStudy || 'YOS'">
+                                <div class="col-lg-6">
                                     <select required ng-model="currentUser.yearOfStudy"
                                             class="selectpicker y-o-s-d-btn form-control">
-                                        <option value="YOS" selected disabled> Year of Study</option>
-                                        <option ng-value="$index" ng-repeat="y in $root.yearOfStydy">{{y}}</option>
+                                        <option value="YOS" disabled>Year of Study</option>
+                                        <option ng-value="y" ng-repeat="y in $root.yearOfStydy">{{y}}</option>
                                     </select>
                                 </div>
                                 <label for="birthDate" class="col-lg-2 control-label">Year of Study</label>
@@ -238,21 +237,20 @@
                                     <select required ng-model="currentUser.yearOfStudy" id="yearOfStudy"
                                             class="selectpicker y-o-s-d-btn form-control">
                                         <option value="YOS" selected disabled>Year of study</option>
-                                        <option ng-value="$index" ng-repeat="y in $root.yearOfStydy">{{y}}</option>
+                                        <option ng-value="y" ng-repeat="y in $root.yearOfStydy">{{y}}</option>
                                     </select>
                                 </div>
                                 <label for="yearOfStudy" class="col-lg-2 control-label">Year of Study</label>
                             </div>
                             <div class="form-group">
                                 <div class="col-lg-6">
-                                <textarea maxlength="160" id="bio" type="text" class="form-control"
-                                          placeholder="Bio"></textarea>
+                                <textarea ng-model="currentUser.bio" maxlength="160" id="bio" type="text" class="form-control" placeholder="Bio"></textarea>
                                 </div>
                                 <label for="bio" class="col-lg-2 control-label">Bio</label>
                             </div>
                             <br/>
                             <br/>
-                            <button type="button" class="btn btn-primary">Save</button>
+                            <button ng-click="updateProfile(currentUser)" type="button" class="btn btn-primary">Save</button>
                         </fieldset>
                     </div>
                     <hr/>

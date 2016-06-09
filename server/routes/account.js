@@ -96,6 +96,7 @@ account.post("/login", function (req, res) {
 account.use("/login", function (err, req, res, next) {
     res.send(err)
 });
+
 /* Bcrypt Password Middleware */
 account.use("/signup", function (req, res, next) {
     bcrypt.genSalt(10, function (err, salt) {
@@ -116,6 +117,8 @@ account.post("/signup", function (req, res) {
 /* Update Info */
 
 account.post('/updateInfo', function (req, res) {
+    console.log(req.body);
+    delete req.body.password;
     usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
         res.send(err || success);
     });
@@ -165,26 +168,27 @@ account.post('/setPassword', function (req, res) {
     });
 });
 
-account.post('/changeTheme', function (req, res) {
-    usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
-        res.send(err || success);
-    });
-});
+/* Change Theme */
+/*account.post('/changeTheme', function (req, res) {
+ usersModel.update({_id: req.body._id}, {$set: req.body}, function (err, success) {
+ res.send(err || success);
+ });
+ });*/
 
 
 /* Delete Account */
 account.use('/deleteAccount', function (req, res, next) {
-    usersModel.findOne({_id: req.body.userID}, function (err, success) {
-        if (success.password) {
+    if (req.body.password) {
+        usersModel.findOne({_id: req.body.userID}, function (err, success) {
             bcrypt.compare(req.body.password, success.password, function (err, isMatch) {
                 req.body.password = null;
                 isMatch ? next() : res.send({code: 0, msg: "Wrong Password!"});
             });
-        }
-        else {
-            next()
-        }
-    })
+        })
+    }
+    else {
+        next()
+    }
 });
 account.post('/deleteAccount', function (req, res) {
     usersModel.findOneAndRemove({_id: req.body.userID}, function (err, success) {

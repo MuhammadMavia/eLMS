@@ -1,5 +1,5 @@
 angular.module("Lms")
-    .service('Tools', function ($http, serverRef) {
+    .service('Tools', function ($http, serverRef,$timeout) {
         var scope = this;
         scope.confirmPassword = function (pass1, pass2) {
             if (pass1 == pass2) {
@@ -10,5 +10,8 @@ angular.module("Lms")
                 return false
             }
         };
+        scope.reloadAfter = function (sec) {
+            $timeout(function(){location.reload()}, sec*1000);
+        }
 
     });

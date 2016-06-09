@@ -5,8 +5,8 @@ angular.module("Lms")
 function settings(UserService, $scope, Cropper, firebaseRef) {
     UserService.getCurrentUser().then(function (currentUser) {
         $scope.currentUser = currentUser;
-        //$scope.$digest();
-        console.log(currentUser);
+        $scope.currentUser.birthDate = $scope.currentUser.birthDate || Date.now();
+        $scope.currentUser.yearOfStudy = $scope.currentUser.yearOfStudy || 'YOS';
     });
     $scope.updateProfile = UserService.updateProfile;
     $scope.changePassword = UserService.changePassword;
